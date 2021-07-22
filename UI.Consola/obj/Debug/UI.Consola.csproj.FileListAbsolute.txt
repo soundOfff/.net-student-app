@@ -1,6 +1,5 @@
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csprojAssemblyReference.cache
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CoreCompileInputs.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe.config
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.pdb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Entities.dll
@@ -12,3 +11,4 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\bin\Deb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.exe
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe.config

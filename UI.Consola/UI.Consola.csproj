@@ -48,9 +48,6 @@
     <Compile Include="Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Business.Entities\Business.Entities.csproj">
       <Project>{3c910126-8fd6-419a-9b9d-854cf2f4d89b}</Project>
       <Name>Business.Entities</Name>
@@ -59,6 +56,9 @@
       <Project>{8e686fa4-a7d4-4d01-884d-46d04482ffdd}</Project>
       <Name>Business.Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

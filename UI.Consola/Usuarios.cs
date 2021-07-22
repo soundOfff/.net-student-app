@@ -125,6 +125,7 @@ namespace UI.Consola
             {
                 Console.WriteLine();
                 Console.WriteLine("La ID ingresada debe ser un numero entero");
+                Console.WriteLine(fe);
             }
             catch (Exception e)
             {
@@ -177,6 +178,7 @@ namespace UI.Consola
             {
                 Console.WriteLine();
                 Console.WriteLine("La id ingresada debe ser un numero entero");
+                Console.WriteLine(fe);
             }
             catch (Exception e)
             {

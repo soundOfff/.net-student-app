@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Business.Entities;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Data.Database
 {
@@ -61,7 +63,25 @@ namespace Data.Database
 
         public List<Usuario> GetAll()
         {
-            return new List<Usuario>(Usuarios);
+            List<Usuario> usuarios = new List<Usuario>();
+            this.OpenConnection();
+            SqlCommand cmdUsuarios = new SqlCommand("SELECT * FROM usuarios", SqlConn);
+            SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
+            while (drUsuarios.Read())
+            {
+                Usuario usr = new Usuario();
+                usr.ID = (int)drUsuarios["id_usuario"];
+                usr.Nombre = (string)drUsuarios["nombre"];
+                usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
+                usr.Apellido = (string)drUsuarios["apellido"];
+                usr.EMail = (string)drUsuarios["email"];
+                usr.Clave = (string)drUsuarios["clave"];
+                usr.Habilitado = (bool)drUsuarios["habilitado"];
+                usuarios.Add(usr);
+            }
+            drUsuarios.Close();
+            this.CloseConnection();
+            return usuarios;
         }
 
         public Business.Entities.Usuario GetOne(int ID)

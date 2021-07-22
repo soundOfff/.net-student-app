@@ -41,5 +41,42 @@ namespace UI.Desktop
         {
             this.Close();
         }
+
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            UsuarioDesktop formTest = new UsuarioDesktop(ApplicationForm.ModoForm.Alta);
+            formTest.ShowDialog();
+            Listar();
+        }
+
+        private void tsbEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvUsuarios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un usuario");
+            }
+            else
+            {
+                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                UsuarioDesktop formTest = new UsuarioDesktop( ID, ApplicationForm.ModoForm.Baja);
+                formTest.ShowDialog();
+                Listar();
+            }
+        }
+
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvUsuarios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un usuario");
+            }
+            else { 
+                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                UsuarioDesktop formTest = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+                formTest.ShowDialog();
+                Listar();
+            }
+        }
+       
     }
 }

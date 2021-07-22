@@ -30,7 +30,6 @@ namespace UI.Desktop
         {
 
         }
-
         public virtual void GuardarCambios()
         {
 
@@ -41,12 +40,12 @@ namespace UI.Desktop
             return false;
         }
 
-        public void Notificar(string titulo, string mensaje, MessageBoxButtons botones, MessageBoxIcon icono)
+        public virtual void Notificar(string titulo, string mensaje, MessageBoxButtons botones, MessageBoxIcon icono)
         {
             MessageBox.Show(titulo, mensaje, botones, icono);
         }
 
-        public void Notificar(string mensaje, MessageBoxButtons botones, MessageBoxIcon icono)
+        public virtual void Notificar(string mensaje, MessageBoxButtons botones, MessageBoxIcon icono)
         {
             MessageBox.Show(this.Text, mensaje, botones, icono);
         }
