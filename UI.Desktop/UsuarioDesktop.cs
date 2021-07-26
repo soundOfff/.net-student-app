@@ -99,17 +99,35 @@ namespace UI.Desktop
             UsuarioLogic _usuarioLogic = new UsuarioLogic();
             if (_modo == ModoForm.Alta || _modo == ModoForm.Modificacion)
             {
-                _usuarioLogic.Save(_usuarioActual);
+                try
+                { 
+                    _usuarioLogic.Save(_usuarioActual);
+                }
+                catch (Exception Ex)
+                {
+                    Exception ExepcionManejada = new Exception("Error al guardar el usuario");
+                    MessageBox.Show("Codigo de error: #347", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else if (_modo == ModoForm.Baja)
             {
-                _usuarioLogic.Delete(_usuarioActual.ID);
+                try
+                {
+                    _usuarioLogic.Delete(_usuarioActual.ID);
+                }
+                catch (Exception Ex)
+                {
+                    Exception ExepcionManejada = new Exception("Error al eliminar el usuario, burro!");
+                    MessageBox.Show("Codigo de error: #505", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         public override bool Validar()
         {
             // Mail, contraseñas coincidencia / 8 caracteres, nada vacio 
-
+            
+            //String.IsNullOrEmpty(this.txtNombre.Text.Trim()) Cambiar
+            
             if ( (this.txtNombre.Text == "") || (this.txtApellido.Text == "") || (this.txtEmail.Text == "") || (this.txtUsuario.Text == "") || (this.txtClave.Text == "") || (this.txtConfirmarClave.Text == "") )
             {
                 Notificar("Error numero: #777", "Hay casillas que estan vacias, por favor complete todos los datos!", MessageBoxButtons.OK, MessageBoxIcon.Error );
@@ -128,9 +146,8 @@ namespace UI.Desktop
                     return false;
                 }
 
-                String expresion;
-                expresion = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-                if (!Regex.IsMatch(this.txtEmail.Text, expresion))
+               
+                if (Validaciones.EsMailValido(txtEmail.Text.Trim()))
                 {
                     Notificar("Error numero: #333", "Mail invalido, por favor reviselo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;

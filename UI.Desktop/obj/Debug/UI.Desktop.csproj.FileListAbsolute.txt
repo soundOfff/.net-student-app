@@ -17,3 +17,4 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\obj\Deb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.ApplicationForm.resources
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.UsuarioDesktop.resources
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.formLogin.resources

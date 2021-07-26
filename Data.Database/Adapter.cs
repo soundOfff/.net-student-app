@@ -18,7 +18,7 @@ namespace Data.Database
 
         protected void OpenConnection()
         {
-            string _connectioString = ConfigurationManager.ConnectionStrings[consKeyDefaultCnnString].ConnectionString;
+            var _connectioString = ConfigurationManager.ConnectionStrings[consKeyDefaultCnnString].ConnectionString;
             _sqlConn = new SqlConnection(_connectioString);
             _sqlConn.Open();
         }

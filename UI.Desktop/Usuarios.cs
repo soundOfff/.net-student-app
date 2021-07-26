@@ -24,7 +24,15 @@ namespace UI.Desktop
         public void Listar()
         {
             UsuarioLogic ul = new UsuarioLogic();
-            this.dgvUsuarios.DataSource = ul.GetAll();
+            try
+            {
+                this.dgvUsuarios.DataSource = ul.GetAll();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExepcionManejada = new Exception("Error al obtener todos los usuarios");
+                MessageBox.Show("Codigo de error: #404", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Usuarios_Load(object sender, EventArgs e)
@@ -77,6 +85,14 @@ namespace UI.Desktop
                 Listar();
             }
         }
-       
+
+        private void Usuarios_Shown(object sender, EventArgs e)
+        {
+            formLogin fLogin = new formLogin();
+            if (fLogin.ShowDialog() != DialogResult.OK)
+            {
+                this.Dispose();
+            }
+        }
     }
 }
