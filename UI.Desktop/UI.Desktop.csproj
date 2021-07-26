@@ -46,14 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ApplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ApplicationForm.Designer.cs">
+      <DependentUpon>ApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioDesktop.Designer.cs">
+      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ApplicationForm.resx">
+      <DependentUpon>ApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioDesktop.resx">
+      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +93,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,7 +105,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\Business.Entities\Business.Entities.csproj">
+      <Project>{3c910126-8fd6-419a-9b9d-854cf2f4d89b}</Project>
+      <Name>Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business.Logic\Business.Logic.csproj">
+      <Project>{8e686fa4-a7d4-4d01-884d-46d04482ffdd}</Project>
+      <Name>Business.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
