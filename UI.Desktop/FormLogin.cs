@@ -30,7 +30,7 @@ namespace UI.Desktop
             {
                 try
                 {
-                    Usuario usr = ul.GetOne(txtUsuario.Text, txtPass.Text);
+                    Business.Entities.Usuario usr = ul.GetOne(txtUsuario.Text, txtPass.Text);
                     if (!String.IsNullOrEmpty(usr.NombreUsuario) )
                     { 
                         this.DialogResult = DialogResult.OK;

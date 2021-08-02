@@ -11,3 +11,16 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Busines
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Business.Logic.pdb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Data.Database.dll
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Data.Database.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\UI.Web.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\UI.Web.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\Business.Entities.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\Business.Logic.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\Data.Database.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\Business.Entities.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\Business.Logic.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\Data.Database.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.csprojAssemblyReference.cache
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.csproj.CopyComplete
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.pdb

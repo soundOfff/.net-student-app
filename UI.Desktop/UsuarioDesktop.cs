@@ -13,19 +13,19 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class UsuarioDesktop : ApplicationForm
+    public partial class UsuariosDesktop : ApplicationForm
     {
-        private Usuario _usuarioActual;
+        private Business.Entities.Usuario _usuarioActual;
 
-        public Usuario UsuarioActual { get { return _usuarioActual; } set { _usuarioActual = value; } }
+        public Business.Entities.Usuario UsuarioActual { get { return _usuarioActual; } set { _usuarioActual = value; } }
 
 
-        public UsuarioDesktop(ModoForm modo) : this()
+        public UsuariosDesktop(ModoForm modo) : this()
         {
             _modo = modo;
         }
 
-        public UsuarioDesktop(int ID, ModoForm modo) : this()
+        public UsuariosDesktop(int ID, ModoForm modo) : this()
         {
             UsuarioLogic ul = new UsuarioLogic();
             _usuarioActual = ul.GetOne(ID);
@@ -33,7 +33,7 @@ namespace UI.Desktop
             MapearDeDatos();
         }
 
-        public UsuarioDesktop()
+        public UsuariosDesktop()
         {
             InitializeComponent();
         }
@@ -69,7 +69,7 @@ namespace UI.Desktop
         {
             if (_modo == ModoForm.Alta)
             {
-                _usuarioActual = new Usuario();
+                _usuarioActual = new Business.Entities.Usuario();
                 _usuarioActual.State = BusinessEntity.States.New;
             }
             else if (_modo == ModoForm.Modificacion)

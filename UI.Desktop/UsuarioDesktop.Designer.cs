@@ -1,6 +1,6 @@
 ﻿namespace UI.Desktop
 {
-    partial class UsuarioDesktop
+    partial class UsuariosDesktop
     {
         /// <summary>
         /// Required designer variable.
