@@ -128,26 +128,25 @@ namespace UI.Desktop
             
             //String.IsNullOrEmpty(this.txtNombre.Text.Trim()) Cambiar
             
-            if ( (this.txtNombre.Text == "") || (this.txtApellido.Text == "") || (this.txtEmail.Text == "") || (this.txtUsuario.Text == "") || (this.txtClave.Text == "") || (this.txtConfirmarClave.Text == "") )
+            if ( String.IsNullOrEmpty(this.txtNombre.Text.Trim()) || String.IsNullOrEmpty(this.txtApellido.Text.Trim()) || String.IsNullOrEmpty(this.txtEmail.Text.Trim()) 
+                || String.IsNullOrEmpty(this.txtUsuario.Text.Trim()) || String.IsNullOrEmpty(this.txtClave.Text.Trim()) || String.IsNullOrEmpty(this.txtConfirmarClave.Text))
             {
                 Notificar("Error numero: #777", "Hay casillas que estan vacias, por favor complete todos los datos!", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return false;
             }
             else
             {
-                if (this.txtClave.Text.Length < 8)
+                if (this.txtClave.Text.Trim().Length < 8)
                 {
                     Notificar("Error numero: #000", "La contrasenia debe tener al menos 8 caracteres", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
-                else if (this.txtClave.Text != this.txtConfirmarClave.Text)
+                else if (this.txtClave.Text.Trim() != this.txtConfirmarClave.Text.Trim())
                 {
                     Notificar("Error numero: #111", "Las contrasenias son diferentes, por favor vuelva a ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error );
                     return false;
                 }
-
-               
-                if (Validaciones.EsMailValido(txtEmail.Text.Trim()))
+                if (!Validaciones.IsValidEmail(txtEmail.Text.Trim()))
                 {
                     Notificar("Error numero: #333", "Mail invalido, por favor reviselo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
