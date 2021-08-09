@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Business.Entities;
 using Business.Logic;
 
-
 namespace UI.Desktop
 {
     public partial class Inscripciones : Form
@@ -18,87 +17,26 @@ namespace UI.Desktop
         public Inscripciones()
         {
             InitializeComponent();
-            this.dgvInscripciones.AutoGenerateColumns = false;
         }
 
         public void Listar()
         {
-            InscripcionLogic ul = new InscripcionLogic();
+            InscripcionLogic ins = new InscripcionLogic();
             try
             {
-                this.dgvInscripciones.DataSource = ul.GetAll();
+                this.dgvInscripciones.DataSource = ins.GetAll();
+                
             }
             catch (Exception Ex)
             {
-                Exception ExepcionManejada = new Exception("Error al obtener todos los usuarios");
+                Exception ExepcionManejada = new Exception("Error al obtener todos las inscripciones");
                 MessageBox.Show("Codigo de error: #404", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void Usuarios_Load(object sender, EventArgs e)
+        private void Inscripciones_Load(object sender, EventArgs e)
         {
             Listar();
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            Listar();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void tsbNuevo_Click(object sender, EventArgs e)
-        {
-            UsuariosDesktop formTest = new UsuariosDesktop(ApplicationForm.ModoForm.Alta);
-            formTest.ShowDialog();
-            Listar();
-        }
-
-        private void tsbEliminar_Click(object sender, EventArgs e)
-        {
-            if (this.dgvInscripciones.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Debe seleccionar un usuario");
-            }
-            else
-            {
-                int ID = ((Business.Entities.Usuario)this.dgvInscripciones.SelectedRows[0].DataBoundItem).ID;
-                UsuariosDesktop formTest = new UsuariosDesktop( ID, ApplicationForm.ModoForm.Baja);
-                formTest.ShowDialog();
-                Listar();
-            }
-        }
-
-        private void tsbEditar_Click(object sender, EventArgs e)
-        {
-           if (this.dgvInscripciones.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Debe seleccionar un usuario");
-            }
-            else { 
-                int ID = ((Business.Entities.Usuario)this.dgvInscripciones.SelectedRows[0].DataBoundItem).ID;
-                UsuariosDesktop formTest = new UsuariosDesktop(ID, ApplicationForm.ModoForm.Modificacion);
-                formTest.ShowDialog();
-                Listar();
-            }
-           
-        }
-
-        private void Usuarios_Shown(object sender, EventArgs e)
-        {
-            formLogin fLogin = new formLogin();
-            if (fLogin.ShowDialog() != DialogResult.OK)
-            {
-                this.Dispose();
-            }
-        }
-
-        private void dgvInscripciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -13,12 +13,12 @@ namespace Data.Database
     {
         public List<Inscripcion> GetAll()
         {
-            List<Inscripcion> Inscripciones = new List<Inscripcion>();
+            List<Inscripcion> inscripciones = new List<Inscripcion>();
 
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInscripciones = new SqlCommand("SELECT * FROM alumnos_incripciones", SqlConn);
+                SqlCommand cmdInscripciones = new SqlCommand("SELECT * FROM alumnos_inscripciones", SqlConn);
                 SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
                 while (drInscripciones.Read())
                 {
@@ -28,6 +28,7 @@ namespace Data.Database
                     ins.IdCurso = (int)drInscripciones["id_curso"];
                     ins.Condicion = (string)drInscripciones["condicion"];
                     ins.Nota = (int)drInscripciones["nota"];
+                    inscripciones.Add(ins);
                 }
 
                 drInscripciones.Close();
@@ -43,7 +44,7 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-            return Inscripciones;
+            return inscripciones;
 
 
         }

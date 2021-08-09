@@ -26,3 +26,17 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\De
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.exe
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\UI.Consola.exe.config
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\UI.Consola.exe
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\UI.Consola.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\Business.Entities.dll
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\Business.Logic.dll
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\Data.Database.dll
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\Business.Entities.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\Business.Logic.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Consola\bin\Debug\Data.Database.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Consola\obj\Debug\UI.Consola.csprojAssemblyReference.cache
+C:\Users\lucab\Desktop\TP2S\UI.Consola\obj\Debug\UI.Consola.csproj.CoreCompileInputs.cache
+C:\Users\lucab\Desktop\TP2S\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
+C:\Users\lucab\Desktop\TP2S\UI.Consola\obj\Debug\UI.Consola.exe
+C:\Users\lucab\Desktop\TP2S\UI.Consola\obj\Debug\UI.Consola.pdb

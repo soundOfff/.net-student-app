@@ -16,3 +16,12 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Data.Database\obj
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.dll
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.pdb
+C:\Users\lucab\Desktop\TP2S\Data.Database\bin\Debug\Data.Database.dll
+C:\Users\lucab\Desktop\TP2S\Data.Database\bin\Debug\Data.Database.pdb
+C:\Users\lucab\Desktop\TP2S\Data.Database\bin\Debug\Business.Entities.dll
+C:\Users\lucab\Desktop\TP2S\Data.Database\bin\Debug\Business.Entities.pdb
+C:\Users\lucab\Desktop\TP2S\Data.Database\obj\Debug\Data.Database.csprojAssemblyReference.cache
+C:\Users\lucab\Desktop\TP2S\Data.Database\obj\Debug\Data.Database.csproj.CoreCompileInputs.cache
+C:\Users\lucab\Desktop\TP2S\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
+C:\Users\lucab\Desktop\TP2S\Data.Database\obj\Debug\Data.Database.dll
+C:\Users\lucab\Desktop\TP2S\Data.Database\obj\Debug\Data.Database.pdb

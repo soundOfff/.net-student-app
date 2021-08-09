@@ -58,11 +58,11 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="InscripcionesDesktop.cs">
+    <Compile Include="Inscripciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InscripcionesDesktop.Designer.cs">
-      <DependentUpon>InscripcionesDesktop.cs</DependentUpon>
+    <Compile Include="Inscripciones.Designer.cs">
+      <DependentUpon>Inscripciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -75,12 +75,6 @@
     </Compile>
     <Compile Include="UsuarioDesktop.Designer.cs">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inscripciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inscripciones.Designer.cs">
-      <DependentUpon>Inscripciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -96,17 +90,14 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InscripcionesDesktop.resx">
-      <DependentUpon>InscripcionesDesktop.cs</DependentUpon>
+    <EmbeddedResource Include="Inscripciones.resx">
+      <DependentUpon>Inscripciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inscripciones.resx">
-      <DependentUpon>Inscripciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
