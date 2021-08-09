@@ -86,13 +86,6 @@ namespace UI.Desktop
             }
         }
 
-        private void Usuarios_Shown(object sender, EventArgs e)
-        {
-            formLogin fLogin = new formLogin();
-            if (fLogin.ShowDialog() != DialogResult.OK)
-            {
-                this.Dispose();
-            }
-        }
+
     }
 }

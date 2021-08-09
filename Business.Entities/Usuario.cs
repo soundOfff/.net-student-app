@@ -13,6 +13,7 @@ namespace Business.Entities
         private string _password;
         private string _nombreUsuario;
         private string _email;
+        private int _IDPersona;
         private bool _habilitado;
 
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
@@ -20,6 +21,7 @@ namespace Business.Entities
         public string Clave { get { return _password; } set { _password = value; } }
         public string NombreUsuario { get { return _nombreUsuario; } set { _nombreUsuario = value; } }
         public string EMail { get { return _email; } set { _email = value; } }
+        public int IDPersona { get { return _IDPersona; } set { _IDPersona = value; } }
         public bool Habilitado { get { return _habilitado; } set { _habilitado = value; } }
 
 

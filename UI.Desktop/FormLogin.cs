@@ -13,6 +13,11 @@ namespace UI.Desktop
     public partial class formLogin : Form
     {
         UsuarioLogic ul = new UsuarioLogic();
+        PersonaLogic pl = new PersonaLogic();
+        Persona _personaRegistrada = new Persona();
+        
+        public Persona PersonaRegistrada {get{return _personaRegistrada;} set{ _personaRegistrada = value;}}
+
         public formLogin()
         {
             InitializeComponent();
@@ -32,7 +37,8 @@ namespace UI.Desktop
                 {
                     Usuario usr = ul.GetOne(txtUsuario.Text, txtPass.Text);
                     if (!String.IsNullOrEmpty(usr.NombreUsuario) )
-                    { 
+                    {
+                        _personaRegistrada = pl.GetOne(usr.IDPersona);
                         this.DialogResult = DialogResult.OK;
                     }
                     else

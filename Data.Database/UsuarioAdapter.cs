@@ -79,6 +79,7 @@ namespace Data.Database
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.EMail = (string)drUsuarios["email"];
+                    usr.IDPersona = (int)drUsuarios["id_persona"];
                     usr.Clave = (string)drUsuarios["clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
                     usuarios.Add(usr);
@@ -114,6 +115,7 @@ namespace Data.Database
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.EMail = (string)drUsuarios["email"];
+                    usr.IDPersona = (int)drUsuarios["id_persona"];
                     usr.Clave = (string)drUsuarios["clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
                 }
@@ -147,6 +149,7 @@ namespace Data.Database
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.EMail = (string)drUsuarios["email"];
+                    usr.IDPersona = (int)drUsuarios["id_persona"];
                     usr.Clave = (string)drUsuarios["clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
                 }
@@ -209,7 +212,7 @@ namespace Data.Database
                     "UPDATE usuarios SET nombre_usuario = @nombre_usuario," +
                     " clave = @clave, habilitado = @habilitado," +
                     " nombre = @nombre, apellido = @apellido," +
-                    " email = @email WHERE id_usuario= @id", SqlConn);
+                    " email = @email, id_persona = @id_persona WHERE id_usuario= @id", SqlConn);
 
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
@@ -218,6 +221,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
                 cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
                 cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.EMail;
+                cmdSave.Parameters.Add("@id_persona", SqlDbType.Int).Value = usuario.IDPersona;
                 cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)
@@ -237,8 +241,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into usuarios(nombre_usuario, clave, habilitado, nombre, apellido, email) " +
-                    "values(@nombre, @clave, @habilitado, @nombre, @apellido, @email) " +
+                    "insert into usuarios(nombre_usuario, clave, habilitado, nombre, apellido, email, id_persona) " +
+                    "values(@nombre, @clave, @habilitado, @nombre, @apellido, @email, @id_persona) " +
                     "select @@identity", SqlConn);
                     // Esta linea es para recuperar el id que asigno el sql automaticamente
 
@@ -248,6 +252,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
                 cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
                 cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.EMail;
+                cmdSave.Parameters.Add("@id_persona", SqlDbType.Int).Value = usuario.IDPersona;
                 usuario.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
             catch (Exception Ex)

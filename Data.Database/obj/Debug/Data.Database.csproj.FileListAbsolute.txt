@@ -7,3 +7,12 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Data.Database\bin\
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.dll
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\bin\Debug\Data.Database.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\bin\Debug\Data.Database.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\bin\Debug\Business.Entities.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\bin\Debug\Business.Entities.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.csproj.AssemblyReference.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.csproj.CoreCompileInputs.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Data.Database\obj\Debug\Data.Database.pdb

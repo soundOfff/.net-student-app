@@ -45,7 +45,10 @@
   <ItemGroup>
     <Compile Include="Adapter.cs" />
     <Compile Include="ComisionAdapter.cs" />
+    <Compile Include="EspecialidadAdapter.cs" />
     <Compile Include="MateriaAdapter.cs" />
+    <Compile Include="PersonaAdapter.cs" />
+    <Compile Include="PlanAdapter.cs" />
     <Compile Include="UsuarioAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

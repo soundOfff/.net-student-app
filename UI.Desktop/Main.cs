@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Business.Entities;
 
 namespace UI.Desktop
 {
     public partial class Main : Form
     {
+        Persona _personaRegistrada = new Persona();
+        public Persona PersonaRegistrada { get { return _personaRegistrada; } set { _personaRegistrada = value; } }
+
         public Main()
         {
             InitializeComponent();
@@ -82,6 +86,34 @@ namespace UI.Desktop
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new Usuarios());
+        }
+
+        private void Main_Shown(object sender, EventArgs e)
+        {
+            formLogin fLogin = new formLogin();
+            if (fLogin.ShowDialog() != DialogResult.OK)
+            {
+                this.Dispose();
+            }
+
+            _personaRegistrada = fLogin.PersonaRegistrada;
+            fLogin.Dispose();
+
+            lblNombrePersona.Text = _personaRegistrada.Nombre;
+            switch (_personaRegistrada.TipoPersona)
+            {
+                case 1:
+                    lblTipoPersona.Text = "Alumno";
+                    break;
+                case 2:
+                    lblTipoPersona.Text = "Docente";
+                    break;
+                case 3:
+                    lblTipoPersona.Text = "Directivo";
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
