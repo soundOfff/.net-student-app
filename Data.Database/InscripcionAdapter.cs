@@ -6,32 +6,44 @@ using System.Threading.Tasks;
 using Business.Entities;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
 
 namespace Data.Database
 {
     public class InscripcionAdapter: Adapter
     {
-        public List<Inscripcion> GetAll()
+        public ArrayList GetAll()
         {
-            List<Inscripcion> inscripciones = new List<Inscripcion>();
+             ArrayList infoExamenes = new ArrayList();
 
             try
-            {
+            {       //ins.IdAlumno = (int)drInscripciones["id_alumno"];
+                    // ins.IdCurso = (int)drInscripciones["id_curso"];
+
+                string query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
+                                FROM alumnos_inscripciones 
+                                INNER JOIN cursos 
+	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                                INNER JOIN materias
+	                                ON materias.id_materia = cursos.id_materia
+                                INNER JOIN planes
+	                                ON planes.id_plan = materias.id_plan
+                                INNER JOIN especialidades
+	                                ON especialidades.id_especialidad = planes.id_especialidad";
+
                 this.OpenConnection();
-                SqlCommand cmdInscripciones = new SqlCommand("SELECT * FROM alumnos_inscripciones", SqlConn);
-                SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
-                while (drInscripciones.Read())
+                SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
+                SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
+                while (drExamenes.Read())
                 {
-                    Inscripcion ins = new Inscripcion();
-                    ins.ID = (int)drInscripciones["id_inscripcion"];
-                    ins.IdAlumno = (int)drInscripciones["id_alumno"];
-                    ins.IdCurso = (int)drInscripciones["id_curso"];
-                    ins.Condicion = (string)drInscripciones["condicion"];
-                    ins.Nota = (int)drInscripciones["nota"];
-                    inscripciones.Add(ins);
+                    infoExamenes.Add(new { DescMateria = (string)drExamenes["desc_materia"],
+                        Nota = (int)drExamenes["nota"],
+                        DescEspecialidad = (string)drExamenes["desc_especialidad"],
+                        DescPlan = (string)drExamenes["desc_plan"]
+                    });
                 }
 
-                drInscripciones.Close();
+                drExamenes.Close();
             }
             catch(Exception Ex)
             {
@@ -44,7 +56,7 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-            return inscripciones;
+            return infoExamenes;
 
 
         }

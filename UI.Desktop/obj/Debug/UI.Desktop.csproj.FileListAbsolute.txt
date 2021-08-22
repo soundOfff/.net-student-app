@@ -62,4 +62,4 @@ C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Business.Entities.pdb
 C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Business.Logic.pdb
 C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Data.Database.pdb
 C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.csproj.CopyComplete
-C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.Inscripciones.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.Examenes.resources

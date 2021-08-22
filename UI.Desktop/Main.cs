@@ -83,5 +83,10 @@ namespace UI.Desktop
         {
             AbrirFormInPanel(new Usuarios());
         }
+
+        private void btnExamenes_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Examenes());
+        }
     }
 }

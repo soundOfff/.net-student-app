@@ -12,11 +12,12 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class Inscripciones : Form
+    public partial class Examenes : Form
     {
-        public Inscripciones()
+        public Examenes()
         {
             InitializeComponent();
+            this.dgvExamenes.AutoGenerateColumns = false;
         }
 
         public void Listar()
@@ -24,7 +25,7 @@ namespace UI.Desktop
             InscripcionLogic ins = new InscripcionLogic();
             try
             {
-                this.dgvInscripciones.DataSource = ins.GetAll();
+                this.dgvExamenes.DataSource = ins.GetAll();
                 
             }
             catch (Exception Ex)
@@ -35,6 +36,16 @@ namespace UI.Desktop
         }
 
         private void Inscripciones_Load(object sender, EventArgs e)
+        {
+            Listar();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
             Listar();
         }

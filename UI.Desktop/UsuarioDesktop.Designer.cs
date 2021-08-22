@@ -171,6 +171,7 @@
             // 
             this.lblConfirmarClave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConfirmarClave.AutoSize = true;
+            this.lblConfirmarClave.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblConfirmarClave.Location = new System.Drawing.Point(333, 238);
             this.lblConfirmarClave.Name = "lblConfirmarClave";
             this.lblConfirmarClave.Size = new System.Drawing.Size(81, 13);
@@ -242,19 +243,20 @@
             // txtID
             // 
             this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.BackColor = System.Drawing.SystemColors.Control;
             this.txtID.Location = new System.Drawing.Point(71, 25);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(232, 20);
             this.txtID.TabIndex = 10;
             // 
-            // UsuarioDesktop
+            // UsuariosDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 350);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UsuarioDesktop";
+            this.Name = "UsuariosDesktop";
             this.Text = "UsuarioDesktop";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

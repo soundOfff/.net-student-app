@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Data.Database;
 using Business.Entities;
+using System.Collections;
 
 namespace Business.Logic
 {
@@ -19,7 +20,7 @@ namespace Business.Logic
             _inscripcionData = new InscripcionAdapter();
         }
 
-        public List<Inscripcion> GetAll()
+        public ArrayList GetAll()
         {
             return _inscripcionData.GetAll();
         }
