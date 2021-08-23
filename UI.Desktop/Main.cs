@@ -49,7 +49,7 @@ namespace UI.Desktop
         {
             if(this.pnlVertical.Width == 200)
             {
-                this.pnlVertical.Width = 55;
+                this.pnlVertical.Width = 60;
             }
             else
             {
@@ -114,6 +114,12 @@ namespace UI.Desktop
                 default:
                     break;
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+           
         }
     }
 }

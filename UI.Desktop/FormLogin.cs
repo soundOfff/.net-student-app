@@ -66,5 +66,10 @@ namespace UI.Desktop
             txtPass.UseSystemPasswordChar = !txtPass.UseSystemPasswordChar;
 
         }
+
+        private void pctrCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

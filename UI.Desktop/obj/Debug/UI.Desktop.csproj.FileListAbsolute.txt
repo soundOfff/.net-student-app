@@ -39,3 +39,4 @@ D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de soft
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.CopyComplete
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.exe
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Materias.resources
