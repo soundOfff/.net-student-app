@@ -121,5 +121,10 @@ namespace UI.Desktop
             Application.Restart();
            
         }
+
+        private void btnExamenes_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Examenes());
+        }
     }
 }
