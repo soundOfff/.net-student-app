@@ -13,11 +13,18 @@ namespace UI.Desktop
     public partial class formLogin : Form
     {
         UsuarioLogic ul = new UsuarioLogic();
+<<<<<<< HEAD
 
         public static Business.Entities.Usuario UsuarioActual;
 
         static Persona _perActual = new Persona();
 
+=======
+        PersonaLogic pl = new PersonaLogic();
+        Persona _personaRegistrada = new Persona();
+        
+        public Persona PersonaRegistrada {get{return _personaRegistrada;} set{ _personaRegistrada = value;}}
+>>>>>>> main
 
         public formLogin()
         {
@@ -36,9 +43,16 @@ namespace UI.Desktop
             {
                 try
                 {
+<<<<<<< HEAD
                     UsuarioActual = ul.GetOne(txtUsuario.Text, txtPass.Text);
                     if (!String.IsNullOrEmpty(UsuarioActual.NombreUsuario) )
                     { 
+=======
+                    Usuario usr = ul.GetOne(txtUsuario.Text, txtPass.Text);
+                    if (!String.IsNullOrEmpty(usr.NombreUsuario) )
+                    {
+                        _personaRegistrada = pl.GetOne(usr.IDPersona);
+>>>>>>> main
                         this.DialogResult = DialogResult.OK;
                     }
                     else
@@ -66,6 +80,11 @@ namespace UI.Desktop
         {
             txtPass.UseSystemPasswordChar = !txtPass.UseSystemPasswordChar;
 
+        }
+
+        private void pctrCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

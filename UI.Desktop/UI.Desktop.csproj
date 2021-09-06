@@ -52,27 +52,43 @@
     <Compile Include="ApplicationForm.Designer.cs">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Clases\CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
+=======
+    <Compile Include="Clases\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Examenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examenes.Designer.cs">
+      <DependentUpon>Examenes.cs</DependentUpon>
+    </Compile>
+>>>>>>> main
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="InscripcionesDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InscripcionesDesktop.Designer.cs">
       <DependentUpon>InscripcionesDesktop.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> main
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="TestDiseñoInscripcionUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,17 +101,27 @@
     <Compile Include="TestInscDesktopUser.Designer.cs">
       <DependentUpon>TestInscDesktopUser.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> main
     <Compile Include="UsuarioDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioDesktop.Designer.cs">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Inscripciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inscripciones.Designer.cs">
       <DependentUpon>Inscripciones.cs</DependentUpon>
+=======
+    <Compile Include="Materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materias.Designer.cs">
+      <DependentUpon>Materias.cs</DependentUpon>
+>>>>>>> main
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -108,9 +134,13 @@
     <EmbeddedResource Include="ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Examenes.resx">
+      <DependentUpon>Examenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="InscripcionesDesktop.resx">
       <DependentUpon>InscripcionesDesktop.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +158,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inscripciones.resx">
       <DependentUpon>Inscripciones.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioDesktop.resx">
+      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materias.resx">
+      <DependentUpon>Materias.cs</DependentUpon>
+>>>>>>> main
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

@@ -31,11 +31,21 @@ namespace UI.Desktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlVertical = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+=======
+            this.lblTipoPersona = new System.Windows.Forms.Label();
+            this.lblNombrePersona = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnExamenes = new System.Windows.Forms.Button();
+>>>>>>> main
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.pctrLogo = new System.Windows.Forms.PictureBox();
             this.pnlTitulo = new System.Windows.Forms.Panel();
@@ -44,6 +54,11 @@ namespace UI.Desktop
             this.pctrMenu = new System.Windows.Forms.PictureBox();
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+=======
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.circularPictureBox1 = new UI.Desktop.Clases.CircularPictureBox();
+>>>>>>> main
             this.pnlVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
@@ -51,16 +66,20 @@ namespace UI.Desktop
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVertical
             // 
-            this.pnlVertical.BackColor = System.Drawing.Color.Purple;
-            this.pnlVertical.Controls.Add(this.button5);
-            this.pnlVertical.Controls.Add(this.button4);
+            this.pnlVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(10)))), ((int)(((byte)(103)))));
+            this.pnlVertical.Controls.Add(this.circularPictureBox1);
+            this.pnlVertical.Controls.Add(this.lblTipoPersona);
+            this.pnlVertical.Controls.Add(this.lblNombrePersona);
+            this.pnlVertical.Controls.Add(this.lbl5);
+            this.pnlVertical.Controls.Add(this.btnLogout);
             this.pnlVertical.Controls.Add(this.button3);
             this.pnlVertical.Controls.Add(this.button2);
-            this.pnlVertical.Controls.Add(this.button1);
+            this.pnlVertical.Controls.Add(this.btnExamenes);
             this.pnlVertical.Controls.Add(this.btnUsuarios);
             this.pnlVertical.Controls.Add(this.pctrLogo);
             this.pnlVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -69,6 +88,7 @@ namespace UI.Desktop
             this.pnlVertical.Size = new System.Drawing.Size(200, 600);
             this.pnlVertical.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // button5
             // 
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -105,6 +125,67 @@ namespace UI.Desktop
             this.button4.TabIndex = 4;
             this.button4.Text = "Usuarios";
             this.button4.UseVisualStyleBackColor = true;
+=======
+            // lblTipoPersona
+            // 
+            this.lblTipoPersona.AutoSize = true;
+            this.lblTipoPersona.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPersona.ForeColor = System.Drawing.Color.White;
+            this.lblTipoPersona.Location = new System.Drawing.Point(12, 103);
+            this.lblTipoPersona.Name = "lblTipoPersona";
+            this.lblTipoPersona.Size = new System.Drawing.Size(38, 13);
+            this.lblTipoPersona.TabIndex = 6;
+            this.lblTipoPersona.Text = "label1";
+            // 
+            // lblNombrePersona
+            // 
+            this.lblNombrePersona.AutoSize = true;
+            this.lblNombrePersona.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombrePersona.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombrePersona.ForeColor = System.Drawing.Color.White;
+            this.lblNombrePersona.Location = new System.Drawing.Point(12, 78);
+            this.lblNombrePersona.Name = "lblNombrePersona";
+            this.lblNombrePersona.Size = new System.Drawing.Size(38, 13);
+            this.lblNombrePersona.TabIndex = 0;
+            this.lblNombrePersona.Text = "label1";
+            // 
+            // lbl5
+            // 
+            this.lbl5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.lbl5.FlatAppearance.BorderSize = 0;
+            this.lbl5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lbl5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lbl5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5.ForeColor = System.Drawing.Color.White;
+            this.lbl5.Image = ((System.Drawing.Image)(resources.GetObject("lbl5.Image")));
+            this.lbl5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl5.Location = new System.Drawing.Point(12, 239);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(180, 40);
+            this.lbl5.TabIndex = 5;
+            this.lbl5.Text = "Usuario";
+            this.lbl5.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(12, 423);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(180, 40);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+>>>>>>> main
             // 
             // button3
             // 
@@ -113,6 +194,7 @@ namespace UI.Desktop
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
@@ -120,6 +202,15 @@ namespace UI.Desktop
             this.button3.Location = new System.Drawing.Point(12, 368);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(180, 30);
+=======
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(12, 377);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(180, 40);
+>>>>>>> main
             this.button3.TabIndex = 3;
             this.button3.Text = "Usuarios";
             this.button3.UseVisualStyleBackColor = true;
@@ -131,6 +222,7 @@ namespace UI.Desktop
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -138,10 +230,20 @@ namespace UI.Desktop
             this.button2.Location = new System.Drawing.Point(12, 317);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 30);
+=======
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 331);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 40);
+>>>>>>> main
             this.button2.TabIndex = 2;
             this.button2.Text = "Usuarios";
             this.button2.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -159,6 +261,26 @@ namespace UI.Desktop
             this.button1.TabIndex = 1;
             this.button1.Text = "Usuarios";
             this.button1.UseVisualStyleBackColor = true;
+=======
+            // btnExamenes
+            // 
+            this.btnExamenes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExamenes.FlatAppearance.BorderSize = 0;
+            this.btnExamenes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnExamenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExamenes.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExamenes.ForeColor = System.Drawing.Color.White;
+            this.btnExamenes.Image = ((System.Drawing.Image)(resources.GetObject("btnExamenes.Image")));
+            this.btnExamenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExamenes.Location = new System.Drawing.Point(12, 285);
+            this.btnExamenes.Name = "btnExamenes";
+            this.btnExamenes.Size = new System.Drawing.Size(180, 40);
+            this.btnExamenes.TabIndex = 1;
+            this.btnExamenes.Text = "Examenes";
+            this.btnExamenes.UseVisualStyleBackColor = true;
+            this.btnExamenes.Click += new System.EventHandler(this.btnExamenes_Click);
+>>>>>>> main
             // 
             // btnUsuarios
             // 
@@ -167,6 +289,7 @@ namespace UI.Desktop
             this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
@@ -174,6 +297,15 @@ namespace UI.Desktop
             this.btnUsuarios.Location = new System.Drawing.Point(12, 136);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 30);
+=======
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 193);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(180, 40);
+>>>>>>> main
             this.btnUsuarios.TabIndex = 0;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
@@ -182,7 +314,7 @@ namespace UI.Desktop
             // pctrLogo
             // 
             this.pctrLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctrLogo.Image")));
-            this.pctrLogo.Location = new System.Drawing.Point(-11, 12);
+            this.pctrLogo.Location = new System.Drawing.Point(-2, 3);
             this.pctrLogo.Name = "pctrLogo";
             this.pctrLogo.Size = new System.Drawing.Size(194, 47);
             this.pctrLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -191,7 +323,7 @@ namespace UI.Desktop
             // 
             // pnlTitulo
             // 
-            this.pnlTitulo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(10)))), ((int)(((byte)(103)))));
             this.pnlTitulo.Controls.Add(this.pctrMinimizar);
             this.pnlTitulo.Controls.Add(this.pctrMaximizar);
             this.pnlTitulo.Controls.Add(this.pctrMenu);
@@ -253,13 +385,26 @@ namespace UI.Desktop
             // 
             // pnlContenedor
             // 
-            this.pnlContenedor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlContenedor.BackColor = System.Drawing.Color.Gray;
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(200, 50);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
+<<<<<<< HEAD
+=======
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
+            this.circularPictureBox1.Location = new System.Drawing.Point(73, 56);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 0;
+            this.circularPictureBox1.TabStop = false;
+            // 
+>>>>>>> main
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,13 +416,16 @@ namespace UI.Desktop
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.Text = "Main";
+            this.Shown += new System.EventHandler(this.Main_Shown);
             this.pnlVertical.ResumeLayout(false);
+            this.pnlVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,10 +441,14 @@ namespace UI.Desktop
         private System.Windows.Forms.PictureBox pctrMaximizar;
         private System.Windows.Forms.PictureBox pctrSalir;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button lbl5;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExamenes;
+        private System.Windows.Forms.Label lblNombrePersona;
+        private System.Windows.Forms.Label lblTipoPersona;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Clases.CircularPictureBox circularPictureBox1;
     }
 }

@@ -11,6 +11,7 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Busines
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Business.Logic.pdb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Data.Database.dll
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Web\bin\Data.Database.pdb
+<<<<<<< HEAD
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\UI.Web.dll
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\UI.Web.pdb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\bin\Business.Entities.dll
@@ -24,3 +25,18 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.csproj.CopyComplete
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.dll
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.pdb
+=======
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\UI.Web.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\UI.Web.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\Business.Entities.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\Business.Logic.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\Data.Database.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\Business.Entities.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\Business.Logic.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\bin\Data.Database.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.csproj.AssemblyReference.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.csproj.CoreCompileInputs.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.csproj.CopyComplete
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Web\obj\Debug\UI.Web.pdb
+>>>>>>> main

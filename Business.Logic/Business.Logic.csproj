@@ -45,7 +45,11 @@
     <Compile Include="ComisionesLogic.cs" />
     <Compile Include="CursoLogic.cs" />
     <Compile Include="EspecialidadLogic.cs" />
+<<<<<<< HEAD
     <Compile Include="InscripcionLogic.cs" />
+=======
+    <Compile Include="ExamenesLogic.cs" />
+>>>>>>> main
     <Compile Include="MateriasLogic.cs" />
     <Compile Include="PersonaLogic.cs" />
     <Compile Include="PlanLogic.cs" />
