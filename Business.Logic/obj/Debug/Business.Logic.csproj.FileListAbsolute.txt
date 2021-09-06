@@ -9,3 +9,25 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Logic\bin
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Entities.pdb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Logic\bin\Debug\Data.Database.pdb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Logic.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Logic.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Entities.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\bin\Debug\Data.Database.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Entities.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\bin\Debug\Data.Database.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.AssemblyReference.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.CoreCompileInputs.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.pdb
+C:\Users\lucab\Desktop\TP2S\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\lucab\Desktop\TP2S\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\lucab\Desktop\TP2S\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\lucab\Desktop\TP2S\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\lucab\Desktop\TP2S\Business.Logic\bin\Debug\Business.Entities.pdb
+C:\Users\lucab\Desktop\TP2S\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\lucab\Desktop\TP2S\Business.Logic\obj\Debug\Business.Logic.csprojAssemblyReference.cache
+C:\Users\lucab\Desktop\TP2S\Business.Logic\obj\Debug\Business.Logic.csproj.CoreCompileInputs.cache
+C:\Users\lucab\Desktop\TP2S\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
+C:\Users\lucab\Desktop\TP2S\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\lucab\Desktop\TP2S\Business.Logic\obj\Debug\Business.Logic.pdb

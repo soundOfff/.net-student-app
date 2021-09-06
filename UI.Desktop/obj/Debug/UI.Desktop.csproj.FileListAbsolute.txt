@@ -18,3 +18,48 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\obj\Deb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.UsuarioDesktop.resources
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.exe.config
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.formLogin.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.exe
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Entities.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Logic.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Data.Database.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Entities.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Logic.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Data.Database.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.AssemblyReference.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.ApplicationForm.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.formLogin.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Main.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.UsuarioDesktop.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Usuarios.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.CoreCompileInputs.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.CopyComplete
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.exe
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Materias.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\UI.Desktop.exe
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\UI.Desktop.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Business.Entities.dll
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Business.Logic.dll
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Data.Database.dll
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Business.Entities.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Business.Logic.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\bin\Debug\Data.Database.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.csprojAssemblyReference.cache
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.ApplicationForm.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.formLogin.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.Main.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.UsuarioDesktop.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.Materias.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.Usuarios.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.cache
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.csproj.CoreCompileInputs.cache
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.csproj.CopyComplete
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.exe
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.pdb
+C:\Users\lucab\Desktop\TP2S\UI.Desktop\obj\Debug\UI.Desktop.Examenes.resources
