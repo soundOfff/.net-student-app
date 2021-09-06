@@ -34,7 +34,7 @@ namespace UI.Desktop
 
         private void AbrirFormInPanel(Form FormHijo)
         {
-            if(this.pnlContenedor.Controls.Count > 0)
+            if (this.pnlContenedor.Controls.Count > 0)
             {
                 this.pnlContenedor.Controls.RemoveAt(0);
             }
@@ -44,6 +44,8 @@ namespace UI.Desktop
             this.pnlContenedor.Tag = FormHijo;
             FormHijo.Show();
         }
+
+
 
         private void pctrMenu_Click(object sender, EventArgs e)
         {
@@ -88,6 +90,11 @@ namespace UI.Desktop
             AbrirFormInPanel(new Usuarios());
         }
 
+<<<<<<< HEAD
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new TestDiseñoInscripcionUser());
+=======
         private void Main_Shown(object sender, EventArgs e)
         {
             formLogin fLogin = new formLogin();
@@ -125,6 +132,7 @@ namespace UI.Desktop
         private void btnExamenes_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new Examenes(_personaRegistrada));
+>>>>>>> main
         }
     }
 }

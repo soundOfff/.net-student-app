@@ -40,6 +40,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -47,7 +49,11 @@
     <Compile Include="ComisionAdapter.cs" />
     <Compile Include="CursoAdapter.cs" />
     <Compile Include="EspecialidadAdapter.cs" />
+<<<<<<< HEAD
+    <Compile Include="InscripcionAdapter.cs" />
+=======
     <Compile Include="ExamenesAdapter.cs" />
+>>>>>>> main
     <Compile Include="MateriaAdapter.cs" />
     <Compile Include="PersonaAdapter.cs" />
     <Compile Include="PlanAdapter.cs" />
