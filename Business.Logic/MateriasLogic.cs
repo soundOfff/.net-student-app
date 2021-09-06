@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,11 +31,12 @@ namespace Business.Logic
             return _materiasData.GetOne(idMateria);
         }
 
-        /*public Materia GetOne(string nombreUsuario, string clave)
+
+        public ArrayList getDatosInscripcion()
         {
-            return _materiasData.GetOne(nombreUsuario, clave);
+            return _materiasData.getDatosInscripcion();
         }
-        */
+
         public void Delete(int idMateria)
         {
             _materiasData.Delete(idMateria);

@@ -52,7 +52,7 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            UsuarioDesktop formTest = new UsuarioDesktop(ApplicationForm.ModoForm.Alta);
+            UsuariosDesktop formTest = new UsuariosDesktop(ApplicationForm.ModoForm.Alta);
             formTest.ShowDialog();
             Listar();
         }
@@ -66,7 +66,7 @@ namespace UI.Desktop
             else
             {
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
-                UsuarioDesktop formTest = new UsuarioDesktop( ID, ApplicationForm.ModoForm.Baja);
+                UsuariosDesktop formTest = new UsuariosDesktop( ID, ApplicationForm.ModoForm.Baja);
                 formTest.ShowDialog();
                 Listar();
             }
@@ -80,12 +80,28 @@ namespace UI.Desktop
             }
             else { 
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
-                UsuarioDesktop formTest = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+                UsuariosDesktop formTest = new UsuariosDesktop(ID, ApplicationForm.ModoForm.Modificacion);
                 formTest.ShowDialog();
                 Listar();
             }
         }
 
+<<<<<<< HEAD
+        private void Usuarios_Shown(object sender, EventArgs e)
+        {
+            formLogin fLogin = new formLogin();
+            if (fLogin.ShowDialog() != DialogResult.OK)
+            {
+                this.Dispose();
+            }
+        }
 
+        private void tlUsuarios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+=======
+
+>>>>>>> main
     }
 }

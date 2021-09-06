@@ -12,6 +12,22 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Deb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.exe
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.pdb
 C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe.config
+<<<<<<< HEAD
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe.config
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Entities.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Logic.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\Data.Database.dll
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Entities.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Logic.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\bin\Debug\Data.Database.pdb
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csprojAssemblyReference.cache
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.exe
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.pdb
+=======
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe.config
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.pdb
@@ -26,3 +42,4 @@ D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de soft
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.exe
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.pdb
+>>>>>>> main

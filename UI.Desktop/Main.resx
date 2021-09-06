@@ -7213,19 +7213,15 @@
   </data>
   <data name="lbl5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAABYkAAAWJAW1onfoAAAJsSURBVEhLxddLqE1xFMfxW5Si
-        DIg8BmKiDGRmTkZkICIZkEwMZCDJoxQKRXlcpJRHEQploiSKojzzCFHeopTkmej4/ra7jrX/5+dy3IFf
-        feqetdZ+3L1Pe/9PR6PRaMcgrMctfMQXPMBujIbbxrLF35iFP2U53LYtbNFYgch3HMBczMEWvEPkINw+
-        amyxMAWRixiMcqY3DiGyFOVMjS0W7kK5A9fPTkL5CneCTbaYTEBE99jNZGMRWQQ3U7HFZCWUt+gDN1PS
-        7VAOw/UrtpjsgHIDru/oy6Wcg+tXbDHZBeUqXN/ZC+UCXL9ii8lOKO0ceD+U83D9ii0m/+3A/3Kp90Hp
-        0aXeDOU+XN85BuU0XL9ii8kCREbBzZSeQ9kG16/YYjISkQ1wM5me35HJcDMVWyzsQWQS3IzoJD9BuQQ3
-        02SLhQHIb59VGIjo94P+0w+IjEfeRwtbNM6izCPoS/et+vQrL+H2UWOLRhz4Hp79/LMWPcu1KlFewO2j
-        xha76BJOxULEwXSZ1ZuJ1ViL+V21aVA+Qy+X6ci3pMYVh2M74ouSsw5uG9HJuByBXpe1+doHaClT5jUe
-        4jHGodwm6Et4GU/hbscaNOfzhksQeYLFGIM8044RmIdriGxE1c+DWidFTiD3ekK3J7IJVb0c6kREi7ey
-        3y5d3sgZNHt5KBxF5DqGwM11R6vO44jcRC80Z/Jwpl8LOTqZv7nfw7AVWmVG9LZqmW0pJDNQ5gp0z2Zj
-        IrQK1ZwW/LqUZZbB7bvbA0tf6KHxHu1EC4ihcPus2KKh+6MHhC7bbbyCHjD60fYGepSegp5y/eH2kTQ6
-        fgCuTGEQm4tJiQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAbNJREFUWEfV
+        mN1RwzAMx5OyAOswBa8MwCuL8HE8lOMBONZhAfYp+lt2KsmOHTtxrvzudJFcSVYtx0k7EKcgo9A3lCqq
+        Ayr4x8X41nShJfflrAxhA2DTZh7ddVZGbYvNL7F2nq5t4oJz8JcQft2KIWZz+0X4YcvpztcEFNqTk3gl
+        rO3gQg7P3gw432TARqRyYwzy6KwzuxcD+4NVpx9ZnfxcWyRk51pVbKNE2tCf/DUQxSijE5jji1WHnzNa
+        iGhgW3hTv7GhSM6rB/1hJg4xIcUWQSSwX1lVWL+J2Q9WgrzfrCqy8/UoBjlfWFUU57IOsFl8y1jXLZqe
+        XezzSxI4HYbDu9cl8Muz8bMJuT5ZVSybY8NikAfniKUqv3FWy5+SOxILxttXRFAdYEB8Yo+0nV9rikEs
+        5MFZZ5pzri2Gr1fD/aRP1K4O7416+FaXwNZjDblbisGzRsbFhTA7FMPf+JokFHFDkqJ7MeTvb/9S7A5t
+        Sr3rJmk5UBGQkhI0VzHO2osI7y+BpUluEyJpKiYsaQhuSxKzKs/cz9RWVue5qGJAKIhE3cZCeDz9BwGN
+        8R0HWcgw/AGhJREexCV38wAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

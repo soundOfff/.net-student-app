@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,27 +14,30 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class UsuarioDesktop : ApplicationForm
+    public partial class UsuariosDesktop : ApplicationForm
     {
-        private Usuario _usuarioActual;
+        private Business.Entities.Usuario _usuarioActual;
+        private byte[] imgTemp;
 
-        public Usuario UsuarioActual { get { return _usuarioActual; } set { _usuarioActual = value; } }
+        public Business.Entities.Usuario UsuarioActual { get { return _usuarioActual; } set { _usuarioActual = value; } }
 
 
-        public UsuarioDesktop(ModoForm modo) : this()
+        public UsuariosDesktop(ModoForm modo) : this()
         {
             _modo = modo;
         }
 
-        public UsuarioDesktop(int ID, ModoForm modo) : this()
+        public UsuariosDesktop(int ID, ModoForm modo) : this()
         {
             UsuarioLogic ul = new UsuarioLogic();
             _usuarioActual = ul.GetOne(ID);
             _modo = modo;
             MapearDeDatos();
+            var ms = new MemoryStream(_usuarioActual.Imagen);
+            pictureBox1.Image = Image.FromStream(ms);
         }
 
-        public UsuarioDesktop()
+        public UsuariosDesktop()
         {
             InitializeComponent();
         }
@@ -69,7 +73,7 @@ namespace UI.Desktop
         {
             if (_modo == ModoForm.Alta)
             {
-                _usuarioActual = new Usuario();
+                _usuarioActual = new Business.Entities.Usuario();
                 _usuarioActual.State = BusinessEntity.States.New;
             }
             else if (_modo == ModoForm.Modificacion)
@@ -89,8 +93,11 @@ namespace UI.Desktop
 
             UsuarioActual.Clave = this.txtClave.Text;
 
-            UsuarioActual.Clave = this.txtConfirmarClave.Text;            
-
+            UsuarioActual.Clave = this.txtConfirmarClave.Text;
+            
+            // Si tiene img que no la cambie
+            UsuarioActual.Imagen = imgTemp;
+            
         }
 
         public override void GuardarCambios()
@@ -181,6 +188,25 @@ namespace UI.Desktop
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnInputImg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog getImage = new OpenFileDialog();
+            getImage.InitialDirectory = "C:\\";
+            getImage.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG (*.png)|*.png";
+            if (getImage.ShowDialog() == DialogResult.OK)
+            {
+                // Para leer la img y convertirla a un array de bytes
+                imgTemp = File.ReadAllBytes(getImage.FileName);
+                var ms = new MemoryStream(imgTemp);
+                pictureBox1.Image = Image.FromStream(ms);
+            }
+            else
+            {
+                MessageBox.Show("No se selecciono una imagen");
+            }
+            
         }
     }
 }
