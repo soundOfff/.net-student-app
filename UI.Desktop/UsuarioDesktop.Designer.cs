@@ -46,7 +46,12 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInputImg = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -74,6 +79,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblClave, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -248,16 +254,47 @@
             this.txtID.Size = new System.Drawing.Size(232, 20);
             this.txtID.TabIndex = 10;
             // 
-            // UsuarioDesktop
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.btnInputImg);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(87, 283);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 64);
+            this.panel1.TabIndex = 19;
+            // 
+            // btnInputImg
+            // 
+            this.btnInputImg.Location = new System.Drawing.Point(124, 14);
+            this.btnInputImg.Name = "btnInputImg";
+            this.btnInputImg.Size = new System.Drawing.Size(34, 29);
+            this.btnInputImg.TabIndex = 20;
+            this.btnInputImg.Text = "button1";
+            this.btnInputImg.UseVisualStyleBackColor = true;
+            this.btnInputImg.Click += new System.EventHandler(this.btnInputImg_Click);
+            // 
+            // UsuariosDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 350);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UsuarioDesktop";
+            this.Name = "UsuariosDesktop";
             this.Text = "UsuarioDesktop";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -282,5 +319,8 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnInputImg;
     }
 }

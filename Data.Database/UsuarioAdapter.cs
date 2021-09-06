@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using Business.Entities;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 
 namespace Data.Database
 {
@@ -80,7 +81,18 @@ namespace Data.Database
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.EMail = (string)drUsuarios["email"];
                     usr.Clave = (string)drUsuarios["clave"];
+                    usr.IDpersona = (int)drUsuarios["id_persona"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
+
+                    if (!drUsuarios.IsDBNull(drUsuarios.GetOrdinal("imagen")))
+                    {
+                        usr.Imagen = (byte[])drUsuarios["imagen"];
+                    }
+                    else
+                    {
+                        setDefaultImage(usr);
+                    }
+
                     usuarios.Add(usr);
                 }
                     drUsuarios.Close();
@@ -95,6 +107,12 @@ namespace Data.Database
                 this.CloseConnection();
             }
             return usuarios;
+        }
+        private void setDefaultImage(Usuario usr)
+        {
+            Image img = Image.FromFile(@"C:\Users\Ignacio Brasca\Desktop\img\def.png");
+            ImageConverter _imageConverter = new ImageConverter();
+            usr.Imagen = (byte[]) _imageConverter.ConvertTo(img, typeof(byte[]));
         }
 
         public Business.Entities.Usuario GetOne(string nombreUsuario, string clave)
@@ -115,7 +133,17 @@ namespace Data.Database
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.EMail = (string)drUsuarios["email"];
                     usr.Clave = (string)drUsuarios["clave"];
+                    usr.IDpersona = (int)drUsuarios["id_persona"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
+                    if (!drUsuarios.IsDBNull(drUsuarios.GetOrdinal("imagen")))
+                    {
+                        usr.Imagen = (byte[])drUsuarios["imagen"];
+                    }
+                    else
+                    {
+                        setDefaultImage(usr);
+                    }
+
                 }
                 drUsuarios.Close();
             }
@@ -148,7 +176,18 @@ namespace Data.Database
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.EMail = (string)drUsuarios["email"];
                     usr.Clave = (string)drUsuarios["clave"];
+                    usr.IDpersona = (int)drUsuarios["id_persona"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
+                    
+                    if (!drUsuarios.IsDBNull(drUsuarios.GetOrdinal("imagen")))
+                    {
+                        usr.Imagen = (byte[])drUsuarios["imagen"];
+                    }
+                    else
+                    {
+                        setDefaultImage(usr);
+                    }
+
                 }
                 drUsuarios.Close();
             }
@@ -209,7 +248,8 @@ namespace Data.Database
                     "UPDATE usuarios SET nombre_usuario = @nombre_usuario," +
                     " clave = @clave, habilitado = @habilitado," +
                     " nombre = @nombre, apellido = @apellido," +
-                    " email = @email WHERE id_usuario= @id", SqlConn);
+                    " email = @email, imagen = @imagen" +
+                    " WHERE id_usuario= @id", SqlConn);
 
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
@@ -218,6 +258,13 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
                 cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
                 cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.EMail;
+
+                if (usuario.Imagen is null)
+                {
+                    setDefaultImage(usuario);
+                }
+
+                cmdSave.Parameters.Add("@imagen", SqlDbType.Image).Value = usuario.Imagen;
                 cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)
@@ -237,8 +284,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into usuarios(nombre_usuario, clave, habilitado, nombre, apellido, email) " +
-                    "values(@nombre, @clave, @habilitado, @nombre, @apellido, @email) " +
+                    "insert into usuarios(nombre_usuario, clave, habilitado, nombre, apellido, email ,imagen) " +
+                    "values(@nombre, @clave, @habilitado, @nombre, @apellido, @email, @imagen) " +
                     "select @@identity", SqlConn);
                     // Esta linea es para recuperar el id que asigno el sql automaticamente
 
@@ -248,6 +295,13 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
                 cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
                 cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.EMail;
+                
+                if (usuario.Imagen.Length == 0)
+                {
+                    setDefaultImage(usuario);
+                }
+                
+                cmdSave.Parameters.Add("@imagen", SqlDbType.Image).Value = usuario.Imagen;
                 usuario.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
             catch (Exception Ex)

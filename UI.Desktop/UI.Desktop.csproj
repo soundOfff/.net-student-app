@@ -52,6 +52,9 @@
     <Compile Include="ApplicationForm.Designer.cs">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +72,18 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestDiseñoInscripcionUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDiseñoInscripcionUser.Designer.cs">
+      <DependentUpon>TestDiseñoInscripcionUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestInscDesktopUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestInscDesktopUser.Designer.cs">
+      <DependentUpon>TestInscDesktopUser.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioDesktop.cs">
       <SubType>Form</SubType>
@@ -101,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestDiseñoInscripcionUser.resx">
+      <DependentUpon>TestDiseñoInscripcionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestInscDesktopUser.resx">
+      <DependentUpon>TestInscDesktopUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>

@@ -1,5 +1,6 @@
 ﻿using Business.Entities;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -41,40 +42,56 @@ namespace Data.Database
             return materias;
         }
 
-        /*public Business.Entities.Materia GetOne(string nombreUsuario, string clave)
+        public ArrayList getDatosInscripcion()
         {
-            Materia usr = new Materia();
+
+            ArrayList datosInscripcion = new ArrayList();
+
             try
             {
+
                 this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios where nombre_usuario = @nombreUsuario and clave = @clave", SqlConn);
-                cmdUsuarios.Parameters.Add("@nombreUsuario", SqlDbType.VarChar, 50).Value = nombreUsuario;
-                cmdUsuarios.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = clave;
-                SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
-                if (drUsuarios.Read())
+                string query = @"SELECT materias.desc_materia, materias.hs_semanales, materias.hs_totales, materias.id_materia,
+	                            cursos.id_curso, planes.desc_plan, comisiones.desc_comision
+                                FROM materias
+                                INNER JOIN planes
+	                                ON planes.id_plan = materias.id_plan
+                                INNER JOIN comisiones
+	                                ON comisiones.id_plan = materias.id_plan
+                                INNER JOIN cursos
+	                                ON cursos.id_materia = materias.id_materia
+	                                AND cursos.id_comision = comisiones.id_comision";
+
+                SqlCommand cmdInscripciones = new SqlCommand(query, SqlConn);
+                SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
+                while (drInscripciones.Read())
                 {
-                    usr.ID = (int)drUsuarios["id_usuario"];
-                    usr.Nombre = (string)drUsuarios["nombre"];
-                    usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
-                    usr.Apellido = (string)drUsuarios["apellido"];
-                    usr.EMail = (string)drUsuarios["email"];
-                    usr.Clave = (string)drUsuarios["clave"];
-                    usr.Habilitado = (bool)drUsuarios["habilitado"];
+                    datosInscripcion.Add(new
+                    {
+                        IDMateria = (int)drInscripciones["id_materia"],
+                        DescMateria = (string)drInscripciones["desc_materia"],
+                        HsSemanales = (int)drInscripciones["hs_semanales"],
+                        HsTotales = (int)drInscripciones["hs_totales"],
+                        IDcurso = (int)drInscripciones["id_curso"],
+                        DescPlan = (string)drInscripciones["desc_plan"],
+                        DescComision = (string)drInscripciones["desc_comision"],
+                    });
                 }
-                drUsuarios.Close();
+                drInscripciones.Close();
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos del usuario", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de materias", Ex);
                 throw ExcepcionManejada;
             }
             finally
             {
                 this.CloseConnection();
             }
-            return usr;
+            return datosInscripcion;
         }
-        */
+
+
 
         public Business.Entities.Materia GetOne(int ID)
         {
@@ -82,13 +99,13 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdMaterias = new SqlCommand("select * from materias where id_materia = @id", SqlConn);
+                SqlCommand cmdMaterias = new SqlCommand("SELECT * FROM materias WHERE id_materia = @id", SqlConn);
                 cmdMaterias.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
                 if (drMaterias.Read())
                 {
-                    mat.ID = (int)drMaterias["id_usuario"];
-                    mat.DescMateria = (string)drMaterias["desc_materias"];
+                    mat.ID = (int)drMaterias["id_materia"];
+                    mat.DescMateria = (string)drMaterias["desc_materia"];
                     mat.HsTotales = (int)drMaterias["hs_totales"];
                     mat.HsSemanales = (int)drMaterias["hs_semanales"];
                 }

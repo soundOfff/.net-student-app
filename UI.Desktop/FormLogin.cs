@@ -13,6 +13,12 @@ namespace UI.Desktop
     public partial class formLogin : Form
     {
         UsuarioLogic ul = new UsuarioLogic();
+
+        public static Business.Entities.Usuario UsuarioActual;
+
+        static Persona _perActual = new Persona();
+
+
         public formLogin()
         {
             InitializeComponent();
@@ -22,7 +28,7 @@ namespace UI.Desktop
         {
             
             //la propiedad Text de los TextBox contiene el texto escrito en ellos
-            if (this.txtUsuario.Text == "Admin" && this.txtPass.Text == "admin")
+            if (this.txtUsuario.Text == "A" && this.txtPass.Text == "a")
             {
                 this.DialogResult = DialogResult.OK;
             }
@@ -30,8 +36,8 @@ namespace UI.Desktop
             {
                 try
                 {
-                    Business.Entities.Usuario usr = ul.GetOne(txtUsuario.Text, txtPass.Text);
-                    if (!String.IsNullOrEmpty(usr.NombreUsuario) )
+                    UsuarioActual = ul.GetOne(txtUsuario.Text, txtPass.Text);
+                    if (!String.IsNullOrEmpty(UsuarioActual.NombreUsuario) )
                     { 
                         this.DialogResult = DialogResult.OK;
                     }
@@ -46,6 +52,7 @@ namespace UI.Desktop
                     MessageBox.Show("Codigo de error: #505", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
 
         }
 

@@ -41,3 +41,5 @@ C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Desktop\obj\De
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Inscripciones.resources
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.UsuariosDesktop.resources
 C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Usuarios.resources
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.TestDiseñoInscripcionUser.resources
+C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.TestInscDesktopUser.resources

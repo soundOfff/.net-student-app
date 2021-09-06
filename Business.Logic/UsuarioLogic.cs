@@ -35,6 +35,9 @@ namespace Business.Logic
             return _usuarioData.GetOne(nombreUsuario, clave);
         }
 
+       
+
+
         public void Delete(int idUsuario)
         {
             _usuarioData.Delete(idUsuario);

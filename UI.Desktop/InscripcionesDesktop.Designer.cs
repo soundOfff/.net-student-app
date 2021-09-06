@@ -42,6 +42,9 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCom = new System.Windows.Forms.Label();
+            this.lblComision = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,6 +177,9 @@
             this.tableLayoutPanel2.Controls.Add(this.lblID, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAceptar, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.btnCancelar, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblCom, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblComision, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -203,6 +209,34 @@
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(232, 13);
             this.lblID.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(349, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Comision";
+            // 
+            // lblCom
+            // 
+            this.lblCom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCom.AutoSize = true;
+            this.lblCom.Location = new System.Drawing.Point(187, 238);
+            this.lblCom.Name = "lblCom";
+            this.lblCom.Size = new System.Drawing.Size(0, 13);
+            this.lblCom.TabIndex = 27;
+            // 
+            // lblComision
+            // 
+            this.lblComision.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblComision.AutoSize = true;
+            this.lblComision.Location = new System.Drawing.Point(561, 28);
+            this.lblComision.Name = "lblComision";
+            this.lblComision.Size = new System.Drawing.Size(0, 13);
+            this.lblComision.TabIndex = 28;
             // 
             // InscripcionesDesktop
             // 
@@ -234,5 +268,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCom;
+        private System.Windows.Forms.Label lblComision;
     }
 }

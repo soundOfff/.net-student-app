@@ -94,5 +94,10 @@ namespace UI.Desktop
                 this.Dispose();
             }
         }
+
+        private void tlUsuarios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

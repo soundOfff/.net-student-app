@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Business.Entities;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
+using System.Windows.Forms;
 
 namespace Data.Database
 {
@@ -18,16 +20,18 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInscripciones = new SqlCommand("SELECT * FROM alumnos_incripciones", SqlConn);
+                SqlCommand cmdInscripciones = new SqlCommand("SELECT * FROM alumnos_inscripciones", SqlConn);
                 SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
                 while (drInscripciones.Read())
                 {
+
+                    // Ver que datos tengo que mostrar
                     Inscripcion ins = new Inscripcion();
-                    ins.ID = (int)drInscripciones["id_inscripcion"];
                     ins.IdAlumno = (int)drInscripciones["id_alumno"];
                     ins.IdCurso = (int)drInscripciones["id_curso"];
                     ins.Condicion = (string)drInscripciones["condicion"];
                     ins.Nota = (int)drInscripciones["nota"];
+                    Inscripciones.Add(ins);
                 }
 
                 drInscripciones.Close();
@@ -47,6 +51,56 @@ namespace Data.Database
 
 
         }
+
+        public ArrayList getAllMateriasInscripcion() {
+
+            ArrayList materiasInscripciones = new ArrayList();
+
+            try
+            {
+
+                this.OpenConnection();
+                string query = @"SELECT alumnos_inscripciones.id_curso, mat.desc_materia, 
+		                        mat.hs_totales, mat.hs_semanales, mat.id_plan, mat.id_materia,
+		                        comisiones.desc_comision, alumnos_inscripciones.id_inscripcion 
+                                FROM alumnos_inscripciones
+                                INNER JOIN cursos
+	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                                INNER JOIN materias mat
+	                                ON mat.id_materia = cursos.id_curso
+                                INNER JOIN comisiones
+	                                ON cursos.id_comision = comisiones.id_comision";
+                SqlCommand cmdInscripciones = new SqlCommand(query, SqlConn);
+                SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
+                while (drInscripciones.Read())
+                {
+                    materiasInscripciones.Add(new {
+                        IDMateria = (int)drInscripciones["id_materia"],
+                        DescMateria = (string)drInscripciones["desc_materia"],
+                        HsSemanales = (int)drInscripciones["hs_semanales"],
+                        HsTotales = (int)drInscripciones["hs_totales"],
+                        IDcurso = (int)drInscripciones["id_curso"],
+                        IDplan = (int)drInscripciones["id_plan"],
+                        DescComision = (string)drInscripciones["desc_comision"],
+                        IDinscripcion = (int)drInscripciones["id_inscripcion"]
+                    });                
+                }
+                drInscripciones.Close();
+            }
+            catch( Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de materias", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return materiasInscripciones;
+        }
+
+
+
 
         public Inscripcion GetOne(int ID)
         {
@@ -82,6 +136,45 @@ namespace Data.Database
             return ins;
 
 
+        }
+
+        public bool getUserAlreadyInscript(int idCurso, int idAlu)
+        {
+            Inscripcion ins = new Inscripcion();
+
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdInscript = new SqlCommand("SELECT * FROM alumnos_inscripciones WHERE id_curso = @idCurso AND id_alumno = @idAlumno", SqlConn);
+                cmdInscript.Parameters.Add("@idCurso", SqlDbType.Int).Value = idCurso;
+                cmdInscript.Parameters.Add("@idAlumno", SqlDbType.Int).Value = idAlu;
+                SqlDataReader drInscripciones = cmdInscript.ExecuteReader();
+                if (drInscripciones.Read())
+                {
+                    //MessageBox.Show(Convert.ToString((int)drInscript["id_inscripcion"]));
+                    // Ver como hacer para sacar el objeto y usar una variable
+                    ins.ID = (int)drInscripciones["id_inscripcion"];
+                    ins.IdAlumno = (int)drInscripciones["id_alumno"];
+                    ins.IdCurso = (int)drInscripciones["id_curso"];
+                    ins.Condicion = (string)drInscripciones["condicion"];
+                    ins.Nota = (int)drInscripciones["nota"];
+
+                    //idStr = Convert.ToString((int)drInscript["id_inscripcion"]);
+                }
+                drInscripciones.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la Inscripcion", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            return ins.ID == 0 ? false : true;
+            
         }
 
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Data.Database;
 using Business.Entities;
+using System.Collections;
 
 namespace Business.Logic
 {
@@ -19,9 +20,19 @@ namespace Business.Logic
             _inscripcionData = new InscripcionAdapter();
         }
 
+        public bool getUserAlreadyInscript(int idCurso, int idAlu)
+        {
+            return _inscripcionData.getUserAlreadyInscript(idCurso, idAlu);
+        }
+
+
         public List<Inscripcion> GetAll()
         {
             return _inscripcionData.GetAll();
+        }
+        public ArrayList GetAllMateriasInscripcion()
+        {
+            return _inscripcionData.getAllMateriasInscripcion();
         }
 
         public Inscripcion GetOne(int idInscripcion)
@@ -38,6 +49,8 @@ namespace Business.Logic
         {
             _inscripcionData.Save(inscripcion);
         }
+
+
 
 
     }

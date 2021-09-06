@@ -14,21 +14,22 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class Inscripciones : Form
+    public partial class TestDiseñoInscripcionUser : Form
     {
 
 
-        public Inscripciones()
+        public TestDiseñoInscripcionUser()
         {
             InitializeComponent();
             this.dgvInscripciones.AutoGenerateColumns = true;
+            //this.dgvInscripciones.RowTemplate.Height = 60;
         }
 
         public void Listar()
         {
             MateriasLogic ml = new MateriasLogic();
             try
-            { 
+            {
                 this.dgvInscripciones.DataSource = ml.getDatosInscripcion();
             }
             catch (Exception Ex)
@@ -51,32 +52,42 @@ namespace UI.Desktop
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             if (this.dgvInscripciones.SelectedRows.Count == 0)
-           {
-               MessageBox.Show("Debe seleccionar un usuario");
-           }
-           else
-           {
+            {
+                MessageBox.Show("Debe seleccionar un usuario");
+            }
+            else
+            {
                 int ID = Convert.ToInt32(this.dgvInscripciones.SelectedRows[0].Cells[0].Value);
                 string DescPlan = Convert.ToString(this.dgvInscripciones.SelectedRows[0].Cells[5].Value);
                 string DescComision = Convert.ToString(this.dgvInscripciones.SelectedRows[0].Cells[6].Value);
                 int IDcur = Convert.ToInt32(this.dgvInscripciones.SelectedRows[0].Cells[4].Value);
-                InscripcionesDesktop formTest = new InscripcionesDesktop(ID, DescPlan, DescComision, IDcur);
-                formTest.ShowDialog();
-                Listar();
+
+                InscripcionLogic il = new InscripcionLogic();
+
+                //var regis = il.getUserAlreadyInscript(IDcur, formLogin.UsuarioActual.IDpersona);
+                // Validar que el usuario no este inscripto en el curso
+
+                if (il.getUserAlreadyInscript(IDcur, formLogin.UsuarioActual.IDpersona))
+                {
+                    MessageBox.Show("Ya te registrarste! ");
+                }
+                else
+                {
+                    MessageBox.Show("Perfecto no estas inscripto");
+                    TestInscDesktopUser formTest = new TestInscDesktopUser(ID, DescPlan, DescComision, IDcur);
+                    formTest.ShowDialog();
+                }
+                
             }
         }
 
-        private void dgvInscripciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Inscripciones_Load(object sender, EventArgs e)
+     
+        private void TestDiseñoInscripcion_Load(object sender, EventArgs e)
         {
             Listar();
         }
 
-        private void Inscripciones_Shown(object sender, EventArgs e)
+        private void TestDiseñoInscripcion_Shown(object sender, EventArgs e)
         {
             formLogin fLogin = new formLogin();
 
@@ -84,6 +95,11 @@ namespace UI.Desktop
             {
                 this.Dispose();
             }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
