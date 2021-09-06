@@ -14,18 +14,29 @@ namespace UI.Desktop
 {
     public partial class Examenes : Form
     {
-        public Examenes()
+        private Persona _personaRegistrada;
+
+        public Persona PersonaRegistrada { get { return _personaRegistrada; } set { _personaRegistrada = value; } }
+
+        public Examenes(Persona per)
         {
             InitializeComponent();
-            this.dgvExamenes.AutoGenerateColumns = false;
+           // this.dgvExamenes.AutoGenerateColumns = false;
+            _personaRegistrada = per;
         }
 
         public void Listar()
         {
-            InscripcionLogic ins = new InscripcionLogic();
+            ExamenesLogic ins = new ExamenesLogic();
             try
-            {
-                this.dgvExamenes.DataSource = ins.GetAll();
+            {   if (_personaRegistrada.TipoPersona == 1)
+                {
+                    this.dgvExamenes.DataSource = ins.GetAll(PersonaRegistrada);
+                }
+                else
+                {
+                    this.dgvExamenes.DataSource = ins.GetAll();
+                }
                 
             }
             catch (Exception Ex)

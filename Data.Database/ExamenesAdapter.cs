@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace Data.Database
 {
-    public class InscripcionAdapter: Adapter
+    public class ExamenesAdapter: Adapter
     {
         public ArrayList GetAll()
         {
@@ -46,6 +46,104 @@ namespace Data.Database
                 drExamenes.Close();
             }
             catch(Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de Inscripciones", Ex);
+                throw ExcepcionManejada;
+
+
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return infoExamenes;
+
+
+        }
+
+        public ArrayList GetAll(Persona per)
+        {
+            ArrayList infoExamenes = new ArrayList();
+            //string query = "";
+            // Usuario usr = new Usuario();
+
+            try
+            {       //ins.IdAlumno = (int)drInscripciones["id_alumno"];
+                    // ins.IdCurso = (int)drInscripciones["id_curso"];
+                /*
+                    string queryID = "";
+                    this.OpenConnection();
+                    SqlCommand cmdID = new SqlCommand(queryID, SqlConn);
+                    cmdID.Parameters.Add("@id_persona", SqlDbType.Int).Value = per.TipoPersona;
+                    SqlDataReader drID = cmdID.ExecuteReader();
+                    while (drID.Read()){
+
+                        usr.ID = (int)drID["id_ususario"]
+
+                    }
+                    this.CloseConnection();
+                                            */ //Ver si conecto al aluimno por id_Persona o id_Usuario
+
+                /*if (per.TipoPersona == 1)
+                {
+                     query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
+                                FROM alumnos_inscripciones 
+                                INNER JOIN cursos 
+	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                                INNER JOIN materias
+	                                ON materias.id_materia = cursos.id_materia
+                                INNER JOIN planes
+	                                ON planes.id_plan = materias.id_plan
+                                INNER JOIN especialidades
+	                                ON especialidades.id_especialidad = planes.id_especialidad
+                                WHERE alumnos_inscripciones.id_alumno = @id_persona";
+                }
+                else
+                {
+                    query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
+                                FROM alumnos_inscripciones 
+                                INNER JOIN cursos 
+	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                                INNER JOIN materias
+	                                ON materias.id_materia = cursos.id_materia
+                                INNER JOIN planes
+	                                ON planes.id_plan = materias.id_plan
+                                INNER JOIN especialidades
+	                                ON especialidades.id_especialidad = planes.id_especialidad
+                         
+                                WHERE alumnos_inscripciones.id_alumno = @id_persona";
+                }*/
+
+               string query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
+                                FROM alumnos_inscripciones 
+                                INNER JOIN cursos 
+	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                                INNER JOIN materias
+	                                ON materias.id_materia = cursos.id_materia
+                                INNER JOIN planes
+	                                ON planes.id_plan = materias.id_plan
+                                INNER JOIN especialidades
+	                                ON especialidades.id_especialidad = planes.id_especialidad
+                                WHERE alumnos_inscripciones.id_alumno = @id_persona";
+
+                this.OpenConnection();
+                SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
+                cmdExamenes.Parameters.Add("@id_persona", SqlDbType.Int).Value = per.ID;
+                SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
+                while (drExamenes.Read())
+                {
+                    infoExamenes.Add(new
+                    {
+                        DescMateria = (string)drExamenes["desc_materia"],
+                        Nota = (int)drExamenes["nota"],
+                        DescEspecialidad = (string)drExamenes["desc_especialidad"],
+                        DescPlan = (string)drExamenes["desc_plan"]
+                    });
+                }
+
+                drExamenes.Close();
+            }
+            catch (Exception Ex)
             {
                 Exception ExcepcionManejada = new Exception("Error al recuperar la lista de Inscripciones", Ex);
                 throw ExcepcionManejada;

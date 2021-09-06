@@ -9,20 +9,25 @@ using System.Collections;
 
 namespace Business.Logic
 {
-    public class InscripcionLogic: BusinessLogic
+    public class ExamenesLogic: BusinessLogic
     {
-        private InscripcionAdapter _inscripcionData;
+        private ExamenesAdapter _inscripcionData;
 
-        public InscripcionAdapter InscripcionData { get { return _inscripcionData; } set { _inscripcionData = value; } }
+        public ExamenesAdapter InscripcionData { get { return _inscripcionData; } set { _inscripcionData = value; } }
         
-        public InscripcionLogic()
+        public ExamenesLogic()
         {
-            _inscripcionData = new InscripcionAdapter();
+            _inscripcionData = new ExamenesAdapter();
         }
 
         public ArrayList GetAll()
         {
             return _inscripcionData.GetAll();
+        }
+
+        public ArrayList GetAll(Persona per)
+        {
+            return _inscripcionData.GetAll(per);
         }
 
         public Inscripcion GetOne(int idInscripcion)

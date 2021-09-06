@@ -124,7 +124,7 @@ namespace UI.Desktop
 
         private void btnExamenes_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new Examenes());
+            AbrirFormInPanel(new Examenes(_personaRegistrada));
         }
     }
 }
