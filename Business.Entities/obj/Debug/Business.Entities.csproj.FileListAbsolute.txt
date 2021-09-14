@@ -1,24 +1,5 @@
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.pdb
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.pdb
-<<<<<<< HEAD
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.pdb
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csprojAssemblyReference.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.pdb
-=======
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.dll
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.pdb
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.dll
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.pdb
-C:\Users\lucab\Desktop\TP2S\Business.Entities\bin\Debug\Business.Entities.dll
-C:\Users\lucab\Desktop\TP2S\Business.Entities\bin\Debug\Business.Entities.pdb
-C:\Users\lucab\Desktop\TP2S\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
-C:\Users\lucab\Desktop\TP2S\Business.Entities\obj\Debug\Business.Entities.dll
-C:\Users\lucab\Desktop\TP2S\Business.Entities\obj\Debug\Business.Entities.pdb
->>>>>>> main
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.dll
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.pdb
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.dll
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.pdb

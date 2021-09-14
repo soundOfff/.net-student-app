@@ -86,7 +86,6 @@ namespace UI.Desktop
             }
         }
 
-<<<<<<< HEAD
         private void Usuarios_Shown(object sender, EventArgs e)
         {
             formLogin fLogin = new formLogin();
@@ -100,8 +99,5 @@ namespace UI.Desktop
         {
 
         }
-=======
-
->>>>>>> main
     }
 }

@@ -52,7 +52,8 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            UsuarioDesktop formTest = new UsuarioDesktop(ApplicationForm.ModoForm.Alta);
+            
+            UsuariosDesktop formTest = new UsuariosDesktop(ApplicationForm.ModoForm.Alta);
             formTest.ShowDialog();
             Listar();
         }
@@ -66,7 +67,7 @@ namespace UI.Desktop
             else
             {
                 int ID = ((Business.Entities.Usuario)this.dgvMaterias.SelectedRows[0].DataBoundItem).ID;
-                UsuarioDesktop formTest = new UsuarioDesktop( ID, ApplicationForm.ModoForm.Baja);
+                UsuariosDesktop formTest = new UsuariosDesktop( ID, ApplicationForm.ModoForm.Baja);
                 formTest.ShowDialog();
                 Listar();
             }
@@ -80,7 +81,7 @@ namespace UI.Desktop
             }
             else { 
                 int ID = ((Business.Entities.Usuario)this.dgvMaterias.SelectedRows[0].DataBoundItem).ID;
-                UsuarioDesktop formTest = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+                UsuariosDesktop formTest = new UsuariosDesktop(ID, ApplicationForm.ModoForm.Modificacion);
                 formTest.ShowDialog();
                 Listar();
             }

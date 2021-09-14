@@ -64,7 +64,7 @@ namespace UI.Desktop
             {
                 _insActual.IdCurso = _idCurso;
                 _insActual.Condicion = "Inscripto";
-                _insActual.IdAlumno = formLogin.UsuarioActual.IDpersona;
+                _insActual.IdAlumno = Main._personaRegistrada.ID;
                 MessageBox.Show(Convert.ToString(_insActual.IdAlumno));
                 MessageBox.Show(Convert.ToString(_insActual.IdCurso));
 

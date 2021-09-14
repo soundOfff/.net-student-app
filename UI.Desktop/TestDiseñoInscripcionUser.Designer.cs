@@ -183,8 +183,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TestDiseñoInscripcionUser";
             this.Text = "TestDiseñoInscripcion";
-            this.Load += new System.EventHandler(this.TestDiseñoInscripcion_Load);
-            this.Shown += new System.EventHandler(this.TestDiseñoInscripcion_Shown);
+
             ((System.ComponentModel.ISupportInitialize)(this.tsbNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.panel2.ResumeLayout(false);

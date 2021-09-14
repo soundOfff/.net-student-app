@@ -1,30 +1,9 @@
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\bin\Debug\Util.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\bin\Debug\Util.pdb
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\obj\Debug\Util.csprojAssemblyReference.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\obj\Debug\Util.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\obj\Debug\Util.pdb
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.pdb
-C:\Users\Ignacio Brasca\Desktop\TP2Academia\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CopyComplete
-<<<<<<< HEAD
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\bin\Debug\Util.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\bin\Debug\Util.pdb
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.pdb
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\obj\Debug\Util.csprojAssemblyReference.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CopyComplete
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\obj\Debug\Util.dll
-C:\Users\Ignacio Brasca\Desktop\TP2Academia2\Tp2Grupo6Academia\Util\obj\Debug\Util.pdb
-=======
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\bin\Debug\Util.dll
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\bin\Debug\Util.pdb
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.dll
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.pdb
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.AssemblyReference.cache
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CopyComplete
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\obj\Debug\Util.dll
-D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\Util\obj\Debug\Util.pdb
->>>>>>> main
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\bin\Debug\Util.dll
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\bin\Debug\Util.pdb
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.dll
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\bin\Debug\Business.Entities.pdb
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\obj\Debug\Util.csprojAssemblyReference.cache
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\obj\Debug\Util.csproj.CopyComplete
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\obj\Debug\Util.dll
+C:\Users\Ignacio Brasca\Desktop\TpBack\Tp2Grupo6Academia\Util\obj\Debug\Util.pdb

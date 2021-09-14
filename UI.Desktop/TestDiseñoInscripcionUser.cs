@@ -67,7 +67,7 @@ namespace UI.Desktop
                 //var regis = il.getUserAlreadyInscript(IDcur, formLogin.UsuarioActual.IDpersona);
                 // Validar que el usuario no este inscripto en el curso
 
-                if (il.getUserAlreadyInscript(IDcur, formLogin.UsuarioActual.IDpersona))
+                if (il.getUserAlreadyInscript(IDcur, Main._personaRegistrada.ID))
                 {
                     MessageBox.Show("Ya te registrarste! ");
                 }
@@ -85,16 +85,6 @@ namespace UI.Desktop
         private void TestDiseñoInscripcion_Load(object sender, EventArgs e)
         {
             Listar();
-        }
-
-        private void TestDiseñoInscripcion_Shown(object sender, EventArgs e)
-        {
-            formLogin fLogin = new formLogin();
-
-            if (fLogin.ShowDialog() != DialogResult.OK)
-            {
-                this.Dispose();
-            }
         }
 
         private void btnSalir_Click_1(object sender, EventArgs e)

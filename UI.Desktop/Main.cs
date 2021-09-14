@@ -14,7 +14,7 @@ namespace UI.Desktop
 {
     public partial class Main : Form
     {
-        Persona _personaRegistrada = new Persona();
+        static public Persona _personaRegistrada = new Persona();
         public Persona PersonaRegistrada { get { return _personaRegistrada; } set { _personaRegistrada = value; } }
 
         public Main()
@@ -90,11 +90,6 @@ namespace UI.Desktop
             AbrirFormInPanel(new Usuarios());
         }
 
-<<<<<<< HEAD
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new TestDiseñoInscripcionUser());
-=======
         private void Main_Shown(object sender, EventArgs e)
         {
             formLogin fLogin = new formLogin();
@@ -132,7 +127,11 @@ namespace UI.Desktop
         private void btnExamenes_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new Examenes(_personaRegistrada));
->>>>>>> main
+        }
+
+        private void lbl5_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new TestDiseñoInscripcionUser());
         }
     }
 }
