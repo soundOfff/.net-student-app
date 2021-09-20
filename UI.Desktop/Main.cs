@@ -15,6 +15,11 @@ namespace UI.Desktop
     public partial class Main : Form
     {
         static public Persona _personaRegistrada = new Persona();
+        private Point _posAntImg;
+        private Point _posAntNom;
+        private Point _posAntTipo;
+
+
         public Persona PersonaRegistrada { get { return _personaRegistrada; } set { _personaRegistrada = value; } }
 
         public Main()
@@ -49,14 +54,35 @@ namespace UI.Desktop
 
         private void pctrMenu_Click(object sender, EventArgs e)
         {
-            if(this.pnlVertical.Width == 200)
+
+            if (this.pnlVertical.Width == 200)
             {
                 this.pnlVertical.Width = 60;
+                this.lblNombrePersona.Location = new Point(
+                    this.lblPosNombre.Location.X,
+                    this.lblPosNombre.Location.Y
+                    );
+                this.lblTipoPersona.Location = new Point(
+                    this.lblPosTipo.Location.X,
+                    this.lblPosTipo.Location.Y
+                    );
+                this.cirPicImg.Location = new Point(
+                    this.lblPosImg.Location.X,
+                    this.lblPosImg.Location.Y
+                    );
+                this.cirPicImg.Height = 45;
+                this.cirPicImg.Width = 45;
             }
             else
             {
                 this.pnlVertical.Width = 200;
+                this.lblTipoPersona.Location = _posAntTipo;
+                this.lblNombrePersona.Location = _posAntNom;
+                this.cirPicImg.Location = _posAntImg;
+                this.cirPicImg.Height = 75;
+                this.cirPicImg.Width= 75;
             }
+
         }
 
         private void pctrSalir_Click(object sender, EventArgs e)
@@ -132,6 +158,13 @@ namespace UI.Desktop
         private void lbl5_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new TestDiseñoInscripcionUser());
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            _posAntImg = this.cirPicImg.Location;
+            _posAntNom = this.lblNombrePersona.Location;
+            _posAntTipo = this.lblTipoPersona.Location;
         }
     }
 }
