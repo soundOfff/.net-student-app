@@ -31,7 +31,6 @@ namespace UI.Desktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlVertical = new System.Windows.Forms.Panel();
-            this.circularPictureBox1 = new UI.Desktop.Clases.CircularPictureBox();
             this.lblTipoPersona = new System.Windows.Forms.Label();
             this.lblNombrePersona = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Button();
@@ -48,22 +47,29 @@ namespace UI.Desktop
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblPosNombre = new System.Windows.Forms.Label();
+            this.lblPosTipo = new System.Windows.Forms.Label();
+            this.lblPosImg = new System.Windows.Forms.Label();
+            this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.pnlVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVertical
             // 
             this.pnlVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(10)))), ((int)(((byte)(103)))));
-            this.pnlVertical.Controls.Add(this.circularPictureBox1);
             this.pnlVertical.Controls.Add(this.lblTipoPersona);
             this.pnlVertical.Controls.Add(this.lblNombrePersona);
+            this.pnlVertical.Controls.Add(this.lblPosImg);
+            this.pnlVertical.Controls.Add(this.lblPosTipo);
+            this.pnlVertical.Controls.Add(this.lblPosNombre);
+            this.pnlVertical.Controls.Add(this.cirPicImg);
             this.pnlVertical.Controls.Add(this.lbl5);
             this.pnlVertical.Controls.Add(this.btnLogout);
             this.pnlVertical.Controls.Add(this.button3);
@@ -76,16 +82,6 @@ namespace UI.Desktop
             this.pnlVertical.Name = "pnlVertical";
             this.pnlVertical.Size = new System.Drawing.Size(200, 600);
             this.pnlVertical.TabIndex = 0;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
-            this.circularPictureBox1.Location = new System.Drawing.Point(73, 56);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 0;
-            this.circularPictureBox1.TabStop = false;
             // 
             // lblTipoPersona
             // 
@@ -199,7 +195,7 @@ namespace UI.Desktop
             this.btnExamenes.Name = "btnExamenes";
             this.btnExamenes.Size = new System.Drawing.Size(180, 40);
             this.btnExamenes.TabIndex = 1;
-            this.btnExamenes.Text = "Examenes";
+            this.btnExamenes.Text = "  Examenes";
             this.btnExamenes.UseVisualStyleBackColor = true;
             this.btnExamenes.Click += new System.EventHandler(this.btnExamenes_Click);
             // 
@@ -303,6 +299,40 @@ namespace UI.Desktop
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
+            // lblPosNombre
+            // 
+            this.lblPosNombre.AutoSize = true;
+            this.lblPosNombre.Location = new System.Drawing.Point(12, 130);
+            this.lblPosNombre.Name = "lblPosNombre";
+            this.lblPosNombre.Size = new System.Drawing.Size(0, 13);
+            this.lblPosNombre.TabIndex = 7;
+            // 
+            // lblPosTipo
+            // 
+            this.lblPosTipo.AutoSize = true;
+            this.lblPosTipo.Location = new System.Drawing.Point(12, 160);
+            this.lblPosTipo.Name = "lblPosTipo";
+            this.lblPosTipo.Size = new System.Drawing.Size(0, 13);
+            this.lblPosTipo.TabIndex = 8;
+            // 
+            // lblPosImg
+            // 
+            this.lblPosImg.AutoSize = true;
+            this.lblPosImg.Location = new System.Drawing.Point(10, 75);
+            this.lblPosImg.Name = "lblPosImg";
+            this.lblPosImg.Size = new System.Drawing.Size(0, 13);
+            this.lblPosImg.TabIndex = 9;
+            // 
+            // cirPicImg
+            // 
+            this.cirPicImg.Image = ((System.Drawing.Image)(resources.GetObject("cirPicImg.Image")));
+            this.cirPicImg.Location = new System.Drawing.Point(73, 56);
+            this.cirPicImg.Name = "cirPicImg";
+            this.cirPicImg.Size = new System.Drawing.Size(75, 75);
+            this.cirPicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cirPicImg.TabIndex = 0;
+            this.cirPicImg.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,16 +344,17 @@ namespace UI.Desktop
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.pnlVertical.ResumeLayout(false);
             this.pnlVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,6 +378,9 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblNombrePersona;
         private System.Windows.Forms.Label lblTipoPersona;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Clases.CircularPictureBox circularPictureBox1;
+        private Clases.CircularPictureBox cirPicImg;
+        private System.Windows.Forms.Label lblPosImg;
+        private System.Windows.Forms.Label lblPosTipo;
+        private System.Windows.Forms.Label lblPosNombre;
     }
 }
