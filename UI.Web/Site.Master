@@ -6,6 +6,7 @@
     </head>
     <body>
         <form id="bodyForm" runat="server">
+
             <asp:Menu runat="server" DataSourceID="SiteMapDataSource">
             </asp:Menu>
             <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
@@ -13,6 +14,7 @@
                 <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
+           
         </form>
     </body>
 </html>

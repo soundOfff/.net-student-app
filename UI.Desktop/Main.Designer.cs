@@ -33,7 +33,10 @@ namespace UI.Desktop
             this.pnlVertical = new System.Windows.Forms.Panel();
             this.lblTipoPersona = new System.Windows.Forms.Label();
             this.lblNombrePersona = new System.Windows.Forms.Label();
-            this.lbl5 = new System.Windows.Forms.Button();
+            this.lblPosImg = new System.Windows.Forms.Label();
+            this.lblPosTipo = new System.Windows.Forms.Label();
+            this.lblPosNombre = new System.Windows.Forms.Label();
+            this.btnInscripciones = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@ namespace UI.Desktop
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblPosNombre = new System.Windows.Forms.Label();
-            this.lblPosTipo = new System.Windows.Forms.Label();
-            this.lblPosImg = new System.Windows.Forms.Label();
             this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.pnlVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
@@ -70,7 +70,7 @@ namespace UI.Desktop
             this.pnlVertical.Controls.Add(this.lblPosTipo);
             this.pnlVertical.Controls.Add(this.lblPosNombre);
             this.pnlVertical.Controls.Add(this.cirPicImg);
-            this.pnlVertical.Controls.Add(this.lbl5);
+            this.pnlVertical.Controls.Add(this.btnInscripciones);
             this.pnlVertical.Controls.Add(this.btnLogout);
             this.pnlVertical.Controls.Add(this.button3);
             this.pnlVertical.Controls.Add(this.button2);
@@ -106,24 +106,48 @@ namespace UI.Desktop
             this.lblNombrePersona.TabIndex = 0;
             this.lblNombrePersona.Text = "label1";
             // 
-            // lbl5
+            // lblPosImg
             // 
-            this.lbl5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.lbl5.FlatAppearance.BorderSize = 0;
-            this.lbl5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbl5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbl5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.ForeColor = System.Drawing.Color.White;
-            this.lbl5.Image = ((System.Drawing.Image)(resources.GetObject("lbl5.Image")));
-            this.lbl5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl5.Location = new System.Drawing.Point(12, 239);
-            this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(180, 40);
-            this.lbl5.TabIndex = 5;
-            this.lbl5.Text = "Usuario";
-            this.lbl5.UseVisualStyleBackColor = true;
-            this.lbl5.Click += new System.EventHandler(this.lbl5_Click);
+            this.lblPosImg.AutoSize = true;
+            this.lblPosImg.Location = new System.Drawing.Point(10, 75);
+            this.lblPosImg.Name = "lblPosImg";
+            this.lblPosImg.Size = new System.Drawing.Size(0, 13);
+            this.lblPosImg.TabIndex = 9;
+            // 
+            // lblPosTipo
+            // 
+            this.lblPosTipo.AutoSize = true;
+            this.lblPosTipo.Location = new System.Drawing.Point(12, 160);
+            this.lblPosTipo.Name = "lblPosTipo";
+            this.lblPosTipo.Size = new System.Drawing.Size(0, 13);
+            this.lblPosTipo.TabIndex = 8;
+            // 
+            // lblPosNombre
+            // 
+            this.lblPosNombre.AutoSize = true;
+            this.lblPosNombre.Location = new System.Drawing.Point(12, 130);
+            this.lblPosNombre.Name = "lblPosNombre";
+            this.lblPosNombre.Size = new System.Drawing.Size(0, 13);
+            this.lblPosNombre.TabIndex = 7;
+            // 
+            // btnInscripciones
+            // 
+            this.btnInscripciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInscripciones.FlatAppearance.BorderSize = 0;
+            this.btnInscripciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnInscripciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnInscripciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInscripciones.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInscripciones.ForeColor = System.Drawing.Color.White;
+            this.btnInscripciones.Image = ((System.Drawing.Image)(resources.GetObject("btnInscripciones.Image")));
+            this.btnInscripciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInscripciones.Location = new System.Drawing.Point(12, 239);
+            this.btnInscripciones.Name = "btnInscripciones";
+            this.btnInscripciones.Size = new System.Drawing.Size(180, 40);
+            this.btnInscripciones.TabIndex = 5;
+            this.btnInscripciones.Text = "    Inscripciones";
+            this.btnInscripciones.UseVisualStyleBackColor = true;
+            this.btnInscripciones.Click += new System.EventHandler(this.lbl5_Click);
             // 
             // btnLogout
             // 
@@ -299,30 +323,6 @@ namespace UI.Desktop
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
-            // lblPosNombre
-            // 
-            this.lblPosNombre.AutoSize = true;
-            this.lblPosNombre.Location = new System.Drawing.Point(12, 130);
-            this.lblPosNombre.Name = "lblPosNombre";
-            this.lblPosNombre.Size = new System.Drawing.Size(0, 13);
-            this.lblPosNombre.TabIndex = 7;
-            // 
-            // lblPosTipo
-            // 
-            this.lblPosTipo.AutoSize = true;
-            this.lblPosTipo.Location = new System.Drawing.Point(12, 160);
-            this.lblPosTipo.Name = "lblPosTipo";
-            this.lblPosTipo.Size = new System.Drawing.Size(0, 13);
-            this.lblPosTipo.TabIndex = 8;
-            // 
-            // lblPosImg
-            // 
-            this.lblPosImg.AutoSize = true;
-            this.lblPosImg.Location = new System.Drawing.Point(10, 75);
-            this.lblPosImg.Name = "lblPosImg";
-            this.lblPosImg.Size = new System.Drawing.Size(0, 13);
-            this.lblPosImg.TabIndex = 9;
-            // 
             // cirPicImg
             // 
             this.cirPicImg.Image = ((System.Drawing.Image)(resources.GetObject("cirPicImg.Image")));
@@ -370,7 +370,7 @@ namespace UI.Desktop
         private System.Windows.Forms.PictureBox pctrMaximizar;
         private System.Windows.Forms.PictureBox pctrSalir;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button lbl5;
+        private System.Windows.Forms.Button btnInscripciones;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
