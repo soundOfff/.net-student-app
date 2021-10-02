@@ -114,7 +114,7 @@ namespace Data.Database
                                 WHERE alumnos_inscripciones.id_alumno = @id_persona";
                 }*/
 
-               string query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
+               string query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan
                                 FROM alumnos_inscripciones 
                                 INNER JOIN cursos 
 	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
@@ -124,7 +124,7 @@ namespace Data.Database
 	                                ON planes.id_plan = materias.id_plan
                                 INNER JOIN especialidades
 	                                ON especialidades.id_especialidad = planes.id_especialidad
-                                WHERE alumnos_inscripciones.id_alumno = @id_persona";
+                                WHERE alumnos_inscripciones.id_alumno = @id_persona"; // , cursos.id_curso, materias.id_materia, planes.id_plan, especialidades.id_especialidad
 
                 this.OpenConnection();
                 SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
@@ -133,12 +133,15 @@ namespace Data.Database
                 while (drExamenes.Read())
                 {
                     infoExamenes.Add(new
-                    {
+                    {   //id_curos = (int)drExamenes["id_curso"],
+                        //id_materia = (int)drExamenes["id_materia"],
+                        //id_plan = (int)drExamenes["id_plan"],
+                        //id_especialidad = (int)drExamenes["id_especialidad"],
                         DescMateria = (string)drExamenes["desc_materia"],
                         Nota = (int)drExamenes["nota"],
                         DescEspecialidad = (string)drExamenes["desc_especialidad"],
                         DescPlan = (string)drExamenes["desc_plan"]
-                    });
+                    }) ;
                 }
 
                 drExamenes.Close();

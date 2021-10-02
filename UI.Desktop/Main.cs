@@ -132,12 +132,16 @@ namespace UI.Desktop
             {
                 case 1:
                     lblTipoPersona.Text = "Alumno";
+                    btnUsuarios.Visible = false;
                     break;
                 case 2:
                     lblTipoPersona.Text = "Docente";
+
                     break;
                 case 3:
                     lblTipoPersona.Text = "Directivo";
+                    btnUsuarios.Visible = true;
+
                     break;
                 default:
                     break;

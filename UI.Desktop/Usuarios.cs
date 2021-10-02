@@ -24,15 +24,9 @@ namespace UI.Desktop
         public void Listar()
         {
             UsuarioLogic ul = new UsuarioLogic();
-            try
-            {
+            
                 this.dgvUsuarios.DataSource = ul.GetAll();
-            }
-            catch (Exception Ex)
-            {
-                Exception ExepcionManejada = new Exception("Error al obtener todos los usuarios");
-                MessageBox.Show("Codigo de error: #404", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         private void Usuarios_Load(object sender, EventArgs e)
