@@ -65,5 +65,12 @@ namespace UI.Desktop
         {
             this.Dispose();
         }
+
+        private void tsbAgregar_Click(object sender, EventArgs e)
+        {
+            ExamenesABM formTest = new ExamenesABM(_personaRegistrada);
+            formTest.ShowDialog();
+            Listar();
+        }
     }
 }

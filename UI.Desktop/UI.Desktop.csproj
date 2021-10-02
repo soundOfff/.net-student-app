@@ -64,6 +64,12 @@
     <Compile Include="Examenes.Designer.cs">
       <DependentUpon>Examenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExamenesABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamenesABM.Designer.cs">
+      <DependentUpon>ExamenesABM.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Examenes.resx">
       <DependentUpon>Examenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamenesABM.resx">
+      <DependentUpon>ExamenesABM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

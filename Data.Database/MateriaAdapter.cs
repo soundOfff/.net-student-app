@@ -42,6 +42,41 @@ namespace Data.Database
             return materias;
         }
 
+        public List<Materia> GetAll(int idPlan)
+        {
+            List<Materia> materias = new List<Materia>();
+
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdMaterias = new SqlCommand("SELECT * FROM materias " +
+                    "WHERE id_plan = @idPlan", SqlConn);
+                cmdMaterias.Parameters.Add("@idPlan", SqlDbType.Int).Value = idPlan;
+                SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
+                while (drMaterias.Read())
+                {
+                    Materia mat = new Materia();
+                    mat.ID = (int)drMaterias["id_materia"];
+                    mat.DescMateria = (string)drMaterias["desc_materia"];
+                    mat.HsTotales = (int)drMaterias["hs_totales"];
+                    mat.HsSemanales = (int)drMaterias["hs_semanales"];
+                    // Foregin key ?
+                    materias.Add(mat);
+                }
+                drMaterias.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de Materias", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return materias;
+        }
+
         public ArrayList getDatosInscripcion()
         {
 

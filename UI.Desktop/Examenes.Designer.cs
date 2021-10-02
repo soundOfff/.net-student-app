@@ -33,6 +33,7 @@ namespace UI.Desktop
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examenes));
             this.tcInscripciones = new System.Windows.Forms.ToolStripContainer();
             this.tlInscripciones = new System.Windows.Forms.TableLayoutPanel();
             this.dgvExamenes = new System.Windows.Forms.DataGridView();
@@ -44,11 +45,13 @@ namespace UI.Desktop
             this.btnActualizar = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
             this.tcInscripciones.ContentPanel.SuspendLayout();
             this.tcInscripciones.TopToolStripPanel.SuspendLayout();
             this.tcInscripciones.SuspendLayout();
             this.tlInscripciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamenes)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcInscripciones
@@ -183,10 +186,22 @@ namespace UI.Desktop
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbAgregar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(111, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(66, 25);
             this.toolStrip1.TabIndex = 0;
+            // 
+            // tsbAgregar
+            // 
+            this.tsbAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAgregar.Image = ((System.Drawing.Image)(resources.GetObject("tsbAgregar.Image")));
+            this.tsbAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAgregar.Name = "tsbAgregar";
+            this.tsbAgregar.Size = new System.Drawing.Size(23, 22);
+            this.tsbAgregar.Text = "toolStripButton1";
+            this.tsbAgregar.Click += new System.EventHandler(this.tsbAgregar_Click);
             // 
             // Examenes
             // 
@@ -208,6 +223,8 @@ namespace UI.Desktop
             this.tcInscripciones.PerformLayout();
             this.tlInscripciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamenes)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -224,5 +241,6 @@ namespace UI.Desktop
         private System.Windows.Forms.DataGridViewTextBoxColumn DescEspecialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescPlan;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsbAgregar;
     }
 }
