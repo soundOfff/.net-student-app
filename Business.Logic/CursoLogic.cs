@@ -18,12 +18,21 @@ namespace Business.Logic
 
         public CursoLogic()
         {
-            CursoAdapter _cursoData = new CursoAdapter();
+            _cursoData = new CursoAdapter();
         }
 
         public List<Curso> GetAll()
         {
           return _cursoData.GetAll();
+        }
+
+        public List<int> CursosProfesor(int idProfesor)
+        {
+            return _cursoData.CursosProfesor(idProfesor);
+        }
+        public List<Curso> GetAll(int idMateria)
+        {
+            return _cursoData.GetAll(idMateria);
         }
 
         public  Curso GetOne(int idCurso)

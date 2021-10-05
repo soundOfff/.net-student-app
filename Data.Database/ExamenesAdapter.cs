@@ -12,35 +12,51 @@ namespace Data.Database
 {
     public class ExamenesAdapter: Adapter
     {
-        public ArrayList GetAll()
+        public List<Examen> GetAll()
         {
-             ArrayList infoExamenes = new ArrayList();
+
+            List<Examen> examenes = new List<Examen>();
 
             try
             {       //ins.IdAlumno = (int)drInscripciones["id_alumno"];
                     // ins.IdCurso = (int)drInscripciones["id_curso"];
 
-                string query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
-                                FROM alumnos_inscripciones 
-                                INNER JOIN cursos 
-	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
-                                INNER JOIN materias
-	                                ON materias.id_materia = cursos.id_materia
-                                INNER JOIN planes
-	                                ON planes.id_plan = materias.id_plan
-                                INNER JOIN especialidades
-	                                ON especialidades.id_especialidad = planes.id_especialidad";
+                string query = @"SELECT distinct alumnos_inscripciones.id_inscripcion, materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan, personas.legajo
+                            FROM docentes_cursos 
+                            INNER JOIN alumnos_inscripciones
+	                            ON docentes_cursos.id_curso = alumnos_inscripciones.id_curso
+                            INNER JOIN personas
+	                            ON alumnos_inscripciones.id_alumno = personas.id_persona
+                            INNER JOIN cursos 
+	                            ON cursos.id_curso = alumnos_inscripciones.id_curso
+                            INNER JOIN materias
+	                            ON materias.id_materia = cursos.id_materia
+                            INNER JOIN planes
+	                              ON planes.id_plan = materias.id_plan
+                            INNER JOIN especialidades
+	                             ON especialidades.id_especialidad = planes.id_especialidad";
 
                 this.OpenConnection();
                 SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
                 SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
                 while (drExamenes.Read())
                 {
-                    infoExamenes.Add(new { DescMateria = (string)drExamenes["desc_materia"],
+                    Examen exa = new Examen();
+
+                    exa.DescMateria = (string)drExamenes["desc_materia"];
+                    exa.Nota = (int)drExamenes["nota"];
+                    exa.DescEspecialidad = (string)drExamenes["desc_especialidad"];
+                    exa.DescPlan = (string)drExamenes["desc_plan"];
+                    exa.ID = (int)drExamenes["id_inscripcion"];
+                    exa.Legajo = (int)drExamenes["legajo"];
+
+                    examenes.Add(exa);
+
+                    /*infoExamenes.Add(new { DescMateria = (string)drExamenes["desc_materia"],
                         Nota = (int)drExamenes["nota"],
                         DescEspecialidad = (string)drExamenes["desc_especialidad"],
                         DescPlan = (string)drExamenes["desc_plan"]
-                    });
+                    });*/
                 }
 
                 drExamenes.Close();
@@ -56,95 +72,88 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-            return infoExamenes;
+            // return infoExamenes;
+            return examenes;
 
 
         }
 
-        public ArrayList GetAll(Persona per)
+
+        public ArrayList GetEP(List<int> idCursos)
         {
             ArrayList infoExamenes = new ArrayList();
+            foreach (int idCurso in idCursos)
+            {
+                try
+                {
+
+
+                    string query = @"SELECT distinct materias.desc_materia, especialidades.desc_especialidad, planes.desc_plan, alumnos_inscripciones.id_curso
+                                FROM alumnos_inscripciones 
+                                INNER JOIN cursos 
+	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                                INNER JOIN materias
+	                                ON materias.id_materia = cursos.id_materia
+                                INNER JOIN planes
+	                                ON planes.id_plan = materias.id_plan
+                                INNER JOIN especialidades
+	                                ON especialidades.id_especialidad = planes.id_especialidad
+                                WHERE alumnos_inscripciones.id_curso = @idCurso";
+
+
+                    this.OpenConnection();
+                    SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
+                    cmdExamenes.Parameters.Add("@idCurso", SqlDbType.Int).Value = idCurso;
+                    SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
+                    while (drExamenes.Read())
+                    {
+                        infoExamenes.Add(new
+                        {   id_curso = (int)drExamenes["id_curso"],
+                            DescMateria = (string)drExamenes["desc_materia"],
+                            DescEspecialidad = (string)drExamenes["desc_especialidad"],
+                            DescPlan = (string)drExamenes["desc_plan"]
+                        });
+                    }
+
+                    drExamenes.Close();
+                }
+                catch (Exception Ex)
+                {
+                    Exception ExcepcionManejada = new Exception("Error al recuperar la lista de Inscripciones", Ex);
+                    throw ExcepcionManejada;
+
+
+                }
+                finally
+                {
+                    this.CloseConnection();
+                }
+            }
+            return infoExamenes;
+
+
+        
+        }
+
+        public List<Examen> GetAll(Persona per)
+        {
+            List<Examen> infoExamenes = new List<Examen>();
             //string query = "";
             // Usuario usr = new Usuario();
 
             try
             {       //ins.IdAlumno = (int)drInscripciones["id_alumno"];
                     // ins.IdCurso = (int)drInscripciones["id_curso"];
-                /*
-                    string queryID = "";
-                    this.OpenConnection();
-                    SqlCommand cmdID = new SqlCommand(queryID, SqlConn);
-                    cmdID.Parameters.Add("@id_persona", SqlDbType.Int).Value = per.TipoPersona;
-                    SqlDataReader drID = cmdID.ExecuteReader();
-                    while (drID.Read()){
-
-                        usr.ID = (int)drID["id_ususario"]
-
-                    }
-                    this.CloseConnection();
-                                            */ //Ver si conecto al aluimno por id_Persona o id_Usuario
-
-                /*if (per.TipoPersona == 1)
+                if(per.TipoPersona == 2)
                 {
-                     query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
-                                FROM alumnos_inscripciones 
-                                INNER JOIN cursos 
-	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
-                                INNER JOIN materias
-	                                ON materias.id_materia = cursos.id_materia
-                                INNER JOIN planes
-	                                ON planes.id_plan = materias.id_plan
-                                INNER JOIN especialidades
-	                                ON especialidades.id_especialidad = planes.id_especialidad
-                                WHERE alumnos_inscripciones.id_alumno = @id_persona";
+                    infoExamenes = GetProfesor(per);
                 }
                 else
                 {
-                    query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan 
-                                FROM alumnos_inscripciones 
-                                INNER JOIN cursos 
-	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
-                                INNER JOIN materias
-	                                ON materias.id_materia = cursos.id_materia
-                                INNER JOIN planes
-	                                ON planes.id_plan = materias.id_plan
-                                INNER JOIN especialidades
-	                                ON especialidades.id_especialidad = planes.id_especialidad
-                         
-                                WHERE alumnos_inscripciones.id_alumno = @id_persona";
-                }*/
-
-               string query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan
-                                FROM alumnos_inscripciones 
-                                INNER JOIN cursos 
-	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
-                                INNER JOIN materias
-	                                ON materias.id_materia = cursos.id_materia
-                                INNER JOIN planes
-	                                ON planes.id_plan = materias.id_plan
-                                INNER JOIN especialidades
-	                                ON especialidades.id_especialidad = planes.id_especialidad
-                                WHERE alumnos_inscripciones.id_alumno = @id_persona"; // , cursos.id_curso, materias.id_materia, planes.id_plan, especialidades.id_especialidad
-
-                this.OpenConnection();
-                SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
-                cmdExamenes.Parameters.Add("@id_persona", SqlDbType.Int).Value = per.ID;
-                SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
-                while (drExamenes.Read())
-                {
-                    infoExamenes.Add(new
-                    {   //id_curos = (int)drExamenes["id_curso"],
-                        //id_materia = (int)drExamenes["id_materia"],
-                        //id_plan = (int)drExamenes["id_plan"],
-                        //id_especialidad = (int)drExamenes["id_especialidad"],
-                        DescMateria = (string)drExamenes["desc_materia"],
-                        Nota = (int)drExamenes["nota"],
-                        DescEspecialidad = (string)drExamenes["desc_especialidad"],
-                        DescPlan = (string)drExamenes["desc_plan"]
-                    }) ;
+                    infoExamenes = GetAlumno(per);
                 }
 
-                drExamenes.Close();
+   
             }
             catch (Exception Ex)
             {
@@ -193,6 +202,7 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
+            
             return ins;
 
 
@@ -204,7 +214,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdDelete = new SqlCommand("delete alumnos_incripciones where id_inscripcion = @id ", SqlConn);
+                SqlCommand cmdDelete = new SqlCommand("delete alumnos_inscripciones where id_inscripcion = @id ", SqlConn);
                 cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 cmdDelete.ExecuteNonQuery();
             }
@@ -273,8 +283,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdSave = new SqlCommand("Update alumnos_inscripciones SET id_alumno = @id_alumno, " +
-                    "id_curso = @id_curso, condicion = @condicion, nota = @nota, " + 
-                    "id_inscripcion = @id", SqlConn);
+                    "id_curso = @id_curso, condicion = @condicion, nota = @nota " + 
+                    "Where id_inscripcion = @id", SqlConn);
 
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = inscripcion.ID;
                 cmdSave.Parameters.Add("@id_alumno", SqlDbType.Int).Value = inscripcion.IdAlumno;
@@ -296,6 +306,93 @@ namespace Data.Database
             }
         }
 
+
+
+        private List<Examen> GetAlumno(Persona per)
+        {
+            List<Examen> Examenes = new List<Examen>();
+
+            string query = @"SELECT materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan
+                                FROM alumnos_inscripciones 
+                                INNER JOIN cursos 
+	                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                                INNER JOIN materias
+	                                ON materias.id_materia = cursos.id_materia
+                                INNER JOIN planes
+	                                ON planes.id_plan = materias.id_plan
+                                INNER JOIN especialidades
+	                                ON especialidades.id_especialidad = planes.id_especialidad
+                                WHERE alumnos_inscripciones.id_alumno = @id_persona"; // , cursos.id_curso, materias.id_materia, planes.id_plan, especialidades.id_especialidad
+
+            this.OpenConnection();
+            SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
+            cmdExamenes.Parameters.Add("@id_persona", SqlDbType.Int).Value = per.ID;
+            SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
+            while (drExamenes.Read())
+            {
+                Examen exa = new Examen();
+
+                exa.DescEspecialidad = (string)drExamenes["desc_especialidad"];
+                exa.Nota = (int)drExamenes["nota"];
+                exa.DescMateria = (string)drExamenes["desc_materia"];
+                exa.DescPlan = (string)drExamenes["desc_plan"];
+
+                Examenes.Add(exa);
+
+            }
+
+            drExamenes.Close();
+
+            return Examenes;
+        }
+
+
+        private List<Examen> GetProfesor(Persona per)
+        {
+            List<Examen> Examenes = new List<Examen>();
+
+            string query = @"SELECT distinct alumnos_inscripciones.id_inscripcion, materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan, personas.legajo, docentes_cursos.id_curso
+                            FROM docentes_cursos 
+                            INNER JOIN alumnos_inscripciones
+	                            ON docentes_cursos.id_curso = alumnos_inscripciones.id_curso
+                            INNER JOIN personas
+	                            ON alumnos_inscripciones.id_alumno = personas.id_persona
+                            INNER JOIN cursos 
+	                            ON cursos.id_curso = alumnos_inscripciones.id_curso
+                            INNER JOIN materias
+	                            ON materias.id_materia = cursos.id_materia
+                            INNER JOIN planes
+	                              ON planes.id_plan = materias.id_plan
+                            INNER JOIN especialidades
+	                             ON especialidades.id_especialidad = planes.id_especialidad
+                            WHERE docentes_cursos.id_docente = @id_persona"; // , cursos.id_curso, materias.id_materia, planes.id_plan, especialidades.id_especialidad
+
+            this.OpenConnection();
+            SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
+            cmdExamenes.Parameters.Add("@id_persona", SqlDbType.Int).Value = per.ID;
+            SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
+            while (drExamenes.Read())
+            {
+                Examen exa = new Examen();
+
+                exa.DescEspecialidad = (string)drExamenes["desc_especialidad"];
+                exa.Nota = (int)drExamenes["nota"];
+                exa.DescMateria = (string)drExamenes["desc_materia"];
+                exa.DescPlan = (string)drExamenes["desc_plan"];
+                exa.Legajo = (int)drExamenes["legajo"];
+                exa.ID = (int)drExamenes["id_inscripcion"];
+                exa.IdCurso = (int)drExamenes["id_curso"];
+
+                Examenes.Add(exa);
+
+
+            }
+
+            drExamenes.Close();
+
+
+            return Examenes;
+        }
 
     }
 }
