@@ -20,14 +20,19 @@ namespace Business.Logic
             _inscripcionData = new ExamenesAdapter();
         }
 
-        public ArrayList GetAll()
+        public List<Examen> GetAll()
         {
             return _inscripcionData.GetAll();
         }
 
-        public ArrayList GetAll(Persona per)
+        public List<Examen> GetAll(Persona per)
         {
             return _inscripcionData.GetAll(per);
+        }
+
+        public ArrayList GetEP(List<int> idCursos)
+        {
+            return _inscripcionData.GetEP(idCursos);
         }
 
         public Inscripcion GetOne(int idInscripcion)

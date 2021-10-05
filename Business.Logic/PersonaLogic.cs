@@ -35,6 +35,12 @@ namespace Business.Logic
             _personaData.Delete(idPersona);
         }
 
+        public int GetIdPersona(int LegajoPersona)
+        {
+            int id_persona = _personaData.GetIdPersona(LegajoPersona);
+            return id_persona;
+        }
+
         public void Save(Persona persona)
         {
             _personaData.Save(persona);

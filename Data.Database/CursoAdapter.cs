@@ -47,6 +47,80 @@ namespace Data.Database
             return cursos;
         }
 
+        public List<Curso> GetAll(int idMateria)
+        {
+            List<Curso> cursos = new List<Curso>();
+
+
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdCursos = new SqlCommand("SELECT * FROM cursos " +
+                    "WHERE id_materia = @idMateria", SqlConn);
+                cmdCursos.Parameters.Add("idMateria", SqlDbType.Int).Value = idMateria;
+                SqlDataReader drCursos = cmdCursos.ExecuteReader();
+                while (drCursos.Read())
+                {
+                    Curso cur = new Curso();
+                    cur.ID = (int)drCursos["id_curso"];
+                    cur.IdMateria = (int)drCursos["id_materia"];
+                    cur.IdComision = (int)drCursos["id_comision"];
+                    cur.AnioCalendario = (int)drCursos["anio_calendario"];
+                    cur.Cupo = (int)drCursos["cupo"];
+                    cursos.Add(cur);
+
+
+                }
+                drCursos.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de Cursos", Ex);
+                throw ExcepcionManejada;
+
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return cursos;
+        }
+
+        public List<int> CursosProfesor(int idProfesor)
+        {
+            List<int> idCursos = new List<int>();
+
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdIdCursos = new SqlCommand("SELECT id_curso FROM docentes_cursos " +
+                    "WHERE id_docente = @idProfesor", SqlConn);
+                cmdIdCursos.Parameters.Add("idProfesor", SqlDbType.Int).Value = idProfesor;
+                SqlDataReader drIdCursos = cmdIdCursos.ExecuteReader();
+                while (drIdCursos.Read())
+                {
+                    
+                   int idCurso = (int)drIdCursos["id_curso"];
+                    
+                    idCursos.Add(idCurso);
+
+
+                }
+                drIdCursos.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de Cursos", Ex);
+                throw ExcepcionManejada;
+
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            return idCursos;
+        }
 
 
         public Curso GetOne(int ID)

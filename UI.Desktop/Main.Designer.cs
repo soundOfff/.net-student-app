@@ -36,6 +36,7 @@ namespace UI.Desktop
             this.lblPosImg = new System.Windows.Forms.Label();
             this.lblPosTipo = new System.Windows.Forms.Label();
             this.lblPosNombre = new System.Windows.Forms.Label();
+            this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.btnInscripciones = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,15 +51,14 @@ namespace UI.Desktop
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.pnlVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVertical
@@ -130,6 +130,16 @@ namespace UI.Desktop
             this.lblPosNombre.Size = new System.Drawing.Size(0, 13);
             this.lblPosNombre.TabIndex = 7;
             // 
+            // cirPicImg
+            // 
+            this.cirPicImg.Image = ((System.Drawing.Image)(resources.GetObject("cirPicImg.Image")));
+            this.cirPicImg.Location = new System.Drawing.Point(73, 56);
+            this.cirPicImg.Name = "cirPicImg";
+            this.cirPicImg.Size = new System.Drawing.Size(75, 75);
+            this.cirPicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cirPicImg.TabIndex = 0;
+            this.cirPicImg.TabStop = false;
+            // 
             // btnInscripciones
             // 
             this.btnInscripciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -145,7 +155,7 @@ namespace UI.Desktop
             this.btnInscripciones.Name = "btnInscripciones";
             this.btnInscripciones.Size = new System.Drawing.Size(180, 40);
             this.btnInscripciones.TabIndex = 5;
-            this.btnInscripciones.Text = "    Inscripciones";
+            this.btnInscripciones.Text = "    Inscribirse";
             this.btnInscripciones.UseVisualStyleBackColor = true;
             this.btnInscripciones.Click += new System.EventHandler(this.lbl5_Click);
             // 
@@ -323,16 +333,6 @@ namespace UI.Desktop
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
-            // cirPicImg
-            // 
-            this.cirPicImg.Image = ((System.Drawing.Image)(resources.GetObject("cirPicImg.Image")));
-            this.cirPicImg.Location = new System.Drawing.Point(73, 56);
-            this.cirPicImg.Name = "cirPicImg";
-            this.cirPicImg.Size = new System.Drawing.Size(75, 75);
-            this.cirPicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cirPicImg.TabIndex = 0;
-            this.cirPicImg.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,13 +348,13 @@ namespace UI.Desktop
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.pnlVertical.ResumeLayout(false);
             this.pnlVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).EndInit();
             this.ResumeLayout(false);
 
         }
