@@ -35,9 +35,9 @@ namespace Business.Logic
             return _inscripcionData.getAllMateriasInscripcion();
         }
 
-        public Inscripcion GetOne(int idInscripcion)
+        public Inscripcion GetOne(int idExamen)
         {
-            return _inscripcionData.GetOne(idInscripcion);
+            return _inscripcionData.GetOne(idExamen);
         }
 
         public void Delete(int idInscripcion)

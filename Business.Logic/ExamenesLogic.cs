@@ -35,7 +35,7 @@ namespace Business.Logic
             return _inscripcionData.GetEP(idCursos);
         }
 
-        public Inscripcion GetOne(int idInscripcion)
+        public Examen GetOne(int idInscripcion)
         {
             return _inscripcionData.GetOne(idInscripcion);
         }

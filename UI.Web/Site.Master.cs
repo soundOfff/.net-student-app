@@ -13,5 +13,20 @@ namespace UI.Web
 		{
 
 		}
-	}
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+			Response.Redirect("~/Usuarios.aspx");
+        }
+
+        protected void btonExamenes_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Examenes.aspx");
+        }
+
+        protected void btonUsuarios_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Usuarios.aspx");
+        }
+    }
 }

@@ -22,9 +22,7 @@ namespace Data.Database
                     // ins.IdCurso = (int)drInscripciones["id_curso"];
 
                 string query = @"SELECT distinct alumnos_inscripciones.id_inscripcion, materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan, personas.legajo
-                            FROM docentes_cursos 
-                            INNER JOIN alumnos_inscripciones
-	                            ON docentes_cursos.id_curso = alumnos_inscripciones.id_curso
+                            FROM alumnos_inscripciones                          
                             INNER JOIN personas
 	                            ON alumnos_inscripciones.id_alumno = personas.id_persona
                             INNER JOIN cursos 
@@ -35,6 +33,8 @@ namespace Data.Database
 	                              ON planes.id_plan = materias.id_plan
                             INNER JOIN especialidades
 	                             ON especialidades.id_especialidad = planes.id_especialidad";
+                // INNER JOIN alumnos_inscripciones
+                // ON docentes_cursos.id_curso = alumnos_inscripciones.id_curso
 
                 this.OpenConnection();
                 SqlCommand cmdExamenes = new SqlCommand(query, SqlConn);
@@ -171,22 +171,40 @@ namespace Data.Database
 
         }
 
-        public Inscripcion GetOne(int ID)
+        public Examen GetOne(int ID)
         {
-            Inscripcion ins = new Inscripcion();
+            Examen ins = new Examen();
 
             try
             {
+                string query = @"SELECT distinct alumnos_inscripciones.id_inscripcion, materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan, personas.legajo, alumnos_inscripciones.id_curso
+                            FROM alumnos_inscripciones
+                            INNER JOIN personas
+                                ON alumnos_inscripciones.id_alumno = personas.id_persona
+                            INNER JOIN cursos
+                                ON cursos.id_curso = alumnos_inscripciones.id_curso
+                            INNER JOIN materias
+                                ON materias.id_materia = cursos.id_materia
+                            INNER JOIN planes
+                                  ON planes.id_plan = materias.id_plan
+                            INNER JOIN especialidades
+                                 ON especialidades.id_especialidad = planes.id_especialidad
+                        where alumnos_inscripciones.id_inscripcion = @id";
                 this.OpenConnection();
-                SqlCommand cmdInscripciones = new SqlCommand("SELECT * FROM alumnos_incripciones where id_inscripcion = @id ", SqlConn);
+                SqlCommand cmdInscripciones = new SqlCommand(query, SqlConn);
+
+
+
+
+
                 cmdInscripciones.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
                 if (drInscripciones.Read())
                 {
                     ins.ID = (int)drInscripciones["id_inscripcion"];
-                    ins.IdAlumno = (int)drInscripciones["id_alumno"];
+                    ins.Legajo = (int)drInscripciones["legajo"];
                     ins.IdCurso = (int)drInscripciones["id_curso"];
-                    ins.Condicion = (string)drInscripciones["condicion"];
+                    
                     ins.Nota = (int)drInscripciones["nota"];
 
                 }

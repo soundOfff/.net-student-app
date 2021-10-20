@@ -109,3 +109,31 @@ C:\Users\lucab\Desktop\Clone Rpository\Tp2Grupo6AcademiaW\UI.Desktop\obj\Debug\U
 C:\Users\lucab\Desktop\Clone Rpository\Tp2Grupo6AcademiaW\UI.Desktop\obj\Debug\UI.Desktop.csproj.CopyComplete
 C:\Users\lucab\Desktop\Clone Rpository\Tp2Grupo6AcademiaW\UI.Desktop\obj\Debug\UI.Desktop.exe
 C:\Users\lucab\Desktop\Clone Rpository\Tp2Grupo6AcademiaW\UI.Desktop\obj\Debug\UI.Desktop.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.exe
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\UI.Desktop.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Entities.dll
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Logic.dll
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Data.Database.dll
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Entities.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Business.Logic.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\bin\Debug\Data.Database.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csprojAssemblyReference.cache
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.ApplicationForm.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Examenes.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.ExamenesABM.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.formLogin.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.InscripcionesDesktop.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Main.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.TestDiseñoInscripcionUser.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.TestInscDesktopUser.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.UsuariosDesktop.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Inscripciones.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Materias.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Usuarios.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.cache
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.CoreCompileInputs.cache
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.csproj.CopyComplete
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.exe
+C:\Users\lucab\Source\Repos\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.pdb

@@ -10,7 +10,12 @@
             <asp:Menu runat="server" DataSourceID="SiteMapDataSource">
             </asp:Menu>
             <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
-            <div>
+            <asp:LinkButton ID="btonUsuarios" runat="server" OnClick="btonUsuarios_Click">Usuarios</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="btonExamenes" runat="server">Examenes</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="btonInscripciones" runat="server">Inscripciones</asp:LinkButton>
+&nbsp;<div>
                 <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

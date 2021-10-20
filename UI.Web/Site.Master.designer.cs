@@ -33,6 +33,33 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource;
 
         /// <summary>
+        /// btonUsuarios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btonUsuarios;
+
+        /// <summary>
+        /// btonExamenes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btonExamenes;
+
+        /// <summary>
+        /// btonInscripciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btonInscripciones;
+
+        /// <summary>
         /// bodyContentPlaceHolder control.
         /// </summary>
         /// <remarks>
