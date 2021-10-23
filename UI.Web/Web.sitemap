@@ -3,5 +3,9 @@
   <siteMapNode url="" title=""  description="">
 	  <siteMapNode url="~/Default.aspx" title="Home"  description="Index page" />
 	  <siteMapNode url="~/Usuarios.aspx" title="Usuarios"  description="User page" />
-  </siteMapNode>
+      <siteMapNode url="~/InscripcionesUser.aspx" title="Inscripciones" description="Inscripciones de un alumno"/>
+      <siteMapNode url="~/About.aspx" title="Acerca de" description="Pagina de FAQ"/>
+      <siteMapNode url="~/Contact.aspx" title="Contacto" description="Pagina de contacto"/>
+      <siteMapNode url="~/Home.aspx" title="Home" description="Home"/>
+</siteMapNode>
 </siteMap>

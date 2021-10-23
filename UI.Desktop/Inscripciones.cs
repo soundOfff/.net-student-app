@@ -29,7 +29,7 @@ namespace UI.Desktop
             MateriasLogic ml = new MateriasLogic();
             try
             { 
-                this.dgvInscripciones.DataSource = ml.getDatosInscripcion();
+                this.dgvInscripciones.DataSource = ml.getDatosInscripcion(formLogin._personaRegistrada.IDPlan);
             }
             catch (Exception Ex)
             {

@@ -25,10 +25,16 @@ namespace Business.Logic
             return _personaData.GetAll();
         }
 
-        public Persona GetOne(int idPersona)
+        public Persona GetOne(int idPer)
         {
-            return _personaData.GetOne(idPersona);
+            return _personaData.GetOne(idPer);
         }
+
+        public Persona GetOneLegajo(int legajo)
+        {
+            return _personaData.GetOne(legajo);
+        }
+
 
         public void Delete(int idPersona)
         {

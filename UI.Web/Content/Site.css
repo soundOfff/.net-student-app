@@ -1,21 +1,234 @@
-﻿/* Move down content because we have a fixed navbar that is 50px tall */
+﻿* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    font-family: montserrat;
+}
+nav {
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.home-content {
+    height: 100%;
+    width: 80%;
+    padding-left: 150px;
+    padding-right: 150px;
+    overflow: hidden;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+.home-top {
+    height: 35%;
+    width: 100%;
+    position:relative;
+    z-index:1;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.home-top img {
+        width: 100%;
+        height: 75%;
+}
+
+
+.footer-carrera {
+    position:absolute;
+    bottom:5%;
+    left:0%;
+    z-index:999;
+    width: 100%;
+    background-color: cornflowerblue;
+    height: 55px;
+    color: white;
+    text-align:center;
+    padding-top:5px;
+    font-size: 35px;
+}
+
+.home-middle {
+    height:70%;
+    width: 100%;
+    padding:20px;
+    position: relative;
+}
+
+.left {
+    background-color: white;
+    height: 100%;
+    width: 65%;
+    padding-right: 20px;
+    padding-top: 30px;
+    display: block;
+}
+
+.rigth {
+    margin-top: 20px;
+    display: inline-block;
+    height: 100%;
+    width: 35%;
+    background-color: white;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    text-align:center;
+    padding-top: 38px;
+}
+
+
+.rigth img {
+        height: 18%;
+        width: 60%;
+        margin-bottom:10px;
+    }
+
+
+.rigth img:hover {
+    cursor:pointer;
+
+}
+
+.card {
+    padding:2px;
+    background-color: rgb(232, 228, 223);
+    width: 33%;
+    height:40%;
+    border: solid 7px white;
+    float: left;
+    margin-bottom:5px;
+}
+.card p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.card:hover {
+        background-color: rgb(189, 177, 164);
+    }
+
+
+#Content1 {
+    height:100%;
+    width: 100%;
+    background-color: black;
+}
+
+.grillaInsc {
+    margin-top: 30px;
+    padding: 30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    float: right;
+}
+
+nav ul {
+    float: left;
+    margin-right: 20px;
+}
+
+nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+}
+
+nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.lgnContainer {    
+    height: 100%;
+    width: 100%;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+        nav ul li a {
+            font-size: 20px;
+        }
+
+    a:hover, a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
 }
 
 
