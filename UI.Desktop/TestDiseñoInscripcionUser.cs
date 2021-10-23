@@ -22,7 +22,7 @@ namespace UI.Desktop
         {
             InitializeComponent();
             this.dgvInscripciones.AutoGenerateColumns = true;
-            //this.dgvInscripciones.RowTemplate.Height = 60;
+          
         }
 
         public void Listar()
@@ -30,7 +30,8 @@ namespace UI.Desktop
             MateriasLogic ml = new MateriasLogic();
             try
             {
-                this.dgvInscripciones.DataSource = ml.getDatosInscripcion();
+                
+                this.dgvInscripciones.DataSource = ml.getDatosInscripcion(formLogin._personaRegistrada.IDPlan);
             }
             catch (Exception Ex)
             {
@@ -67,7 +68,7 @@ namespace UI.Desktop
                 //var regis = il.getUserAlreadyInscript(IDcur, formLogin.UsuarioActual.IDpersona);
                 // Validar que el usuario no este inscripto en el curso
 
-                if (il.getUserAlreadyInscript(IDcur, Main._personaRegistrada.ID))
+                if (il.getUserAlreadyInscript(IDcur, formLogin._personaRegistrada.ID))
                 {
                     MessageBox.Show("Ya te registrarste! ");
                 }
@@ -90,6 +91,11 @@ namespace UI.Desktop
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TestDiseñoInscripcionUser_Load(object sender, EventArgs e)
+        {
+            Listar();
         }
     }
 }

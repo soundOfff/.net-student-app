@@ -14,8 +14,9 @@ namespace UI.Desktop
     {
         UsuarioLogic ul = new UsuarioLogic();
         PersonaLogic pl = new PersonaLogic();
-        Persona _personaRegistrada = new Persona();
-        
+        public static Persona _personaRegistrada = new Persona();
+        public static Usuario _usuarioRegistrado = new Usuario();
+
         public Persona PersonaRegistrada {get{return _personaRegistrada;} set{ _personaRegistrada = value;}}
 
         public formLogin()
@@ -35,10 +36,10 @@ namespace UI.Desktop
             {
                 try
                 {
-                    Usuario usr = ul.GetOne(txtUsuario.Text, txtPass.Text);
-                    if (!String.IsNullOrEmpty(usr.NombreUsuario) )
+                    _usuarioRegistrado = ul.GetOne(txtUsuario.Text, txtPass.Text);
+                    if (!String.IsNullOrEmpty(_usuarioRegistrado.NombreUsuario) )
                     {
-                        _personaRegistrada = pl.GetOne(usr.IDPersona);
+                        _personaRegistrada = pl.GetOne(_usuarioRegistrado.IDPersona);
                         this.DialogResult = DialogResult.OK;
                     }
                     else

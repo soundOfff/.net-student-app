@@ -25,7 +25,6 @@ namespace Data.Database
                     mat.DescMateria = (string)drMaterias["desc_materia"];
                     mat.HsTotales = (int)drMaterias["hs_totales"];
                     mat.HsSemanales = (int)drMaterias["hs_semanales"];
-                    // Foregin key ?
                     materias.Add(mat);
                 }
                 drMaterias.Close();
@@ -77,7 +76,7 @@ namespace Data.Database
             return materias;
         }
 
-        public ArrayList getDatosInscripcion()
+        public ArrayList getDatosInscripcion(int idPlan)
         {
 
             ArrayList datosInscripcion = new ArrayList();
@@ -86,18 +85,20 @@ namespace Data.Database
             {
 
                 this.OpenConnection();
-                string query = @"SELECT materias.desc_materia, materias.hs_semanales, materias.hs_totales, materias.id_materia,
-	                            cursos.id_curso, planes.desc_plan, comisiones.desc_comision
+                string query = @"SELECT	materias.desc_materia,
+		                        materias.hs_totales, materias.hs_semanales, materias.id_materia,
+		                        comisiones.desc_comision, cursos.id_curso, planes.desc_plan
                                 FROM materias
-                                INNER JOIN planes
-	                                ON planes.id_plan = materias.id_plan
-                                INNER JOIN comisiones
-	                                ON comisiones.id_plan = materias.id_plan
                                 INNER JOIN cursos
 	                                ON cursos.id_materia = materias.id_materia
-	                                AND cursos.id_comision = comisiones.id_comision";
+                                INNER JOIN comisiones
+	                                ON cursos.id_comision = comisiones.id_comision
+                                INNER JOIN planes 
+                                    ON planes.id_plan = materias.id_plan
+                                WHERE materias.id_plan = @idPlan";
 
                 SqlCommand cmdInscripciones = new SqlCommand(query, SqlConn);
+                cmdInscripciones.Parameters.Add("@idPlan", SqlDbType.Int).Value = idPlan;
                 SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
                 while (drInscripciones.Read())
                 {

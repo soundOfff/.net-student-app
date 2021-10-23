@@ -80,14 +80,50 @@ namespace Data.Database
             return id_persona;
 
         }
-        public Business.Entities.Persona GetOne(int ID)
+        public Business.Entities.Persona GetOne(int idPersona)
         {
             Persona per = new Persona();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdPersonas = new SqlCommand("select * from personas where id_persona = @id", SqlConn);
-                cmdPersonas.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdPersonas = new SqlCommand("select * from personas where id_persona = @idPer", SqlConn);
+                cmdPersonas.Parameters.Add("@idPer", SqlDbType.Int).Value = idPersona;
+                SqlDataReader drPersonas = cmdPersonas.ExecuteReader();
+                if (drPersonas.Read())
+                {
+                    per.ID = (int)drPersonas["id_persona"];
+                    per.Nombre = (string)drPersonas["nombre"];
+                    per.Apellido = (string)drPersonas["apellido"];
+                    per.EMail = (string)drPersonas["email"];
+                    per.Direccion = (string)drPersonas["direccion"];
+                    per.Telefono = (string)drPersonas["telefono"];
+                    per.FechaNac = (DateTime)drPersonas["fecha_nac"];
+                    per.Legajo = (int)drPersonas["legajo"];
+                    per.TipoPersona = (int)drPersonas["tipo_persona"];
+                    per.IDPlan = (int)drPersonas["id_plan"];
+
+                }
+                drPersonas.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la persona", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return per;
+        }
+        public Business.Entities.Persona GetOneLegajo(int legajo)
+        {
+            Persona per = new Persona();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdPersonas = new SqlCommand("select * from personas where legajo = @legajo", SqlConn);
+                cmdPersonas.Parameters.Add("@legajo", SqlDbType.Int).Value = legajo;
                 SqlDataReader drPersonas = cmdPersonas.ExecuteReader();
                 if (drPersonas.Read())
                 {

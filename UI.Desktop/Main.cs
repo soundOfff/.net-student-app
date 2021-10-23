@@ -9,22 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Business.Entities;
+using System.IO;
 
 namespace UI.Desktop
 {
     public partial class Main : Form
     {
-        static public Persona _personaRegistrada = new Persona();
+        //static public Persona _personaRegistrada = new Persona();
+        public Usuario _user;
         private Point _posAntImg;
         private Point _posAntNom;
         private Point _posAntTipo;
 
 
-        public Persona PersonaRegistrada { get { return _personaRegistrada; } set { _personaRegistrada = value; } }
+        //public Persona PersonaRegistrada { get { return _personaRegistrada; } set { _personaRegistrada = value; } }
 
         public Main()
         {
             InitializeComponent();
+
         }
 
 
@@ -123,12 +126,17 @@ namespace UI.Desktop
             {
                 this.Dispose();
             }
+            
+            if (!(formLogin._usuarioRegistrado.Imagen is null))
+            {
+                var ms = new MemoryStream(formLogin._usuarioRegistrado.Imagen);
+                cirPicImg.Image = Image.FromStream(ms);
+            }
 
-            _personaRegistrada = fLogin.PersonaRegistrada;
             fLogin.Dispose();
 
-            lblNombrePersona.Text = _personaRegistrada.Nombre;
-            switch (_personaRegistrada.TipoPersona)
+            lblNombrePersona.Text = formLogin._personaRegistrada.Nombre;
+            switch (formLogin._personaRegistrada.TipoPersona)
             {
                 case 1:
                     lblTipoPersona.Text = "Alumno";
@@ -156,7 +164,7 @@ namespace UI.Desktop
 
         private void btnExamenes_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new Examenes(_personaRegistrada));
+            AbrirFormInPanel(new Examenes(formLogin._personaRegistrada));
         }
 
         private void lbl5_Click(object sender, EventArgs e)

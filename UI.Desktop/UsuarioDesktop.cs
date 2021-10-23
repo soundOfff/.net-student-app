@@ -24,11 +24,15 @@ namespace UI.Desktop
 
         public UsuariosDesktop(ModoForm modo) : this()
         {
+            txtApellido.Text = FormLegajo._personaAinscribirse.Apellido;
+            txtNombre.Text = FormLegajo._personaAinscribirse.Nombre;
             _modo = modo;
         }
 
         public UsuariosDesktop(int ID, ModoForm modo) : this()
         {
+            this.txtApellido.Enabled = true;
+            this.txtNombre.Enabled = true;
             UsuarioLogic ul = new UsuarioLogic();
             _usuarioActual = ul.GetOne(ID);
             _modo = modo;
@@ -75,12 +79,15 @@ namespace UI.Desktop
             {
                 _usuarioActual = new Business.Entities.Usuario();
                 _usuarioActual.State = BusinessEntity.States.New;
+                UsuarioActual.IDPersona = FormLegajo._personaAinscribirse.ID;
+
             }
             else if (_modo == ModoForm.Modificacion)
             {
                 _usuarioActual.State = BusinessEntity.States.Modified;
+               
             }
-            
+
             UsuarioActual.Habilitado = this.chkHabilitado.Checked;
             
             UsuarioActual.Nombre = this.txtNombre.Text;
@@ -94,7 +101,7 @@ namespace UI.Desktop
             UsuarioActual.Clave = this.txtClave.Text;
 
             UsuarioActual.Clave = this.txtConfirmarClave.Text;
-            
+
             // Si tiene img que no la cambie
             UsuarioActual.Imagen = imgTemp;
             

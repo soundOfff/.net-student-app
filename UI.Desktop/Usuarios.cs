@@ -46,6 +46,8 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
+            FormLegajo formLegajo = new FormLegajo();
+            formLegajo.ShowDialog();
             UsuariosDesktop formTest = new UsuariosDesktop(ApplicationForm.ModoForm.Alta);
             formTest.ShowDialog();
             Listar();

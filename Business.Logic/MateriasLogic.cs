@@ -35,9 +35,9 @@ namespace Business.Logic
         }
 
 
-        public ArrayList getDatosInscripcion()
+        public ArrayList getDatosInscripcion(int idPlan)
         {
-            return _materiasData.getDatosInscripcion();
+            return _materiasData.getDatosInscripcion(idPlan);
         }
 
         public void Delete(int idMateria)

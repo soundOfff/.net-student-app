@@ -3,10 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title>Academia</title>
+        <link href="Content/Site.css" rel="stylesheet" />
     </head>
     <body>
+    <div>
+      <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+            <label class="logo">UTN</label>
+      <ul>
+        <li><a class="active" href="Login.aspx">Home</a></li>
+        <li><a href="Login.aspx">Autogestion</a></li>
+        <li><a href="Contact.aspx">Contacto</a></li>
+        <li><a href="About.aspx">Acerca de</a></li>
+      </ul>
+    </nav>
         <form id="bodyForm" runat="server">
-
             <asp:Menu runat="server" DataSourceID="SiteMapDataSource">
             </asp:Menu>
             <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
@@ -16,10 +30,15 @@
 &nbsp;&nbsp;&nbsp;
             <asp:LinkButton ID="btonInscripciones" runat="server">Inscripciones</asp:LinkButton>
 &nbsp;<div>
+            <div  style="width:100%; height:100%; display:flex; padding-top:50px; justify-content:center; align-content:center; margin-right:auto; overflow:auto">
                 <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
            
         </form>
+        <footer>
+            <p style="text-align:center">Copyright &copy; UTN.com</p>
+        </footer>
+            </div>
     </body>
 </html>
