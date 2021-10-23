@@ -40,7 +40,7 @@ namespace UI.Web
                     }
                     else
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Credenciales incorrectas" + "');", true);
+                        ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Credenciales incorrectas no puede dejar valores nulos" + "');", true);
                     }
                 }
                 catch (Exception)

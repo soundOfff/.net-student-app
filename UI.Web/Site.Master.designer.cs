@@ -24,43 +24,6 @@ namespace UI.Web
         protected global::System.Web.UI.HtmlControls.HtmlForm bodyForm;
 
         /// <summary>
-        /// Control SiteMapDataSource.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource;
-
-        /// <summary>
-        /// btonUsuarios control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btonUsuarios;
-
-        /// <summary>
-        /// btonExamenes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btonExamenes;
-
-        /// <summary>
-        /// btonInscripciones control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btonInscripciones;
-
-        /// <summary>
-        /// bodyContentPlaceHolder control.
         /// Control bodyContentPlaceHolder.
         /// </summary>
         /// <remarks>

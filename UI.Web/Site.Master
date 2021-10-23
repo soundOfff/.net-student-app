@@ -21,15 +21,6 @@
       </ul>
     </nav>
         <form id="bodyForm" runat="server">
-            <asp:Menu runat="server" DataSourceID="SiteMapDataSource">
-            </asp:Menu>
-            <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
-            <asp:LinkButton ID="btonUsuarios" runat="server" OnClick="btonUsuarios_Click">Usuarios</asp:LinkButton>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:LinkButton ID="btonExamenes" runat="server">Examenes</asp:LinkButton>
-&nbsp;&nbsp;&nbsp;
-            <asp:LinkButton ID="btonInscripciones" runat="server">Inscripciones</asp:LinkButton>
-&nbsp;<div>
             <div  style="width:100%; height:100%; display:flex; padding-top:50px; justify-content:center; align-content:center; margin-right:auto; overflow:auto">
                 <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>

@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="ExamenesABM.Designer.cs">
       <DependentUpon>ExamenesABM.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLegajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,13 +138,11 @@
     <EmbeddedResource Include="Examenes.resx">
       <DependentUpon>Examenes.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="ExamenesABM.resx">
       <DependentUpon>ExamenesABM.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLegajo.resx">
       <DependentUpon>FormLegajo.cs</DependentUpon>
->>>>>>> InscripcionUsuarioWeb
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

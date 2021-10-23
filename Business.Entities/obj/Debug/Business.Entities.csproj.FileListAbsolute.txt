@@ -1,0 +1,6 @@
+C:\Users\Ignacio Brasca\Desktop\TpNet\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.dll
+C:\Users\Ignacio Brasca\Desktop\TpNet\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.pdb
+C:\Users\Ignacio Brasca\Desktop\TpNet\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csprojAssemblyReference.cache
+C:\Users\Ignacio Brasca\Desktop\TpNet\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio Brasca\Desktop\TpNet\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.dll
+C:\Users\Ignacio Brasca\Desktop\TpNet\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.pdb
