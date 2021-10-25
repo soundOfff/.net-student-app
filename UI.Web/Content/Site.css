@@ -7,12 +7,20 @@
 }
 
 body {
-    font-family: montserrat;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 nav {
-    background: #0082e6;
+    background: #0466c8;
     height: 80px;
     width: 100%;
+}
+
+.nav-container {
+    background: #0466c8;
+    height: 80px;
+    width: 63%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .home-content {
@@ -21,17 +29,115 @@ nav {
     padding-left: 150px;
     padding-right: 150px;
     overflow: hidden;
+
+}
+
+.menu-aut-top {
+    height: 70px;
+    width: 35%;
+    font-size: 35px;
+    background: #cccc;
+    color: Black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+    .menu-aut-container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-aut-content {
+    margin-bottom: 20px;
+    height: 70%;
+    width: 35%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.menu-aut {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #cccc;
+    border-radius: 15px;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.menu-aut li {
+    font-size: 35px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu-aut li:hover {
+    cursor: pointer;
+}
+
+.button {
+  width:50%;
+  position: relative;
+  display: inline-block;
+  padding: .8em 4em;
+  border: 2px solid #333;
+  color: #333;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+}
+.button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: #333;
+  transition: transform .3s;
+}
+.button:hover {
+  color: #fff;
+}
+
+.button01::before {
+  transform-origin: right top;
+  transform: scale(0, 1);
+}
+.button01:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.myImages {
+    animation: showNav 250ms ease-in-out both;
 }
 
 .home-top {
     height: 35%;
     width: 100%;
-    position:relative;
-    z-index:1;
+    position: relative;
+    z-index: 1;
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
 }
+
 .home-top img {
         width: 100%;
         height: 75%;
@@ -60,12 +166,12 @@ nav {
 }
 
 .left {
-    background-color: white;
     height: 100%;
-    width: 65%;
-    padding-right: 20px;
+    width: 75%;
     padding-top: 30px;
-    display: block;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
 }
 
 .rigth {
@@ -98,9 +204,8 @@ nav {
     padding:2px;
     background-color: rgb(232, 228, 223);
     width: 33%;
-    height:40%;
-    border: solid 7px white;
-    float: left;
+    height: 40%;
+    border: solid 7px white
     margin-bottom:5px;
 }
 .card p {
@@ -241,4 +346,46 @@ section {
     .body-content {
         padding: 0;
     }
+}
+.footer-basic {
+  width:100%;
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0px 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social a {
+}
+
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
 }

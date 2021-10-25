@@ -80,7 +80,14 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadGrid();
+            if (Session["id"] == null)
+            {
+                Response.Redirect("Login.aspx", true);
+            }
+            else
+            {
+                LoadGrid();
+            }
         }
 
         private void LoadForm(int id)

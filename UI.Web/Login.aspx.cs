@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -13,8 +14,8 @@ namespace UI.Web
     {
         UsuarioLogic ul = new UsuarioLogic();
         PersonaLogic pl = new PersonaLogic();
-        public static Persona _personaRegistrada = new Persona();
         public static Usuario _usuarioRegistrado = new Usuario();
+        public static Persona _personaRegistrada = new Persona();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,13 +35,14 @@ namespace UI.Web
                     if (!String.IsNullOrEmpty(_usuarioRegistrado.NombreUsuario))
                     {
                         _personaRegistrada = pl.GetOne(_usuarioRegistrado.IDPersona);
-                        ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "OK" + "');", true);
-                        Response.Redirect("~/InscripcionesUser.aspx");
-
+                        Session["id"] = _personaRegistrada.ID;
+                        Response.Redirect("~/MenuAutogestion.aspx");
+                        Session.RemoveAll();
                     }
                     else
                     {
                         ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Credenciales incorrectas no puede dejar valores nulos" + "');", true);
+                        Response.Redirect("Login.aspx", true);
                     }
                 }
                 catch (Exception)

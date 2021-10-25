@@ -15,7 +15,15 @@ namespace UI.Web
         InscripcionLogic _inscLogic = new InscripcionLogic();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Listar();
+            if (Session["id"] == null)
+            {
+                Response.Redirect("Login.aspx", true);
+            }
+            else
+            {
+                Listar();
+            }
+
         }
 
         public void Listar()

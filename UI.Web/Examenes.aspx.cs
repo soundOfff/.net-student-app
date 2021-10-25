@@ -56,10 +56,16 @@ namespace UI.Web
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            Panel3.Visible = false;
-            dgvExamenes.AutoGenerateColumns = false;
-            Listar();
-
+            if (Session["id"] == null)
+            {
+                Response.Redirect("Login.aspx", true);
+            }
+            else
+            {
+                Panel3.Visible = false;
+                dgvExamenes.AutoGenerateColumns = false;
+                Listar();
+            }
         }
 
         public void Listar()

@@ -7,10 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace UI.Web
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class MenuAutogestion : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["id"] == null)
+            {
+                Response.Redirect("Login.aspx", true);
+            }
         }
+
+
     }
 }

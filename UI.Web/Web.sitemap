@@ -7,5 +7,7 @@
       <siteMapNode url="~/About.aspx" title="Acerca de" description="Pagina de FAQ"/>
       <siteMapNode url="~/Contact.aspx" title="Contacto" description="Pagina de contacto"/>
       <siteMapNode url="~/Home.aspx" title="Home" description="Home"/>
-</siteMapNode>
+      <siteMapNode url="~/MenuAutogestion.aspx" title="Menu Autogestion" description="Menu para elegir opciones"/>
+
+  </siteMapNode>
 </siteMap>
