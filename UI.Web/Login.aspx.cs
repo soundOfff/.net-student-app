@@ -25,7 +25,7 @@ namespace UI.Web
         {
             if(LoginUsuario.UserName == "A" && LoginUsuario.Password == "a")
             {
-                Response.Redirect("~/Usuarios.aspx");
+                Response.Redirect("~/MenuAutogestion.aspx");
             }
             else
             {

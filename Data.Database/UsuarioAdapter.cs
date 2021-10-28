@@ -140,9 +140,9 @@ namespace Data.Database
                     usr.EMail = (string)drUsuarios["email"];
                     usr.IDPersona = (int)drUsuarios["id_persona"];
                     usr.Clave = (string)drUsuarios["clave"];
-                   // usr.IDpersona = (int)drUsuarios["id_persona"];
+                  
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
-                    usr.Imagen = (byte[])drUsuarios["imagen"];
+                   // usr.Imagen = (byte[])drUsuarios["imagen"];
 
                 }
                 drUsuarios.Close();
