@@ -25,7 +25,9 @@ namespace UI.Web
         {
             if(LoginUsuario.UserName == "A" && LoginUsuario.Password == "a")
             {
-                Response.Redirect("~/Usuarios.aspx");
+                Session["id"] = "admin";
+                Response.Redirect("~/MenuAutogestion.aspx");
+                Session.RemoveAll();
             }
             else
             {

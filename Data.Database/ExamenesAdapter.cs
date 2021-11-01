@@ -21,7 +21,7 @@ namespace Data.Database
             {       //ins.IdAlumno = (int)drInscripciones["id_alumno"];
                     // ins.IdCurso = (int)drInscripciones["id_curso"];
 
-                string query = @"SELECT distinct alumnos_inscripciones.id_inscripcion, materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan, personas.legajo
+                string query = @"SELECT distinct alumnos_inscripciones.id_inscripcion, materias.desc_materia, alumnos_inscripciones.nota, especialidades.desc_especialidad, planes.desc_plan, personas.legajo, cursos.id_curso
                             FROM alumnos_inscripciones                          
                             INNER JOIN personas
 	                            ON alumnos_inscripciones.id_alumno = personas.id_persona
@@ -49,14 +49,8 @@ namespace Data.Database
                     exa.DescPlan = (string)drExamenes["desc_plan"];
                     exa.ID = (int)drExamenes["id_inscripcion"];
                     exa.Legajo = (int)drExamenes["legajo"];
-
+                    exa.IdCurso = (int)drExamenes["id_curso"];
                     examenes.Add(exa);
-
-                    /*infoExamenes.Add(new { DescMateria = (string)drExamenes["desc_materia"],
-                        Nota = (int)drExamenes["nota"],
-                        DescEspecialidad = (string)drExamenes["desc_especialidad"],
-                        DescPlan = (string)drExamenes["desc_plan"]
-                    });*/
                 }
 
                 drExamenes.Close();
@@ -65,17 +59,12 @@ namespace Data.Database
             {
                 Exception ExcepcionManejada = new Exception("Error al recuperar la lista de Inscripciones", Ex);
                 throw ExcepcionManejada;
-
-
             }
             finally
             {
                 this.CloseConnection();
             }
-            // return infoExamenes;
             return examenes;
-
-
         }
 
 
@@ -192,11 +181,6 @@ namespace Data.Database
                         where alumnos_inscripciones.id_inscripcion = @id";
                 this.OpenConnection();
                 SqlCommand cmdInscripciones = new SqlCommand(query, SqlConn);
-
-
-
-
-
                 cmdInscripciones.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
                 if (drInscripciones.Read())
@@ -204,7 +188,6 @@ namespace Data.Database
                     ins.ID = (int)drInscripciones["id_inscripcion"];
                     ins.Legajo = (int)drInscripciones["legajo"];
                     ins.IdCurso = (int)drInscripciones["id_curso"];
-                    
                     ins.Nota = (int)drInscripciones["nota"];
 
                 }
