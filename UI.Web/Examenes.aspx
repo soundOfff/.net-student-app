@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
     <asp:Panel ID="Panel1" runat="server" Height="338px" style="margin-top: 9px">
         <asp:Panel ID="Panel2" runat="server" Height="67px">
-            <asp:GridView ID="dgvExamenes" runat="server" DataKeyNames="ID" OnSelectedIndexChanged="dgvExamenes_SelectedIndexChanged">
+            <asp:GridView ID="dgvExamenes" runat="server" DataKeyNames="ID" OnSelectedIndexChanged="dgvExamenes_SelectedIndexChanged" CssClass="mGrid"
+                PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt">
                 <Columns>
                     <asp:BoundField HeaderText="Plan" DataField="DescPlan" />
                     <asp:BoundField HeaderText="Materia" DataField="DescMateria" />
@@ -34,9 +35,11 @@
  
             </asp:Panel>
             <asp:Panel ID="Panel4" runat="server">
-                <asp:LinkButton ID="btonEditar" runat ="server" Text="Editar" OnClick="btonEditar_Click"></asp:LinkButton>
-                <asp:LinkButton ID="btonNuevo" runat ="server" Text="Nuevo" OnClick="btonNuevo_Click"></asp:LinkButton>
-                <asp:LinkButton ID="btonEliminar" runat ="server" Text="Eliminar" OnClick="btonEliminar_Click"></asp:LinkButton>
+                <asp:LinkButton ID="btonEditar" runat ="server" Text="Editar" OnClick="btonEditar_Click" CssClass="button-10"></asp:LinkButton>
+               
+                <asp:LinkButton ID="btonNuevo" runat ="server" Text="Nuevo" OnClick="btonNuevo_Click" CssClass="button-10"></asp:LinkButton>
+                
+                <asp:LinkButton ID="btonEliminar" runat ="server" Text="Eliminar" OnClick="btonEliminar_Click" CssClass="button-10"></asp:LinkButton>
 
             </asp:Panel>
         </asp:Panel>
