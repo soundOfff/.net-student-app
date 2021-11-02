@@ -86,14 +86,14 @@ namespace Data.Database
                     
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
 
-                    if (!drUsuarios.IsDBNull(drUsuarios.GetOrdinal("imagen")))
+                   /* if (!drUsuarios.IsDBNull(drUsuarios.GetOrdinal("imagen")))
                     {
                         usr.Imagen = (byte[])drUsuarios["imagen"];
                     }
                     else
                     {
                         setDefaultImage(usr);
-                    }
+                    }*/
 
                     usuarios.Add(usr);
                 }
@@ -179,7 +179,7 @@ namespace Data.Database
                     usr.Clave = (string)drUsuarios["clave"];
                    // usr.IDpersona = (int)drUsuarios["id_persona"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
-                   usr.Imagen = (byte[])drUsuarios["imagen"];
+                  // usr.Imagen = (byte[])drUsuarios["imagen"];
 
                 }
                 drUsuarios.Close();

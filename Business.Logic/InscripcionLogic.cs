@@ -50,7 +50,10 @@ namespace Business.Logic
             _inscripcionData.Save(inscripcion);
         }
 
-
+        public ArrayList getAlumnoCurso(int idCurso)
+        {
+            return _inscripcionData.getAlumnosCurso(idCurso);
+        }
 
 
     }

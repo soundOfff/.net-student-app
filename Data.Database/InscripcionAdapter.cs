@@ -274,7 +274,47 @@ namespace Data.Database
                 this.CloseConnection();
             }
         }
+        public ArrayList getAlumnosCurso(int idCurso)
+        {
+           
+            ArrayList alumnos = new ArrayList();
 
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdInscript = new SqlCommand("SELECT distinct personas.legajo, personas.nombre, personas.apellido FROM alumnos_inscripciones " +
+                    "INNER JOIN personas " +
+                     "ON personas.id_persona = alumnos_inscripciones.id_alumno " +
+                    "WHERE alumnos_inscripciones.id_curso = @idCurso", SqlConn);
+                cmdInscript.Parameters.Add("@idCurso", SqlDbType.Int).Value = idCurso;
+                SqlDataReader drInscripciones = cmdInscript.ExecuteReader();
+                while (drInscripciones.Read())
+                {
+              
+                    var alumno = new
+                    {
+                        Legajo = (int)drInscripciones["legajo"],
+                        Nombre = (string)drInscripciones["nombre"],
+                        Apellido = (string)drInscripciones["apellido"]
+                    };
+                    alumnos.Add(alumno);
+                   
+                }
+                drInscripciones.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la Inscripcion", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            return alumnos;
+
+        }
 
     }
 }

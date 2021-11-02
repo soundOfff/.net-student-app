@@ -1,0 +1,11 @@
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\bin\Debug\Business.Entities.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\obj\Debug\Business.Logic.csprojAssemblyReference.cache
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\obj\Debug\Business.Logic.csproj.CoreCompileInputs.cache
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\lucab\Source\Repos\Tp2Grupo6AcademiaUltimo\Business.Logic\obj\Debug\Business.Logic.pdb

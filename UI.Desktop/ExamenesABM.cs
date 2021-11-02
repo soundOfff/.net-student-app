@@ -49,16 +49,17 @@ namespace UI.Desktop
             if(!(_modo == ModoForm.Baja))
             {
                 btnGuardar.Text = "Crear";
-                txtLegajoAlumno.Enabled = true;
-                txtNota.Enabled = true;
+                txtLegajoAlumno.Enabled = false;
+                
+                cbNota.Enabled = true;
                 if (_modo == ModoForm.Modificacion)
                 {
                     btnGuardar.Text = "Editar";
                     txtIDinscripcion.Text = (_examenActual.ID).ToString();
                     txtLegajoAlumno.Text = (_examenActual.Legajo).ToString();
-                    txtNota.Text = (_examenActual.Nota).ToString();
+                   
                     txtIdCurso.Text = (_examenActual.IdCurso).ToString();
-
+                    cbNota.Text = (_examenActual.Nota).ToString();
 
                 }
                 CursoLogic curso = new CursoLogic();
@@ -71,11 +72,14 @@ namespace UI.Desktop
             {
                 btnGuardar.Text = "Eliminar";
                 txtLegajoAlumno.Enabled = false;
-                txtNota.Enabled = false;
+                
+                cbNota.Enabled = false;
                 txtIDinscripcion.Text = (_examenActual.ID).ToString();
                 txtLegajoAlumno.Text = (_examenActual.Legajo).ToString();
-                txtNota.Text = (_examenActual.Nota).ToString();
+                
                 txtIdCurso.Text = (_examenActual.IdCurso).ToString();
+                cbNota.Text = (_examenActual.Nota).ToString();
+
             }
         }
 
@@ -123,8 +127,9 @@ namespace UI.Desktop
             int idPersona = per.GetIdPersona(Int32.Parse(txtLegajoAlumno.Text));
 
             insc.IdCurso = (Int32.Parse(txtIdCurso.Text));
-            insc.Nota = Int32.Parse(txtNota.Text);
-            if (Int32.Parse(txtNota.Text) < 6)
+            
+            insc.Nota = Int32.Parse(cbNota.Text);
+            if (Int32.Parse(cbNota.Text) < 6)
             {
                 insc.Condicion = "Reprobado";
             }
@@ -164,6 +169,28 @@ namespace UI.Desktop
             if (dgvDatosExamenes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 txtIdCurso.Text = dgvDatosExamenes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            }
+        }
+
+        
+        private void btonFiltrar_Click(object sender, EventArgs e)
+        {
+            if(txtIdCurso.Text == null || txtIdCurso.Text == "")
+            {
+                MessageBox.Show("Seleccione algun curso");
+            }
+            else
+            {
+                InscripcionLogic insc = new InscripcionLogic();
+                dgvAlumnos.DataSource = insc.getAlumnoCurso(Int32.Parse(txtIdCurso.Text));
+            }
+        }
+
+        private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAlumnos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                txtLegajoAlumno.Text = dgvAlumnos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             }
         }
     }
