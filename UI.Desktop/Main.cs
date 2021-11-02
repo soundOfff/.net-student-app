@@ -172,11 +172,17 @@ namespace UI.Desktop
             AbrirFormInPanel(new TestDiseñoInscripcionUser());
         }
 
+        private void btnReportePlanes_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new ReportePlanes());
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             _posAntImg = this.cirPicImg.Location;
             _posAntNom = this.lblNombrePersona.Location;
             _posAntTipo = this.lblTipoPersona.Location;
         }
+
     }
 }

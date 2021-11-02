@@ -19,6 +19,10 @@
 
                     </li>
                     <li>
+                        <a class="button button01" href="ReportePlan.aspx" >Reporte Plan</a>
+
+                    </li>
+                    <li>
                         <a runat="server" class="button button01" id="cerrar" href="Home.aspx" >Cerrar Sesion</a>
                     </li>
                 </ul>

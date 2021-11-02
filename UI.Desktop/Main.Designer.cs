@@ -40,7 +40,7 @@ namespace UI.Desktop
             this.btnInscripciones = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnReportePlanes = new System.Windows.Forms.Button();
             this.btnExamenes = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.pctrLogo = new System.Windows.Forms.PictureBox();
@@ -73,7 +73,7 @@ namespace UI.Desktop
             this.pnlVertical.Controls.Add(this.btnInscripciones);
             this.pnlVertical.Controls.Add(this.btnLogout);
             this.pnlVertical.Controls.Add(this.button3);
-            this.pnlVertical.Controls.Add(this.button2);
+            this.pnlVertical.Controls.Add(this.btnReportePlanes);
             this.pnlVertical.Controls.Add(this.btnExamenes);
             this.pnlVertical.Controls.Add(this.btnUsuarios);
             this.pnlVertical.Controls.Add(this.pctrLogo);
@@ -196,23 +196,24 @@ namespace UI.Desktop
             this.button3.Text = "Usuarios";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnReportePlanes
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Usuarios";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnReportePlanes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReportePlanes.FlatAppearance.BorderSize = 0;
+            this.btnReportePlanes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnReportePlanes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnReportePlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportePlanes.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportePlanes.ForeColor = System.Drawing.Color.White;
+            this.btnReportePlanes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportePlanes.Image")));
+            this.btnReportePlanes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportePlanes.Location = new System.Drawing.Point(12, 331);
+            this.btnReportePlanes.Name = "btnReportePlanes";
+            this.btnReportePlanes.Size = new System.Drawing.Size(180, 40);
+            this.btnReportePlanes.TabIndex = 2;
+            this.btnReportePlanes.Text = "Planes";
+            this.btnReportePlanes.UseVisualStyleBackColor = true;
+            this.btnReportePlanes.Click += new System.EventHandler(this.btnReportePlanes_Click);
             // 
             // btnExamenes
             // 
@@ -373,7 +374,7 @@ namespace UI.Desktop
         private System.Windows.Forms.Button btnInscripciones;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnReportePlanes;
         private System.Windows.Forms.Button btnExamenes;
         private System.Windows.Forms.Label lblNombrePersona;
         private System.Windows.Forms.Label lblTipoPersona;
