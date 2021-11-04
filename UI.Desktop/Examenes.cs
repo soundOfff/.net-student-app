@@ -34,6 +34,7 @@ namespace UI.Desktop
                     if(_personaRegistrada.TipoPersona == 1)
                     {
                         dgvExamenes.AutoGenerateColumns = false;
+                        
                         this.dgvExamenes.DataSource = ins.GetAll(PersonaRegistrada);
                     }
                     else
@@ -42,11 +43,7 @@ namespace UI.Desktop
                         this.dgvExamenes.DataSource = ins.GetAll(PersonaRegistrada);
                     }
                 }
-                else
-                {
-                    dgvExamenes.AutoGenerateColumns = true;
-                    this.dgvExamenes.DataSource = ins.GetAll();
-                }
+                
                 
             }
             catch (Exception Ex)
@@ -78,24 +75,31 @@ namespace UI.Desktop
 
         private void tsbAgregar_Click(object sender, EventArgs e)
         {
-            ExamenesABM formTest = new ExamenesABM(_personaRegistrada, ApplicationForm.ModoForm.Alta);
-            formTest.ShowDialog();
-            Listar();
+            if (_personaRegistrada.TipoPersona == 2)
+            {
+                ExamenesABM formTest = new ExamenesABM(_personaRegistrada, ApplicationForm.ModoForm.Alta);
+                formTest.ShowDialog();
+                Listar();
+            }
+
+            
         }
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            if(dgvExamenes.SelectedRows.Count == 0) 
-            {
+            if (_personaRegistrada.TipoPersona == 2) { 
+                if (dgvExamenes.SelectedRows.Count == 0)
+                {
 
-                MessageBox.Show("Seleccione ID");
-            }
-            else
-            {
-                _examenActual = ((Examen)this.dgvExamenes.SelectedRows[0].DataBoundItem);
-                
-                ExamenesABM formTest = new ExamenesABM(_personaRegistrada, _examenActual, ApplicationForm.ModoForm.Modificacion);
-                formTest.ShowDialog();
+                    MessageBox.Show("Seleccione ID");
+                }
+                else
+                {
+                    _examenActual = ((Examen)this.dgvExamenes.SelectedRows[0].DataBoundItem);
+
+                    ExamenesABM formTest = new ExamenesABM(_personaRegistrada, _examenActual, ApplicationForm.ModoForm.Modificacion);
+                    formTest.ShowDialog();
+                }
             }
 
         }
@@ -112,16 +116,18 @@ namespace UI.Desktop
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if(dgvExamenes.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Seleccione ID");
-            }
-            else
-            {
-                _examenActual = ((Examen)dgvExamenes.SelectedRows[0].DataBoundItem);
+            if (_personaRegistrada.TipoPersona == 2) { 
+                if (dgvExamenes.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Seleccione ID");
+                }
+                else
+                {
+                    _examenActual = ((Examen)dgvExamenes.SelectedRows[0].DataBoundItem);
 
-                ExamenesABM formtest = new ExamenesABM(_personaRegistrada, _examenActual, ApplicationForm.ModoForm.Baja);
-                formtest.ShowDialog();
+                    ExamenesABM formtest = new ExamenesABM(_personaRegistrada, _examenActual, ApplicationForm.ModoForm.Baja);
+                    formtest.ShowDialog();
+                }
             }
         }
     }

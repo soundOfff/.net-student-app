@@ -43,10 +43,13 @@ namespace UI.Desktop
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.btonFiltrar = new System.Windows.Forms.Button();
+            this.btonCancelar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosExamenes)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -56,9 +59,9 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.75F));
             this.tableLayoutPanel1.Controls.Add(this.dgvDatosExamenes, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnGuardar, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.dgvAlumnos, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.btonFiltrar, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -189,7 +192,7 @@ namespace UI.Desktop
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Location = new System.Drawing.Point(79, 425);
+            this.btnGuardar.Location = new System.Drawing.Point(19, 70);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 22);
             this.btnGuardar.TabIndex = 3;
@@ -217,6 +220,31 @@ namespace UI.Desktop
             this.btonFiltrar.UseVisualStyleBackColor = true;
             this.btonFiltrar.Click += new System.EventHandler(this.btonFiltrar_Click);
             // 
+            // btonCancelar
+            // 
+            this.btonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btonCancelar.Location = new System.Drawing.Point(133, 70);
+            this.btonCancelar.Name = "btonCancelar";
+            this.btonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btonCancelar.TabIndex = 6;
+            this.btonCancelar.Text = "Cancelar";
+            this.btonCancelar.UseVisualStyleBackColor = true;
+            this.btonCancelar.Click += new System.EventHandler(this.btonCancelar_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.btonCancelar, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnGuardar, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 256);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(228, 163);
+            this.tableLayoutPanel3.TabIndex = 7;
+            // 
             // ExamenesABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +259,7 @@ namespace UI.Desktop
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -251,5 +280,7 @@ namespace UI.Desktop
         private System.Windows.Forms.DataGridView dgvAlumnos;
         private System.Windows.Forms.Button btonFiltrar;
         private System.Windows.Forms.ComboBox cbNota;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btonCancelar;
     }
 }

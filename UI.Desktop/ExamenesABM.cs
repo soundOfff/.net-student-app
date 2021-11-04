@@ -121,43 +121,52 @@ namespace UI.Desktop
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            PersonaLogic per = new PersonaLogic();
-            Inscripcion insc = new Inscripcion();
-            ExamenesLogic inscLogic = new ExamenesLogic();
-            int idPersona = per.GetIdPersona(Int32.Parse(txtLegajoAlumno.Text));
+            try
+            {
+                PersonaLogic per = new PersonaLogic();
+                Inscripcion insc = new Inscripcion();
+                ExamenesLogic inscLogic = new ExamenesLogic();
+                int idPersona = per.GetIdPersona(Int32.Parse(txtLegajoAlumno.Text));
 
-            insc.IdCurso = (Int32.Parse(txtIdCurso.Text));
+                insc.IdCurso = (Int32.Parse(txtIdCurso.Text));
+
+                insc.Nota = Int32.Parse(cbNota.Text);
+                if (Int32.Parse(cbNota.Text) < 6)
+                {
+                    insc.Condicion = "Reprobado";
+                }
+                else
+                {
+                    insc.Condicion = "Aprobado";
+                }
+
+                insc.IdAlumno = idPersona;
+
+                if (_modo == ModoForm.Modificacion)
+                {
+                    insc.State = BusinessEntity.States.Modified;
+                    insc.ID = Int32.Parse(txtIDinscripcion.Text);
+                }
+                else if (_modo == ModoForm.Alta)
+                {
+                    insc.State = BusinessEntity.States.New;
+                }
+                else
+                {
+                    insc.State = BusinessEntity.States.Deleted;
+                    insc.ID = Int32.Parse(txtIDinscripcion.Text);
+                }
+
+                inscLogic.Save(insc);
+
+                this.Dispose();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExepcionManejada = new Exception("Error al " + btnGuardar.Text + " Examen");
+                MessageBox.Show("Codigo de error: #404", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
-            insc.Nota = Int32.Parse(cbNota.Text);
-            if (Int32.Parse(cbNota.Text) < 6)
-            {
-                insc.Condicion = "Reprobado";
-            }
-            else
-            {
-                insc.Condicion = "Aprobado";
-            }
-
-            insc.IdAlumno = idPersona;
-
-            if(_modo == ModoForm.Modificacion)
-            {
-                insc.State = BusinessEntity.States.Modified;
-                insc.ID = Int32.Parse(txtIDinscripcion.Text);
-            }
-            else if (_modo == ModoForm.Alta)
-            {
-                insc.State = BusinessEntity.States.New;
-            }
-            else
-            {
-                insc.State = BusinessEntity.States.Deleted;
-                insc.ID = Int32.Parse(txtIDinscripcion.Text);
-            }
-            
-             inscLogic.Save(insc);
-
-            this.Dispose();
             
 
             
@@ -192,6 +201,12 @@ namespace UI.Desktop
             {
                 txtLegajoAlumno.Text = dgvAlumnos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             }
+        }
+
+        private void btonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+
         }
     }
 }
