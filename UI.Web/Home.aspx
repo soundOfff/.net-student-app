@@ -38,6 +38,8 @@
                     <p>El día jueves 4 de noviembre, a las 18, se llevará adelante la jornada “Jóvenes que transforman Santa Fe”.</p>
                     <p>Esta consiste de un espacio para conectar talento joven, visibilizar experiencias de alto  ...</p>
                 </div>
+                <img style="margin-top:auto; margin-bottom:auto; height:100%; width:100%;" src="Content/img/bannercovid19.png" />
+                
                 <div class="card">
                     <b>Jornada: Jóvenes que transforman Santa Fe</b>
                     <p>El día jueves 4 de noviembre, a las 18, se llevará adelante la jornada “Jóvenes que transforman Santa Fe”.</p>
@@ -53,13 +55,9 @@
                     <p>El día jueves 4 de noviembre, a las 18, se llevará adelante la jornada “Jóvenes que transforman Santa Fe”.</p>
                     <p>Esta consiste de un espacio para conectar talento joven, visibilizar experiencias de alto  ...</p>
                 </div>
-            </div>
-        
-            <div class="rigth">
-                <img src="Content/img/idiomas1.jpg" />
-                <img src="Content/img/bannercovid19.png" />
-                <img src="Content/img/turnos-Online-Frro.png" />
-                <img src="Content/img/ventanilla-zoom-utn-frro.jpeg" />
+                <img style="height:100%; width:100%;" src="Content/img/turnos-Online-Frro.png" />
+                
+
             </div>
         </div>
          <script>
