@@ -56,9 +56,13 @@ namespace UI.Web
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] == null)
+            if (Session["rol"] == null)
             {
-                Response.Redirect("Login.aspx", true);
+                Response.Redirect("Login.aspx");
+            }
+            else if ((string)Session["rol"] != "2")
+            {
+                Response.Redirect("MenuAutogestion.aspx");
             }
             else
             {
@@ -199,6 +203,9 @@ namespace UI.Web
 
         }
 
-
+        protected void Volver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MenuAutogestion.aspx");
+        }
     }
 }

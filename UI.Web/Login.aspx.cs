@@ -18,14 +18,17 @@ namespace UI.Web
         public static Persona _personaRegistrada = new Persona();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            alert.Visible = false;
         }
 
-        protected void LoginUsuario_Authenticate(object sender, AuthenticateEventArgs e)
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if(LoginUsuario.UserName == "A" && LoginUsuario.Password == "a")
+            if (this.txtUsername.Text == "A" && this.txtPassword.Text == "a")
             {
-                Session["id"] = "admin";
+                // Persona registrada en la db como admin 
+                _usuarioRegistrado = ul.GetOne("Admin", "a");
+                _personaRegistrada = pl.GetOne(19);
+                Session["rol"] = "admin";
                 Response.Redirect("~/MenuAutogestion.aspx");
                 Session.RemoveAll();
             }
@@ -33,19 +36,19 @@ namespace UI.Web
             {
                 try
                 {
-                    _usuarioRegistrado = ul.GetOne(this.LoginUsuario.UserName, this.LoginUsuario.Password);
+                    _usuarioRegistrado = ul.GetOne(this.txtUsername.Text, this.txtPassword.Text);
                     if (!String.IsNullOrEmpty(_usuarioRegistrado.NombreUsuario))
                     {
                         _personaRegistrada = pl.GetOne(_usuarioRegistrado.IDPersona);
-                        Session["id"] = _personaRegistrada.ID;
+                        Session["rol"] = Convert.ToString(_personaRegistrada.TipoPersona);
                         Response.Redirect("~/MenuAutogestion.aspx");
                         Session.RemoveAll();
                     }
                     else
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Credenciales incorrectas no puede dejar valores nulos" + "');", true);
-                        Response.Redirect("Login.aspx", true);
+                        alert.Visible = true;
                     }
+
                 }
                 catch (Exception)
                 {
