@@ -24,6 +24,10 @@ namespace Business.Logic
             return _planData.GetAll();
         }
 
+        public List<String> GetAllDistinct()
+        {
+            return _planData.GetAllDistinct();
+        }
         public List<Plan> GetAll(int idEspecialidad)
         {
             return _planData.GetAll(idEspecialidad);
@@ -32,6 +36,11 @@ namespace Business.Logic
         public Plan GetOne(int idPlan)
         {
             return _planData.GetOne(idPlan);
+        }
+
+        public int GetOne(string descPlan, string descEspecialidad)
+        {
+            return _planData.GetOne(descPlan, descEspecialidad);
         }
 
         public void Delete(int idPlan)

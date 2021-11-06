@@ -39,7 +39,7 @@
         <asp:Label ID="nombreLabel" runat="server" Text="Nombre: "></asp:Label>
         <asp:TextBox ID="nombreTextBox" runat="server"></asp:TextBox>
         
-                <asp:RequiredFieldValidator ForeColor="Red" ID="rfvNombre" runat ="server" ControlToValidate ="nombreTextBox" ErrorMessage="El nombre no puede estar vacio" InitialValue=" "  >*</asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ForeColor="Red" ID="rfvNombre" runat ="server" ControlToValidate ="nombreTextBox" ErrorMessage="El nombre no puede estar vacio" InitialValue=" "  >*</asp:RequiredFieldValidator>
        
         <br />
         <asp:Label ID="apellidoLabel" runat="server" Text="Apellido: "></asp:Label>

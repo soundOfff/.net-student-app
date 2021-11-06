@@ -29,12 +29,12 @@ Inherits="UI.Web.MenuAutogestion" %>
           <a class="button button01" href="Examenes.aspx">Examenes</a>
         </li>
         <li>
+          <a class="button button01" href="Personas.aspx">Personas</a>
+        </li>
+        <li>
           <a class="button button01" href="ReportePlan.aspx">Reporte Plan</a>
         </li>
         <li>
-          <a runat="server" class="button button01" id="cerrar" href="Home.aspx"
-            >Cerrar Sesion</a
-          >
           <asp:LinkButton
             runat="server"
             OnClick="Cerrar_Click"

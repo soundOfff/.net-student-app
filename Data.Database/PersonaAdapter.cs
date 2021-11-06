@@ -33,6 +33,7 @@ namespace Data.Database
                     per.Legajo = (int)drPersonas["legajo"];
                     per.TipoPersona = (int)drPersonas["tipo_persona"];
                     per.IDPlan = (int)drPersonas["id_plan"];
+                    personas.Add(per);
                 }
                 drPersonas.Close();
             }
@@ -224,7 +225,7 @@ namespace Data.Database
             }
         }
 
-        protected void Insert(Persona persona)
+        public void Insert(Persona persona)
         {
             try
             {

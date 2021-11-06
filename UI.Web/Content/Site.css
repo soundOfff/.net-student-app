@@ -87,14 +87,21 @@ nav {
     height:75px;
 }
 
+
+.report-container{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
 .menu-aut-top p {
-    float:right;
-    margin-right:40px;
+    float: right;
+    margin-right: 40px;
 }
 
 
 .menu-aut-container {
-    height: 80%;
+    height: 90%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -104,15 +111,17 @@ nav {
 
 .menu-aut-content {
     margin-bottom: 20px;
-    height: 70%;
+    height: 100%;
     width: 35%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.menu-aut {
     border-left: solid 1px;
     border-right: solid 1px;
     border-bottom: solid 1px;
+}
+
+
+
+.menu-aut {
     width: 100%;
     height: 100%;
     display: flex;
@@ -183,15 +192,15 @@ nav {
 
 .home-top img {
         width: 100%;
-        height: 75%;
-        border-radius: 10px 10px 0px 0px;
+        height:258px;
+        border-radius: 15px 15px 10px 10px;
         border: 1px solid rgba(255, 0, 0, .5);
 }
 
 
 .footer-carrera {
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     left: 0%;
     z-index: 999;
     width: 100%;

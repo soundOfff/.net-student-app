@@ -43,6 +43,66 @@ namespace Data.Database
 
         }
 
+        public List<String> GetAllDistinct()
+        {
+            List<String> planes = new List<String>();
+
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdPlanes = new SqlCommand("select distinct desc_plan from planes", SqlConn);
+                SqlDataReader drPlanes = cmdPlanes.ExecuteReader();
+                while (drPlanes.Read())
+                {
+                    String pln;
+                    pln = (string)drPlanes["desc_plan"];
+                    planes.Add(pln);
+                }
+                drPlanes.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de planes", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return planes;
+
+        }
+
+        public int GetOne(string descPlan, string descEspecialidad)
+        {
+            var idPlan = 0;
+
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdPlanes = new SqlCommand("select id_plan from planes where planes.desc_plan = @descPlan and id_especialidad = (select id_especialidad from especialidades where desc_especialidad = @descEspecialidad)", SqlConn);
+                cmdPlanes.Parameters.Add("@descPlan", SqlDbType.VarChar, 50).Value = descPlan;
+                cmdPlanes.Parameters.Add("@descEspecialidad", SqlDbType.VarChar, 50).Value = descEspecialidad;
+                SqlDataReader drPlanes = cmdPlanes.ExecuteReader();
+                if (drPlanes.Read())
+                {
+                    idPlan = (int)drPlanes["id_plan"];
+                }
+                drPlanes.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de planes", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return idPlan;
+        }
+
+
         public List<Plan> GetAll(int idEsp)
         {
             List<Plan> planes = new List<Plan>();

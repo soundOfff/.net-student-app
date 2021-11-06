@@ -35,7 +35,10 @@ namespace Business.Logic
             return _personaData.GetOne(legajo);
         }
 
-
+        public void Insert(Persona per)
+        {
+            _personaData.Insert(per);
+        }
         public void Delete(int idPersona)
         {
             _personaData.Delete(idPersona);
