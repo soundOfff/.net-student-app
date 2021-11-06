@@ -17,7 +17,7 @@
                     <asp:BoundField HeaderText="Nota" DataField="Nota" />
                     <asp:BoundField HeaderText="legajo" DataField="Legajo" Visible = "false" />
                     <asp:BoundField HeaderText="IdCurso" DataField="IdCurso" Visible = "false" />
-                    <asp:BoundField HeaderText="IdCurso" DataField="ID" Visible = "false" />
+                    <asp:BoundField HeaderText="IdInscripcion" DataField="ID" Visible = "false" />
                     <asp:CommandField HeaderText="Seleccionar" ShowSelectButton="true"/>
                 </Columns>
 

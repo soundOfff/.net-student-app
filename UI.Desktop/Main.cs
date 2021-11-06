@@ -164,7 +164,8 @@ namespace UI.Desktop
 
         private void btnExamenes_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new Examenes(formLogin._personaRegistrada));
+            //AbrirFormInPanel(new Examenes(formLogin._personaRegistrada));
+            AbrirFormInPanel(new Cursos());
         }
 
         private void lbl5_Click(object sender, EventArgs e)
