@@ -10,51 +10,50 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
         </style>
     </head>
     <body>
-      <nav>
-       <div class="nav-container">
+           
+          <nav>
+           <div class="nav-container">
 
-      <input type="checkbox" id="check" />
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-            <label class="logo">UTN</label>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="Login.aspx">Autogestion</a></li>
-        <li><a href="Contact.aspx">Contacto</a></li>
-        <li><a href="About.aspx">Acerca de</a></li>
-      </ul>
-        </div>
-    </nav>
-        <form id="bodyForm" runat="server">
-            <div  style="
-                    width: 100%;
-                    height: 90%;
-                    display: flex;
-                    padding-bottom: 50px;
-                    flex-wrap: wrap;
-                    justify-content:center;
-                    overflow:auto;
-                    margin-top: 50px;
-                    margin-right: auto;">
-                <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
-                </asp:ContentPlaceHolder>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+                <label class="logo">UTN</label>
+          <ul>
+            <li><a href="Home.aspx">Home</a></li>
+            <li><a href="Login.aspx">Autogestion</a></li>
+            <li><a href="Contact.aspx">Contacto</a></li>
+            <li><a href="About.aspx">Acerca de</a></li>
+          </ul>
             </div>
-        </form>
+        </nav>
+            <form id="bodyForm" runat="server">
+                <div  style="
+                        width: 100%;
+                        height: 800px;
+                        display: flex;
+                        padding-bottom: 50px;
+                        flex-wrap: wrap;
+                        justify-content:center;
+                        overflow:auto;
+                        margin-top: 50px;">
+                    <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
         <div class="">
-        <footer style="width:100%; height:40px; background:#f0f0f0; text-align:center; padding-top:10px;">
-            <span>
-                © 2021 Group 6 All rights reserved.
-            </span>
-        </footer>
-    </div>
+            <footer style="width:100%; height:40px; background:#f0f0f0; text-align:center; padding-top:10px;">
+                <span>
+                    © 2021 Group 6 All rights reserved.
+                </span>
+            </footer>
+        </div>
 
-      
+     
     </body>
 </html>

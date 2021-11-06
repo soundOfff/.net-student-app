@@ -54,11 +54,5 @@ namespace UI.Desktop
         {
             InitializeComponent();
         }
-
-
-
-
-
-
     }
 }
