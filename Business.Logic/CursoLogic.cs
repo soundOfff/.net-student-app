@@ -50,5 +50,11 @@ namespace Business.Logic
         {
             _cursoData.Save(curso);
         }
+
+        public List<Curso> GetAllDGV()
+        {
+            return _cursoData.GetAllDGV();
+        }
+
     }
 }
