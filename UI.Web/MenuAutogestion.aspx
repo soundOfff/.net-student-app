@@ -32,6 +32,9 @@ Inherits="UI.Web.MenuAutogestion" %>
           <a class="button button01" href="Personas.aspx">Personas</a>
         </li>
         <li>
+          <a class="button button01" href="Cursos.aspx">Cursos</a>
+        </li>
+        <li>
           <a class="button button01" href="ReportePlan.aspx">Reporte Plan</a>
         </li>
         <li>

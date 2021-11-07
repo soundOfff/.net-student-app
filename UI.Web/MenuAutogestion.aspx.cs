@@ -19,9 +19,9 @@ namespace UI.Web
             {
                 lblUsuario.InnerText = "Nombre de Usuario: " + Login._usuarioRegistrado.NombreUsuario + ".";
 
-                //string strBase64 = Convert.ToBase64String(Login._usuarioRegistrado.Imagen);
+                string strBase64 = Convert.ToBase64String(Login._usuarioRegistrado.Imagen);
 
-                //userImage.ImageUrl = "data:Image/png;base64," + strBase64;
+                userImage.ImageUrl = "data:Image/png;base64," + strBase64;
 
                if ( (string)Session["rol"] == "1" )
                 {
