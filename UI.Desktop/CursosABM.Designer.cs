@@ -34,6 +34,8 @@ namespace UI.Desktop
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMateria = new System.Windows.Forms.DataGridView();
+            this.IDc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtIdCurso = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,8 +49,8 @@ namespace UI.Desktop
             this.txtAnioCalendario = new System.Windows.Forms.TextBox();
             this.btonAceptar = new System.Windows.Forms.Button();
             this.btonCancelar = new System.Windows.Forms.Button();
-            this.IDc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materias = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComision)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateria)).BeginInit();
@@ -68,6 +70,8 @@ namespace UI.Desktop
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btonAceptar, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btonCancelar, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.materias, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -98,6 +102,7 @@ namespace UI.Desktop
             this.dgvComision.Size = new System.Drawing.Size(389, 108);
             this.dgvComision.TabIndex = 12;
             this.dgvComision.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComision_CellClick);
+            this.dgvComision.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvComision_RowHeaderMouseClick);
             // 
             // ID
             // 
@@ -124,6 +129,20 @@ namespace UI.Desktop
             this.dgvMateria.Size = new System.Drawing.Size(389, 191);
             this.dgvMateria.TabIndex = 11;
             this.dgvMateria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMateria_CellClick);
+            this.dgvMateria.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMateria_RowHeaderMouseClick);
+            // 
+            // IDc
+            // 
+            this.IDc.DataPropertyName = "ID";
+            this.IDc.HeaderText = "ID";
+            this.IDc.Name = "IDc";
+            // 
+            // State1
+            // 
+            this.State1.DataPropertyName = "State";
+            this.State1.HeaderText = "State";
+            this.State1.Name = "State1";
+            this.State1.Visible = false;
             // 
             // tableLayoutPanel2
             // 
@@ -216,6 +235,7 @@ namespace UI.Desktop
             // 
             // txtIdComision
             // 
+            this.txtIdComision.Enabled = false;
             this.txtIdComision.Location = new System.Drawing.Point(192, 49);
             this.txtIdComision.Name = "txtIdComision";
             this.txtIdComision.Size = new System.Drawing.Size(100, 20);
@@ -257,18 +277,25 @@ namespace UI.Desktop
             this.btonCancelar.UseVisualStyleBackColor = true;
             this.btonCancelar.Click += new System.EventHandler(this.btonCancelar_Click);
             // 
-            // IDc
+            // materias
             // 
-            this.IDc.DataPropertyName = "ID";
-            this.IDc.HeaderText = "ID";
-            this.IDc.Name = "IDc";
+            this.materias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.materias.AutoSize = true;
+            this.materias.Location = new System.Drawing.Point(388, 30);
+            this.materias.Name = "materias";
+            this.materias.Size = new System.Drawing.Size(47, 13);
+            this.materias.TabIndex = 15;
+            this.materias.Text = "Materias";
             // 
-            // State1
+            // label6
             // 
-            this.State1.DataPropertyName = "State";
-            this.State1.HeaderText = "State";
-            this.State1.Name = "State1";
-            this.State1.Visible = false;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(388, 250);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Comisiones";
             // 
             // CursosABM
             // 
@@ -280,6 +307,7 @@ namespace UI.Desktop
             this.Text = "CursosABM";
             this.Load += new System.EventHandler(this.CursosABM_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComision)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateria)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -311,5 +339,7 @@ namespace UI.Desktop
         private System.Windows.Forms.DataGridViewTextBoxColumn State;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDc;
         private System.Windows.Forms.DataGridViewTextBoxColumn State1;
+        private System.Windows.Forms.Label materias;
+        private System.Windows.Forms.Label label6;
     }
 }

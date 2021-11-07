@@ -31,6 +31,7 @@ namespace UI.Desktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlVertical = new System.Windows.Forms.Panel();
+            this.buttonEspecialidades = new System.Windows.Forms.Button();
             this.lblTipoPersona = new System.Windows.Forms.Label();
             this.lblNombrePersona = new System.Windows.Forms.Label();
             this.lblPosImg = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@ namespace UI.Desktop
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.buttonEspecialidades = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
             this.pnlVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
@@ -65,6 +66,7 @@ namespace UI.Desktop
             // pnlVertical
             // 
             this.pnlVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(10)))), ((int)(((byte)(103)))));
+            this.pnlVertical.Controls.Add(this.btnCursos);
             this.pnlVertical.Controls.Add(this.buttonEspecialidades);
             this.pnlVertical.Controls.Add(this.lblTipoPersona);
             this.pnlVertical.Controls.Add(this.lblNombrePersona);
@@ -84,6 +86,25 @@ namespace UI.Desktop
             this.pnlVertical.Name = "pnlVertical";
             this.pnlVertical.Size = new System.Drawing.Size(200, 600);
             this.pnlVertical.TabIndex = 0;
+            // 
+            // buttonEspecialidades
+            // 
+            this.buttonEspecialidades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonEspecialidades.FlatAppearance.BorderSize = 0;
+            this.buttonEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEspecialidades.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEspecialidades.ForeColor = System.Drawing.Color.White;
+            this.buttonEspecialidades.Image = ((System.Drawing.Image)(resources.GetObject("buttonEspecialidades.Image")));
+            this.buttonEspecialidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEspecialidades.Location = new System.Drawing.Point(12, 367);
+            this.buttonEspecialidades.Name = "buttonEspecialidades";
+            this.buttonEspecialidades.Size = new System.Drawing.Size(180, 40);
+            this.buttonEspecialidades.TabIndex = 10;
+            this.buttonEspecialidades.Text = "Especialidades";
+            this.buttonEspecialidades.UseVisualStyleBackColor = true;
+            this.buttonEspecialidades.Click += new System.EventHandler(this.buttonEspecialidades_Click);
             // 
             // lblTipoPersona
             // 
@@ -172,7 +193,7 @@ namespace UI.Desktop
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(12, 423);
+            this.btnLogout.Location = new System.Drawing.Point(12, 467);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(180, 40);
             this.btnLogout.TabIndex = 4;
@@ -337,24 +358,24 @@ namespace UI.Desktop
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
-            // buttonEspecialidades
+            // btnCursos
             // 
-            this.buttonEspecialidades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonEspecialidades.FlatAppearance.BorderSize = 0;
-            this.buttonEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEspecialidades.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEspecialidades.ForeColor = System.Drawing.Color.White;
-            this.buttonEspecialidades.Image = ((System.Drawing.Image)(resources.GetObject("buttonEspecialidades.Image")));
-            this.buttonEspecialidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEspecialidades.Location = new System.Drawing.Point(12, 367);
-            this.buttonEspecialidades.Name = "buttonEspecialidades";
-            this.buttonEspecialidades.Size = new System.Drawing.Size(180, 40);
-            this.buttonEspecialidades.TabIndex = 10;
-            this.buttonEspecialidades.Text = "Especialidades";
-            this.buttonEspecialidades.UseVisualStyleBackColor = true;
-            this.buttonEspecialidades.Click += new System.EventHandler(this.buttonEspecialidades_Click);
+            this.btnCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCursos.FlatAppearance.BorderSize = 0;
+            this.btnCursos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursos.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursos.ForeColor = System.Drawing.Color.White;
+            this.btnCursos.Image = ((System.Drawing.Image)(resources.GetObject("btnCursos.Image")));
+            this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCursos.Location = new System.Drawing.Point(12, 413);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(180, 40);
+            this.btnCursos.TabIndex = 11;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
             // Main
             // 
@@ -406,5 +427,6 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblPosTipo;
         private System.Windows.Forms.Label lblPosNombre;
         private System.Windows.Forms.Button buttonEspecialidades;
+        private System.Windows.Forms.Button btnCursos;
     }
 }

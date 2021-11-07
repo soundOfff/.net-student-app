@@ -14,6 +14,7 @@ namespace UI.Desktop
 {
     public partial class Cursos : ApplicationForm
     {
+        private Persona _personaRegistrada;
         private Curso _cursoActual;
 
         public Cursos()
@@ -21,9 +22,18 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
+        public Cursos(Persona per)
+        {
+            InitializeComponent();
+            _personaRegistrada = per;
+        }
+
         private void Cursos_Load(object sender, EventArgs e)
         {
-            Listar();
+            if (_personaRegistrada == null)
+            {
+                Listar();
+            }
         }
 
         private void Listar()
@@ -36,44 +46,57 @@ namespace UI.Desktop
 
         private void tsbAgregar_Click(object sender, EventArgs e)
         {
-            CursosABM formTest = new CursosABM(ApplicationForm.ModoForm.Alta);
-            formTest.ShowDialog();
-            Listar();
+            if (_personaRegistrada == null)
+            {
+                CursosABM formTest = new CursosABM(ApplicationForm.ModoForm.Alta);
+                formTest.ShowDialog();
+                Listar();
+            }
 
         }
 
         private void tsbEditar_Click(object sender, EventArgs e)
-        {
-            if(dgvCursos.SelectedRows.Count == 0)
+        {   
+            if(_personaRegistrada == null)
             {
-                MessageBox.Show("Seleccione Curso");
-            }
-            else
-            {
-                _cursoActual = (Curso)dgvCursos.SelectedRows[0].DataBoundItem;
-                CursosABM formTest = new CursosABM(_cursoActual, ApplicationForm.ModoForm.Modificacion);
-                formTest.ShowDialog();
-                
-            }
 
-            Listar();
+                if (dgvCursos.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Seleccione Curso");
+                }
+                else
+                {
+                    _cursoActual = (Curso)dgvCursos.SelectedRows[0].DataBoundItem;
+                    CursosABM formTest = new CursosABM(_cursoActual, ApplicationForm.ModoForm.Modificacion);
+                    formTest.ShowDialog();
+
+                }
+
+                Listar();
+
+
+            }
+            
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvCursos.SelectedRows.Count == 0)
+            if (_personaRegistrada == null)
             {
-                MessageBox.Show("Seleccione Curso");
-            }
-            else
-            {
-                _cursoActual = (Curso)dgvCursos.SelectedRows[0].DataBoundItem;
-                CursosABM formTest = new CursosABM(_cursoActual, ApplicationForm.ModoForm.Baja);
-                formTest.ShowDialog();
+                if (dgvCursos.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Seleccione Curso");
+                }
+                else
+                {
+                    _cursoActual = (Curso)dgvCursos.SelectedRows[0].DataBoundItem;
+                    CursosABM formTest = new CursosABM(_cursoActual, ApplicationForm.ModoForm.Baja);
+                    formTest.ShowDialog();
 
-            }
+                }
 
-            Listar();
+                Listar();
+            }
         }
     }
 }

@@ -15,10 +15,17 @@ namespace UI.Desktop
 {
     public partial class Especialidades: Form
     {
+        private Persona _personaRegistrada;
         public Especialidades()
         {
             InitializeComponent();
             this.dgvEspecialidades.AutoGenerateColumns = false;
+        }
+        public Especialidades(Persona per)
+        {
+            InitializeComponent();
+            this.dgvEspecialidades.AutoGenerateColumns = false;
+            _personaRegistrada = per;
         }
 
         public void Listar()
@@ -29,7 +36,10 @@ namespace UI.Desktop
 
         private void Especialidades_Load(object sender, EventArgs e)
         {
-            Listar();
+            if (_personaRegistrada == null)
+            {
+                Listar();
+            }
         }
 
 
@@ -45,38 +55,47 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-      
-            EspecialidadesDesktop formTest = new EspecialidadesDesktop(ApplicationForm.ModoForm.Alta);
-            formTest.ShowDialog();
-            Listar();
+            if (_personaRegistrada == null)
+            {
+                EspecialidadesDesktop formTest = new EspecialidadesDesktop(ApplicationForm.ModoForm.Alta);
+                formTest.ShowDialog();
+                Listar();
+            }
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if (this.dgvEspecialidades.SelectedRows.Count == 0)
+            if (_personaRegistrada == null)
             {
-                MessageBox.Show("Debe seleccionar una especialidad");
-            }
-            else
-            {
-                int ID = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
-                EspecialidadesDesktop formTest = new EspecialidadesDesktop( ID, ApplicationForm.ModoForm.Baja);
-                formTest.ShowDialog();
-                Listar();
+                if (this.dgvEspecialidades.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Debe seleccionar una especialidad");
+                }
+                else
+                {
+                    int ID = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                    EspecialidadesDesktop formTest = new EspecialidadesDesktop(ID, ApplicationForm.ModoForm.Baja);
+                    formTest.ShowDialog();
+                    Listar();
+                }
             }
         }
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            if (this.dgvEspecialidades.SelectedRows.Count == 0)
+            if (_personaRegistrada == null)
             {
-                MessageBox.Show("Debe seleccionar una especialidad");
-            }
-            else { 
-                int ID = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
-                EspecialidadesDesktop formTest = new EspecialidadesDesktop(ID, ApplicationForm.ModoForm.Modificacion);
-                formTest.ShowDialog();
-                Listar();
+                if (this.dgvEspecialidades.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Debe seleccionar una especialidad");
+                }
+                else
+                {
+                    int ID = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                    EspecialidadesDesktop formTest = new EspecialidadesDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+                    formTest.ShowDialog();
+                    Listar();
+                }
             }
         }
 
