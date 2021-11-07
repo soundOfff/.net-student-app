@@ -12,3 +12,17 @@ C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\UI.Consola\obj\
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.exe
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe.config
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.exe
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\UI.Consola.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Entities.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Logic.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\Data.Database.dll
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Entities.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\Business.Logic.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\bin\Debug\Data.Database.pdb
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.AssemblyReference.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CoreCompileInputs.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.exe
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Consola\obj\Debug\UI.Consola.pdb

@@ -190,5 +190,11 @@ namespace UI.Desktop
             AlumnosYProfesores aluPro = new AlumnosYProfesores();
             AbrirFormInPanel(aluPro);
         }
+
+        private void buttonEspecialidades_Click(object sender, EventArgs e)
+        {
+            Especialidades esp = new Especialidades();
+            AbrirFormInPanel(esp);
+        }
     }
 }

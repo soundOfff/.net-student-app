@@ -51,6 +51,7 @@ namespace UI.Desktop
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.buttonEspecialidades = new System.Windows.Forms.Button();
             this.pnlVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
@@ -64,6 +65,7 @@ namespace UI.Desktop
             // pnlVertical
             // 
             this.pnlVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(10)))), ((int)(((byte)(103)))));
+            this.pnlVertical.Controls.Add(this.buttonEspecialidades);
             this.pnlVertical.Controls.Add(this.lblTipoPersona);
             this.pnlVertical.Controls.Add(this.lblNombrePersona);
             this.pnlVertical.Controls.Add(this.lblPosImg);
@@ -151,7 +153,7 @@ namespace UI.Desktop
             this.btnInscripciones.ForeColor = System.Drawing.Color.White;
             this.btnInscripciones.Image = ((System.Drawing.Image)(resources.GetObject("btnInscripciones.Image")));
             this.btnInscripciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInscripciones.Location = new System.Drawing.Point(12, 239);
+            this.btnInscripciones.Location = new System.Drawing.Point(12, 183);
             this.btnInscripciones.Name = "btnInscripciones";
             this.btnInscripciones.Size = new System.Drawing.Size(180, 40);
             this.btnInscripciones.TabIndex = 5;
@@ -189,7 +191,7 @@ namespace UI.Desktop
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 377);
+            this.button3.Location = new System.Drawing.Point(13, 321);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(180, 40);
             this.button3.TabIndex = 3;
@@ -208,7 +210,7 @@ namespace UI.Desktop
             this.btnReportePlanes.ForeColor = System.Drawing.Color.White;
             this.btnReportePlanes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportePlanes.Image")));
             this.btnReportePlanes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportePlanes.Location = new System.Drawing.Point(12, 331);
+            this.btnReportePlanes.Location = new System.Drawing.Point(12, 275);
             this.btnReportePlanes.Name = "btnReportePlanes";
             this.btnReportePlanes.Size = new System.Drawing.Size(180, 40);
             this.btnReportePlanes.TabIndex = 2;
@@ -227,7 +229,7 @@ namespace UI.Desktop
             this.btnExamenes.ForeColor = System.Drawing.Color.White;
             this.btnExamenes.Image = ((System.Drawing.Image)(resources.GetObject("btnExamenes.Image")));
             this.btnExamenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExamenes.Location = new System.Drawing.Point(12, 285);
+            this.btnExamenes.Location = new System.Drawing.Point(15, 229);
             this.btnExamenes.Name = "btnExamenes";
             this.btnExamenes.Size = new System.Drawing.Size(180, 40);
             this.btnExamenes.TabIndex = 1;
@@ -246,7 +248,7 @@ namespace UI.Desktop
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 193);
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 137);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 40);
             this.btnUsuarios.TabIndex = 0;
@@ -335,6 +337,25 @@ namespace UI.Desktop
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
+            // buttonEspecialidades
+            // 
+            this.buttonEspecialidades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonEspecialidades.FlatAppearance.BorderSize = 0;
+            this.buttonEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEspecialidades.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEspecialidades.ForeColor = System.Drawing.Color.White;
+            this.buttonEspecialidades.Image = ((System.Drawing.Image)(resources.GetObject("buttonEspecialidades.Image")));
+            this.buttonEspecialidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEspecialidades.Location = new System.Drawing.Point(12, 367);
+            this.buttonEspecialidades.Name = "buttonEspecialidades";
+            this.buttonEspecialidades.Size = new System.Drawing.Size(180, 40);
+            this.buttonEspecialidades.TabIndex = 10;
+            this.buttonEspecialidades.Text = "Especialidades";
+            this.buttonEspecialidades.UseVisualStyleBackColor = true;
+            this.buttonEspecialidades.Click += new System.EventHandler(this.buttonEspecialidades_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +405,6 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblPosImg;
         private System.Windows.Forms.Label lblPosTipo;
         private System.Windows.Forms.Label lblPosNombre;
+        private System.Windows.Forms.Button buttonEspecialidades;
     }
 }
