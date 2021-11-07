@@ -182,3 +182,6 @@ D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de soft
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.pdb
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.Especialidades.resources
 D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.EspecialidadesDesktop.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\UI.Desktop.ReportePlanesDesktop.resources
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\RdlCompile.cache
+D:\Documents\Desktop\Carpetas\UTN Tercer Año\Tecnologías de desarrollo de software IDE\git\Tp2Grupo6Academia\UI.Desktop\obj\Debug\RdlCompile.compiled
