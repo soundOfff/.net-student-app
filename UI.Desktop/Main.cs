@@ -164,8 +164,8 @@ namespace UI.Desktop
 
         private void btnExamenes_Click(object sender, EventArgs e)
         {
-            //AbrirFormInPanel(new Examenes(formLogin._personaRegistrada));
-            AbrirFormInPanel(new Cursos());
+            AbrirFormInPanel(new Examenes(formLogin._personaRegistrada));
+            
         }
 
         private void lbl5_Click(object sender, EventArgs e)
@@ -195,6 +195,11 @@ namespace UI.Desktop
         {
             Especialidades esp = new Especialidades();
             AbrirFormInPanel(esp);
+        }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Cursos());
         }
     }
 }
