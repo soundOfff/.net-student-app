@@ -31,6 +31,10 @@ namespace UI.Desktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlVertical = new System.Windows.Forms.Panel();
+            this.lblPosCur = new System.Windows.Forms.Label();
+            this.lblPosEsp = new System.Windows.Forms.Label();
+            this.lblPosPer = new System.Windows.Forms.Label();
+            this.lblPosPlan = new System.Windows.Forms.Label();
             this.btnCursos = new System.Windows.Forms.Button();
             this.btnEspecialiades = new System.Windows.Forms.Button();
             this.lblTipoPersona = new System.Windows.Forms.Label();
@@ -38,6 +42,7 @@ namespace UI.Desktop
             this.lblPosImg = new System.Windows.Forms.Label();
             this.lblPosTipo = new System.Windows.Forms.Label();
             this.lblPosNombre = new System.Windows.Forms.Label();
+            this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.btnInscripciones = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnPersonas = new System.Windows.Forms.Button();
@@ -52,20 +57,23 @@ namespace UI.Desktop
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.pnlVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVertical
             // 
             this.pnlVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(10)))), ((int)(((byte)(103)))));
+            this.pnlVertical.Controls.Add(this.lblPosCur);
+            this.pnlVertical.Controls.Add(this.lblPosEsp);
+            this.pnlVertical.Controls.Add(this.lblPosPer);
+            this.pnlVertical.Controls.Add(this.lblPosPlan);
             this.pnlVertical.Controls.Add(this.btnCursos);
             this.pnlVertical.Controls.Add(this.btnEspecialiades);
             this.pnlVertical.Controls.Add(this.lblTipoPersona);
@@ -87,6 +95,46 @@ namespace UI.Desktop
             this.pnlVertical.Size = new System.Drawing.Size(200, 600);
             this.pnlVertical.TabIndex = 0;
             // 
+            // lblPosCur
+            // 
+            this.lblPosCur.AutoSize = true;
+            this.lblPosCur.Location = new System.Drawing.Point(15, 330);
+            this.lblPosCur.Name = "lblPosCur";
+            this.lblPosCur.Size = new System.Drawing.Size(35, 13);
+            this.lblPosCur.TabIndex = 15;
+            this.lblPosCur.Text = "label1";
+            this.lblPosCur.Visible = false;
+            // 
+            // lblPosEsp
+            // 
+            this.lblPosEsp.AutoSize = true;
+            this.lblPosEsp.Location = new System.Drawing.Point(15, 284);
+            this.lblPosEsp.Name = "lblPosEsp";
+            this.lblPosEsp.Size = new System.Drawing.Size(35, 13);
+            this.lblPosEsp.TabIndex = 14;
+            this.lblPosEsp.Text = "label1";
+            this.lblPosEsp.Visible = false;
+            // 
+            // lblPosPer
+            // 
+            this.lblPosPer.AutoSize = true;
+            this.lblPosPer.Location = new System.Drawing.Point(15, 238);
+            this.lblPosPer.Name = "lblPosPer";
+            this.lblPosPer.Size = new System.Drawing.Size(35, 13);
+            this.lblPosPer.TabIndex = 13;
+            this.lblPosPer.Text = "label1";
+            this.lblPosPer.Visible = false;
+            // 
+            // lblPosPlan
+            // 
+            this.lblPosPlan.AutoSize = true;
+            this.lblPosPlan.Location = new System.Drawing.Point(15, 192);
+            this.lblPosPlan.Name = "lblPosPlan";
+            this.lblPosPlan.Size = new System.Drawing.Size(35, 13);
+            this.lblPosPlan.TabIndex = 12;
+            this.lblPosPlan.Text = "label1";
+            this.lblPosPlan.Visible = false;
+            // 
             // btnCursos
             // 
             this.btnCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -94,11 +142,10 @@ namespace UI.Desktop
             this.btnCursos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCursos.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCursos.ForeColor = System.Drawing.Color.White;
-            this.btnCursos.Image = ((System.Drawing.Image)(resources.GetObject("btnCursos.Image")));
             this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCursos.Location = new System.Drawing.Point(12, 413);
+            this.btnCursos.Location = new System.Drawing.Point(12, 422);
             this.btnCursos.Name = "btnCursos";
             this.btnCursos.Size = new System.Drawing.Size(180, 40);
             this.btnCursos.TabIndex = 11;
@@ -113,15 +160,14 @@ namespace UI.Desktop
             this.btnEspecialiades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnEspecialiades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnEspecialiades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEspecialiades.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEspecialiades.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEspecialiades.ForeColor = System.Drawing.Color.White;
-            this.btnEspecialiades.Image = ((System.Drawing.Image)(resources.GetObject("btnEspecialiades.Image")));
             this.btnEspecialiades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEspecialiades.Location = new System.Drawing.Point(12, 367);
+            this.btnEspecialiades.Location = new System.Drawing.Point(12, 376);
             this.btnEspecialiades.Name = "btnEspecialiades";
             this.btnEspecialiades.Size = new System.Drawing.Size(180, 40);
             this.btnEspecialiades.TabIndex = 10;
-            this.btnEspecialiades.Text = "    Especialidades";
+            this.btnEspecialiades.Text = "Especialidades";
             this.btnEspecialiades.UseVisualStyleBackColor = true;
             this.btnEspecialiades.Click += new System.EventHandler(this.buttonEspecialidades_Click);
             // 
@@ -172,6 +218,15 @@ namespace UI.Desktop
             this.lblPosNombre.Size = new System.Drawing.Size(0, 13);
             this.lblPosNombre.TabIndex = 7;
             // 
+            // cirPicImg
+            // 
+            this.cirPicImg.Location = new System.Drawing.Point(73, 56);
+            this.cirPicImg.Name = "cirPicImg";
+            this.cirPicImg.Size = new System.Drawing.Size(75, 75);
+            this.cirPicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cirPicImg.TabIndex = 0;
+            this.cirPicImg.TabStop = false;
+            // 
             // btnInscripciones
             // 
             this.btnInscripciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -179,15 +234,14 @@ namespace UI.Desktop
             this.btnInscripciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnInscripciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnInscripciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscripciones.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInscripciones.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInscripciones.ForeColor = System.Drawing.Color.White;
-            this.btnInscripciones.Image = ((System.Drawing.Image)(resources.GetObject("btnInscripciones.Image")));
             this.btnInscripciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInscripciones.Location = new System.Drawing.Point(12, 183);
+            this.btnInscripciones.Location = new System.Drawing.Point(12, 192);
             this.btnInscripciones.Name = "btnInscripciones";
             this.btnInscripciones.Size = new System.Drawing.Size(180, 40);
             this.btnInscripciones.TabIndex = 5;
-            this.btnInscripciones.Text = "    Inscribirse";
+            this.btnInscripciones.Text = "Inscribirse";
             this.btnInscripciones.UseVisualStyleBackColor = true;
             this.btnInscripciones.Click += new System.EventHandler(this.lbl5_Click);
             // 
@@ -200,13 +254,12 @@ namespace UI.Desktop
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(12, 467);
+            this.btnLogout.Location = new System.Drawing.Point(13, 523);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(180, 40);
             this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "      Cerrar Sesion";
+            this.btnLogout.Text = "Cerrar Sesion";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -217,11 +270,10 @@ namespace UI.Desktop
             this.btnPersonas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnPersonas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonas.ForeColor = System.Drawing.Color.White;
-            this.btnPersonas.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonas.Image")));
             this.btnPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonas.Location = new System.Drawing.Point(13, 321);
+            this.btnPersonas.Location = new System.Drawing.Point(13, 330);
             this.btnPersonas.Name = "btnPersonas";
             this.btnPersonas.Size = new System.Drawing.Size(180, 40);
             this.btnPersonas.TabIndex = 3;
@@ -236,11 +288,10 @@ namespace UI.Desktop
             this.btnReportePlanes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnReportePlanes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnReportePlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportePlanes.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportePlanes.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportePlanes.ForeColor = System.Drawing.Color.White;
-            this.btnReportePlanes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportePlanes.Image")));
             this.btnReportePlanes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportePlanes.Location = new System.Drawing.Point(12, 275);
+            this.btnReportePlanes.Location = new System.Drawing.Point(12, 284);
             this.btnReportePlanes.Name = "btnReportePlanes";
             this.btnReportePlanes.Size = new System.Drawing.Size(180, 40);
             this.btnReportePlanes.TabIndex = 2;
@@ -255,15 +306,14 @@ namespace UI.Desktop
             this.btnExamenes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnExamenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExamenes.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExamenes.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExamenes.ForeColor = System.Drawing.Color.White;
-            this.btnExamenes.Image = ((System.Drawing.Image)(resources.GetObject("btnExamenes.Image")));
             this.btnExamenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExamenes.Location = new System.Drawing.Point(15, 229);
+            this.btnExamenes.Location = new System.Drawing.Point(15, 238);
             this.btnExamenes.Name = "btnExamenes";
             this.btnExamenes.Size = new System.Drawing.Size(180, 40);
             this.btnExamenes.TabIndex = 1;
-            this.btnExamenes.Text = "  Examenes";
+            this.btnExamenes.Text = "Examenes";
             this.btnExamenes.UseVisualStyleBackColor = true;
             this.btnExamenes.Click += new System.EventHandler(this.btnExamenes_Click);
             // 
@@ -274,11 +324,10 @@ namespace UI.Desktop
             this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 137);
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 146);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 40);
             this.btnUsuarios.TabIndex = 0;
@@ -367,16 +416,6 @@ namespace UI.Desktop
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
-            // cirPicImg
-            // 
-            this.cirPicImg.Image = ((System.Drawing.Image)(resources.GetObject("cirPicImg.Image")));
-            this.cirPicImg.Location = new System.Drawing.Point(73, 56);
-            this.cirPicImg.Name = "cirPicImg";
-            this.cirPicImg.Size = new System.Drawing.Size(75, 75);
-            this.cirPicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cirPicImg.TabIndex = 0;
-            this.cirPicImg.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,13 +431,13 @@ namespace UI.Desktop
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.pnlVertical.ResumeLayout(false);
             this.pnlVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +467,9 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblPosNombre;
         private System.Windows.Forms.Button btnEspecialiades;
         private System.Windows.Forms.Button btnCursos;
+        private System.Windows.Forms.Label lblPosPer;
+        private System.Windows.Forms.Label lblPosPlan;
+        private System.Windows.Forms.Label lblPosCur;
+        private System.Windows.Forms.Label lblPosEsp;
     }
 }

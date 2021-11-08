@@ -47,7 +47,7 @@ namespace UI.Desktop
                     }
                     else
                     {
-                        MessageBox.Show("Codigo de error: #sosUnburro", "Contrasenia/Usuario incorrectos, revise!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Codigo de error: #404", "Contrasenia/Usuario incorrectos, revise!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception)

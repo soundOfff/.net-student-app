@@ -121,7 +121,7 @@ namespace UI.Desktop
                 }
                 catch (Exception Ex)
                 {
-                    Exception ExepcionManejada = new Exception("Error al eliminar el usuario, burro!");
+                    Exception ExepcionManejada = new Exception("Error al eliminar el usuario!");
                     MessageBox.Show("Codigo de error: #505", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -178,7 +178,7 @@ namespace UI.Desktop
             }
             else
             {
-                MessageBox.Show("Burro!");
+                MessageBox.Show("Error al guardar usuario!");
             }
         }
 

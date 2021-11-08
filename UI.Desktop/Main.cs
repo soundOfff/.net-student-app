@@ -154,6 +154,10 @@ namespace UI.Desktop
                     lblTipoPersona.Text = "Admin";
                     btnInscripciones.Visible = false;
                     btnExamenes.Visible = false;
+                    btnReportePlanes.Location = lblPosPlan.Location;
+                    btnPersonas.Location = lblPosPer.Location;
+                    btnEspecialiades.Location = lblPosEsp.Location;
+                    btnCursos.Location = lblPosCur.Location;
                     break;
                 default:
                     break;
@@ -162,11 +166,11 @@ namespace UI.Desktop
 
         private void OcultarBotones()
         {
-            //btnUsuarios.Visible = false;
+            btnUsuarios.Visible = false;
             btnCursos.Visible = false;
             btnReportePlanes.Visible = false;
             btnCursos.Visible = false;
-            //btnPersonas.Visible = false;
+            btnPersonas.Visible = false;
             btnEspecialiades.Visible = false;
         }
 

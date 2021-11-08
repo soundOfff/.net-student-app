@@ -129,8 +129,6 @@ namespace UI.Web
             usuario.Habilitado = this.habilitadoChechBox.Checked;
             usuario.NombreUsuario = this.nombreUsuarioTextBox.Text;
             usuario.Clave = this.claveTextBox.Text;
-
-
         }
 
         private void SaveEntity(Usuario usuario)
@@ -159,7 +157,6 @@ namespace UI.Web
                         this.Entity.ID = this.IDseleccionado;
                         this.LoadEntity(Entity);
                         this.Entity.State = BusinessEntity.States.Modified;
-                        this.LoadEntity(Entity);
                         this.SaveEntity(Entity);
                         break;
                     default:

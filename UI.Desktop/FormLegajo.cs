@@ -22,7 +22,9 @@ namespace UI.Desktop
         private void btnAccept_Click(object sender, EventArgs e)
         {
             PersonaLogic pl = new PersonaLogic();
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtLegajo.Text, "[^0-9]"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtLegajo.Text, "[^0-9]") &&
+                !pl.PersonaExiste(Convert.ToInt32(txtLegajo.Text))
+                )
             {
                 _personaAinscribirse = pl.GetOneLegajo(Convert.ToInt32(txtLegajo.Text));
                 this.Close();

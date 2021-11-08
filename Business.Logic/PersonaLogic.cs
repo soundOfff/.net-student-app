@@ -30,6 +30,11 @@ namespace Business.Logic
             return _personaData.GetOne(idPer);
         }
 
+        public bool PersonaExiste(int idLeg)
+        {
+            return _personaData.PersonaExiste(idLeg);
+        }
+
         public Persona GetOneLegajo(int legajo)
         {
             return _personaData.GetOneLegajo(legajo);

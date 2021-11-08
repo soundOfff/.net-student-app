@@ -81,6 +81,46 @@ namespace Data.Database
             return id_persona;
 
         }
+
+        public bool PersonaExiste(int idLegajo)
+        {
+            var ids = new List<int>();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdPersonas = new SqlCommand("select id_persona from personas where legajo = @Legajo_persona", SqlConn);
+                cmdPersonas.Parameters.Add("@Legajo_persona", SqlDbType.Int).Value = idLegajo;
+                SqlDataReader drPersonas = cmdPersonas.ExecuteReader();
+                while (drPersonas.Read())
+                {
+                    int id_persona = (int)drPersonas["id_persona"];
+                    ids.Add(id_persona);
+                }
+                drPersonas.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la persona", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            if (ids.Count > 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+
+
         public Business.Entities.Persona GetOne(int idPersona)
         {
             Persona per = new Persona();

@@ -75,8 +75,7 @@ namespace UI.Web
         public void Listar()
         {
             ExamenesLogic exam = new ExamenesLogic();
-            //dgvExamenes.DataSource = exam.GetAll(Login._personaRegistrada);
-            dgvExamenes.DataSource = exam.GetAll();
+            dgvExamenes.DataSource = exam.GetAll(Login._personaRegistrada);
             dgvExamenes.DataBind();
         }
 
