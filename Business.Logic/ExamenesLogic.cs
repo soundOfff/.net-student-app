@@ -30,7 +30,7 @@ namespace Business.Logic
             return _inscripcionData.GetAll(per);
         }
 
-        public ArrayList GetEP(List<int> idCursos)
+        public List<Examen> GetEP(List<int> idCursos)
         {
             return _inscripcionData.GetEP(idCursos);
         }

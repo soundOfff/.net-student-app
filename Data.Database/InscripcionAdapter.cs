@@ -274,10 +274,10 @@ namespace Data.Database
                 this.CloseConnection();
             }
         }
-        public ArrayList getAlumnosCurso(int idCurso)
+        public List<Persona> getAlumnosCurso(int idCurso)
         {
            
-            ArrayList alumnos = new ArrayList();
+            List<Persona> alumnos = new List<Persona>();
 
             try
             {
@@ -291,13 +291,12 @@ namespace Data.Database
                 while (drInscripciones.Read())
                 {
               
-                    var alumno = new
-                    {
-                        Legajo = (int)drInscripciones["legajo"],
-                        Nombre = (string)drInscripciones["nombre"],
-                        Apellido = (string)drInscripciones["apellido"]
-                    };
-                    alumnos.Add(alumno);
+                    
+                    Persona alum = new Persona();
+                    alum.Legajo = (int)drInscripciones["legajo"];
+                    alum.Nombre = (string)drInscripciones["nombre"];
+                    alum.Apellido = (string)drInscripciones["apellido"];
+                    alumnos.Add(alum);
                    
                 }
                 drInscripciones.Close();

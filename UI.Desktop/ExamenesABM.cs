@@ -43,6 +43,7 @@ namespace UI.Desktop
 
         private void ExamenesABM_Load(object sender, EventArgs e)
         {
+            dgvDatosExamenes.AutoGenerateColumns = false;
             /*EspecialidadLogic esp = new EspecialidadLogic();
            
             this.dgvDatosExamenes.DataSource = esp.GetAll();*/
@@ -175,10 +176,7 @@ namespace UI.Desktop
 
         private void dgvDatosExamenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvDatosExamenes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                txtIdCurso.Text = dgvDatosExamenes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-            }
+            
         }
 
         
@@ -197,16 +195,23 @@ namespace UI.Desktop
 
         private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvAlumnos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                txtLegajoAlumno.Text = dgvAlumnos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-            }
+            
         }
 
         private void btonCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
 
+        }
+
+        private void dgvDatosExamenes_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtIdCurso.Text = ((Examen)dgvDatosExamenes.SelectedRows[0].DataBoundItem).IdCurso.ToString();
+        }
+
+        private void dgvAlumnos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtLegajoAlumno.Text = ((Persona)dgvAlumnos.SelectedRows[0].DataBoundItem).Legajo.ToString();
         }
     }
 }

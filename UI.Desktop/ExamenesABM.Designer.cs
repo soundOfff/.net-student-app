@@ -31,6 +31,10 @@ namespace UI.Desktop
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDatosExamenes = new System.Windows.Forms.DataGridView();
+            this.IdCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescEspecialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtLegajoAlumno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,11 +44,14 @@ namespace UI.Desktop
             this.cbNota = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDinscripcion = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.btonFiltrar = new System.Windows.Forms.Button();
-            this.btonCancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btonCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.Legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosExamenes)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -75,13 +82,50 @@ namespace UI.Desktop
             // 
             // dgvDatosExamenes
             // 
+            this.dgvDatosExamenes.AllowUserToAddRows = false;
+            this.dgvDatosExamenes.AllowUserToDeleteRows = false;
             this.dgvDatosExamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatosExamenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdCurso,
+            this.DescMateria,
+            this.DescPlan,
+            this.DescEspecialidad});
             this.dgvDatosExamenes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDatosExamenes.Location = new System.Drawing.Point(237, 3);
             this.dgvDatosExamenes.Name = "dgvDatosExamenes";
+            this.dgvDatosExamenes.ReadOnly = true;
             this.dgvDatosExamenes.Size = new System.Drawing.Size(560, 189);
             this.dgvDatosExamenes.TabIndex = 0;
             this.dgvDatosExamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatosExamenes_CellClick);
+            this.dgvDatosExamenes.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDatosExamenes_RowHeaderMouseClick);
+            // 
+            // IdCurso
+            // 
+            this.IdCurso.DataPropertyName = "IdCurso";
+            this.IdCurso.HeaderText = "IdCurso";
+            this.IdCurso.Name = "IdCurso";
+            this.IdCurso.ReadOnly = true;
+            // 
+            // DescMateria
+            // 
+            this.DescMateria.DataPropertyName = "DescMateria";
+            this.DescMateria.HeaderText = "DescMateria";
+            this.DescMateria.Name = "DescMateria";
+            this.DescMateria.ReadOnly = true;
+            // 
+            // DescPlan
+            // 
+            this.DescPlan.DataPropertyName = "DescPlan";
+            this.DescPlan.HeaderText = "DescPlan";
+            this.DescPlan.Name = "DescPlan";
+            this.DescPlan.ReadOnly = true;
+            // 
+            // DescEspecialidad
+            // 
+            this.DescEspecialidad.DataPropertyName = "DescEspecialidad";
+            this.DescEspecialidad.HeaderText = "DescEspecialidad";
+            this.DescEspecialidad.Name = "DescEspecialidad";
+            this.DescEspecialidad.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -189,26 +233,23 @@ namespace UI.Desktop
             this.txtIDinscripcion.Size = new System.Drawing.Size(100, 20);
             this.txtIDinscripcion.TabIndex = 13;
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Location = new System.Drawing.Point(19, 70);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 22);
-            this.btnGuardar.TabIndex = 3;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // dgvAlumnos
             // 
+            this.dgvAlumnos.AllowUserToAddRows = false;
+            this.dgvAlumnos.AllowUserToDeleteRows = false;
             this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Legajo,
+            this.Apellido,
+            this.Nombre});
             this.dgvAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAlumnos.Location = new System.Drawing.Point(237, 256);
             this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.ReadOnly = true;
             this.dgvAlumnos.Size = new System.Drawing.Size(560, 163);
             this.dgvAlumnos.TabIndex = 4;
             this.dgvAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellClick);
+            this.dgvAlumnos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAlumnos_RowHeaderMouseClick);
             // 
             // btonFiltrar
             // 
@@ -219,17 +260,6 @@ namespace UI.Desktop
             this.btonFiltrar.Text = "Filtrar";
             this.btonFiltrar.UseVisualStyleBackColor = true;
             this.btonFiltrar.Click += new System.EventHandler(this.btonFiltrar_Click);
-            // 
-            // btonCancelar
-            // 
-            this.btonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btonCancelar.Location = new System.Drawing.Point(133, 70);
-            this.btonCancelar.Name = "btonCancelar";
-            this.btonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btonCancelar.TabIndex = 6;
-            this.btonCancelar.Text = "Cancelar";
-            this.btonCancelar.UseVisualStyleBackColor = true;
-            this.btonCancelar.Click += new System.EventHandler(this.btonCancelar_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -244,6 +274,49 @@ namespace UI.Desktop
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(228, 163);
             this.tableLayoutPanel3.TabIndex = 7;
+            // 
+            // btonCancelar
+            // 
+            this.btonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btonCancelar.Location = new System.Drawing.Point(133, 70);
+            this.btonCancelar.Name = "btonCancelar";
+            this.btonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btonCancelar.TabIndex = 6;
+            this.btonCancelar.Text = "Cancelar";
+            this.btonCancelar.UseVisualStyleBackColor = true;
+            this.btonCancelar.Click += new System.EventHandler(this.btonCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.Location = new System.Drawing.Point(19, 70);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 22);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // Legajo
+            // 
+            this.Legajo.DataPropertyName = "Legajo";
+            this.Legajo.HeaderText = "Legajo";
+            this.Legajo.Name = "Legajo";
+            this.Legajo.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // ExamenesABM
             // 
@@ -282,5 +355,12 @@ namespace UI.Desktop
         private System.Windows.Forms.ComboBox cbNota;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btonCancelar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCurso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescMateria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescPlan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescEspecialidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Legajo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

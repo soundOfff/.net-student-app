@@ -142,7 +142,7 @@ namespace Data.Database
                     usr.Clave = (string)drUsuarios["clave"];
                   
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
-                    usr.Imagen = (byte[])drUsuarios["imagen"];
+                    //usr.Imagen = (byte[])drUsuarios["imagen"];
 
                 }
                 drUsuarios.Close();
@@ -178,7 +178,7 @@ namespace Data.Database
                     usr.IDPersona = (int)drUsuarios["id_persona"];
                     usr.Clave = (string)drUsuarios["clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
-                    usr.Imagen = (byte[])drUsuarios["imagen"];
+                    //usr.Imagen = (byte[])drUsuarios["imagen"];
 
                 }
                 drUsuarios.Close();

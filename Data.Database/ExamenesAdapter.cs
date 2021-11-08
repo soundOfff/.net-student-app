@@ -68,9 +68,9 @@ namespace Data.Database
         }
 
 
-        public ArrayList GetEP(List<int> idCursos)
+        public List<Examen> GetEP(List<int> idCursos)
         {
-            ArrayList infoExamenes = new ArrayList();
+            List<Examen> infoExamenes = new List<Examen>();
             foreach (int idCurso in idCursos)
             {
                 try
@@ -96,12 +96,20 @@ namespace Data.Database
                     SqlDataReader drExamenes = cmdExamenes.ExecuteReader();
                     while (drExamenes.Read())
                     {
-                        infoExamenes.Add(new
+                       /* infoExamenes.Add(new
                         {   id_curso = (int)drExamenes["id_curso"],
                             DescMateria = (string)drExamenes["desc_materia"],
                             DescEspecialidad = (string)drExamenes["desc_especialidad"],
                             DescPlan = (string)drExamenes["desc_plan"]
-                        });
+                        });*/
+                        Examen ex = new Examen();
+                        ex.IdCurso = (int)drExamenes["id_curso"];
+                        ex.DescMateria = (string)drExamenes["desc_materia"];
+                        ex.DescEspecialidad = (string)drExamenes["desc_especialidad"];
+                        ex.DescPlan = (string)drExamenes["desc_plan"];
+                        infoExamenes.Add(ex);
+                        
+
                     }
 
                     drExamenes.Close();
