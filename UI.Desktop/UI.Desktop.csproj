@@ -107,6 +107,12 @@
     <Compile Include="ExamenesABM.Designer.cs">
       <DependentUpon>ExamenesABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportePlanesDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePlanesDesktop.Designer.cs">
+      <DependentUpon>ReportePlanesDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLegajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExamenesABM.resx">
       <DependentUpon>ExamenesABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePlanesDesktop.resx">
+      <DependentUpon>ReportePlanesDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLegajo.resx">
       <DependentUpon>FormLegajo.cs</DependentUpon>

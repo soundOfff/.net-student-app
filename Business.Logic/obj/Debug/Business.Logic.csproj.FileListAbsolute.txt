@@ -9,3 +9,14 @@ C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Logic\
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.dll
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.pdb
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\bin\Debug\Business.Entities.pdb
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.AssemblyReference.cache
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.CoreCompileInputs.cache
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Logic\obj\Debug\Business.Logic.pdb

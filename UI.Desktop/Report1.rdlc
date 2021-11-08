@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.4084cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.4084cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.4084cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -226,21 +226,54 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Materias</DataSetName>
-        <Top>2.00766cm</Top>
-        <Left>4.54766cm</Left>
+        <Top>3.09245cm</Top>
+        <Left>3.46287cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.5cm</Width>
+        <Width>10.22521cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Listado de materias del plan</Value>
+                <Style>
+                  <FontSize>36pt</FontSize>
+                  <Color>Maroon</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.47307cm</Top>
+        <Left>0.3175cm</Left>
+        <Height>1.87854cm</Height>
+        <Width>16.51cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2.29411in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.625in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

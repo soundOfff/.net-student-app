@@ -13,5 +13,6 @@ namespace Business.Entities
 
         public string DescPlan { get { return _descPlan; } set{ _descPlan = value; } }
         public int IDEspecialidad { get{ return _IDEspecialidad; } set { _IDEspecialidad = value; } }
+        public string Informacion { get { return IDEspecialidad + " " + DescPlan; } }
     }
 }

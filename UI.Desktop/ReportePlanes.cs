@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business.Logic;
 using Microsoft.Reporting.WinForms;
+using Business.Entities;
 
 namespace UI.Desktop
 {
     public partial class ReportePlanes : Form
     {
+        public static Plan plan;
+
         public ReportePlanes()
         {
             InitializeComponent();
@@ -24,19 +27,23 @@ namespace UI.Desktop
             MateriasLogic ml = new MateriasLogic();
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "UI.Desktop.Report1.rdlc";
-            
+            ReportePlanesDesktop reportePlanesDesktop = new ReportePlanesDesktop();
 
-            try
-            {
-                ReportDataSource rds1 = new ReportDataSource("Materias", ml.getDatosInscripcion(formLogin._personaRegistrada.IDPlan)); 
-                this.reportViewer1.LocalReport.DataSources.Add(rds1);
-            }
-            catch (Exception Ex)
-            {
-                Exception ExepcionManejada = new Exception("Error al obtener todos las materias para inscripcion");
-                MessageBox.Show("Codigo de error: #404", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            reportePlanesDesktop.ShowDialog();
 
+            if (reportePlanesDesktop.DialogResult != DialogResult.Cancel)
+            {
+                try
+                {
+                    ReportDataSource rds1 = new ReportDataSource("Materias", ml.GetAll(plan.ID));
+                    this.reportViewer1.LocalReport.DataSources.Add(rds1);
+                }
+                catch (Exception Ex)
+                {
+                    Exception ExepcionManejada = new Exception("Error al obtener todos las materias del plan");
+                    MessageBox.Show("Codigo de error: #404", ExepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
             
             
             

@@ -4,3 +4,9 @@ C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Entiti
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.dll
 C:\Users\Ignacio Brasca\Desktop\TpFinalVersion\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.pdb
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.dll
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Entities\bin\Debug\Business.Entities.pdb
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.AssemblyReference.cache
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.dll
+C:\Users\ivodu\Desktop\UTN Local\TP2 .NET\Tp2Grupo6Academia\Business.Entities\obj\Debug\Business.Entities.pdb
