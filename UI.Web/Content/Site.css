@@ -101,7 +101,7 @@ nav {
 
 
 .menu-aut-container {
-    height: 95%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -192,8 +192,8 @@ nav {
 
 .home-top img {
         width: 100%;
-        height:258px;
-        border-radius: 15px 15px 10px 10px;
+        height:240px;
+        border-radius: 15px 15px 0px 0px;
         border: 1px solid rgba(255, 0, 0, .5);
 }
 

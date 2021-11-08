@@ -27,9 +27,13 @@ namespace UI.Web
                 {
                     lblTipo.InnerText = "Tipo de Usuario: Alumno.";
                 }
-                else
+                else if ( (string)Session["rol"] == "2")
                 {
                     lblTipo.InnerText = "Tipo de Usuario: Profesor.";
+                }
+               else if ((string)Session["rol"] == "admin")
+                {
+                    lblTipo.InnerText = "Tipo de Usuario: Admin.";
                 }
                
             }

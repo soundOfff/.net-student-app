@@ -159,6 +159,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Examenes.aspx" />
+    <Content Include="Especialidades.aspx" />
     <Content Include="Personas.aspx" />
     <Content Include="ReportePlan.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -269,6 +270,13 @@
     </Compile>
     <Compile Include="MenuAutogestion.aspx.designer.cs">
       <DependentUpon>MenuAutogestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Especialidades.aspx.cs">
+      <DependentUpon>Especialidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Especialidades.aspx.designer.cs">
+      <DependentUpon>Especialidades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Personas.aspx.cs">
       <DependentUpon>Personas.aspx</DependentUpon>

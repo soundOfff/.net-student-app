@@ -73,6 +73,11 @@ namespace UI.Desktop
                 nudCupo.Enabled = false;
                 txtAnioCalendario.Enabled = false;
                 
+                txtIdComision.Text = _cursoActual.IdComision.ToString();
+                txtIdCurso.Text = _cursoActual.ID.ToString();
+                txtIdMateria.Text = _cursoActual.IdMateria.ToString();
+                nudCupo.Value = _cursoActual.Cupo;
+                txtAnioCalendario.Text = _cursoActual.AnioCalendario.ToString();
 
             }
 
@@ -132,18 +137,28 @@ namespace UI.Desktop
 
         private void dgvMateria_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvMateria.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            /*if (dgvMateria.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 txtIdMateria.Text = dgvMateria.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-            }
+            }*/
         }
 
         private void dgvComision_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvComision.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            /*if (dgvComision.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 txtIdComision.Text = dgvComision.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-            }
+            }*/
+        }
+
+        private void dgvMateria_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtIdMateria.Text = ((Materia)dgvMateria.SelectedRows[0].DataBoundItem).ID.ToString();
+        }
+
+        private void dgvComision_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtIdComision.Text = ((Comision)dgvComision.SelectedRows[0].DataBoundItem).ID.ToString();
         }
     }
 }
