@@ -140,21 +140,36 @@ namespace UI.Desktop
             {
                 case 1:
                     lblTipoPersona.Text = "Alumno";
-                    btnUsuarios.Visible = false;
+                    OcultarBotones();
                     break;
                 case 2:
                     lblTipoPersona.Text = "Docente";
-                    btnUsuarios.Visible = false;
+                    OcultarBotones();
                     break;
                 case 3:
                     lblTipoPersona.Text = "Directivo";
-                    btnUsuarios.Visible = true;
-
+                    OcultarBotones();
+                    break;
+                case 999:
+                    lblTipoPersona.Text = "Admin";
+                    btnInscripciones.Visible = false;
+                    btnExamenes.Visible = false;
                     break;
                 default:
                     break;
             }
         }
+
+        private void OcultarBotones()
+        {
+            //btnUsuarios.Visible = false;
+            btnCursos.Visible = false;
+            btnReportePlanes.Visible = false;
+            btnCursos.Visible = false;
+            //btnPersonas.Visible = false;
+            btnEspecialiades.Visible = false;
+        }
+
 
         private void btnLogout_Click(object sender, EventArgs e)
         {

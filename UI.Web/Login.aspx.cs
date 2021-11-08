@@ -26,8 +26,8 @@ namespace UI.Web
             if (this.txtUsername.Text == "A" && this.txtPassword.Text == "a")
             {
                 // Persona registrada en la db como admin 
-                _usuarioRegistrado = ul.GetOne("Admin", "a");
-                _personaRegistrada = pl.GetOne(19);
+                _usuarioRegistrado = ul.GetOne("Admin", "12345678");
+                _personaRegistrada = pl.GetOne(_usuarioRegistrado.IDPersona);
                 Session["rol"] = "admin";
                 Response.Redirect("~/MenuAutogestion.aspx");
                 Session.RemoveAll();

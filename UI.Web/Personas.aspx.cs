@@ -159,38 +159,46 @@ namespace UI.Web
          }
 
          protected void aceptarLinkButton_Click(object sender, EventArgs e)
-        { 
-             int numModo = (int)this.ModoForm;
-             switch (numModo)
-             {
-                 case 0:
-                     this.Entity = new Persona();
-                     this.LoadEntity(Entity);
-                     this.SaveEntity(Entity);
-                     break;
-                 case 1:
-                     this.Entity = new Persona();
-                     this.LoadEntity(Entity);
-                     this.Entity.State = BusinessEntity.States.Deleted;
-                     this.DeleteEntity(IDseleccionado);
-                     break;
-                 case 2:
-                     this.Entity = new Persona();
-                     this.Entity.ID = this.IDseleccionado;
-                     this.LoadEntity(Entity);
-                     this.Entity.State = BusinessEntity.States.Modified;
-                     this.LoadEntity(Entity);
-                     this.SaveEntity(Entity);
-                     break;
-                 default:
-                     break;
-             }
-             
-             this.LoadGrid();
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(legajoTxt.Text, "[^0-9]") &&
+                !System.Text.RegularExpressions.Regex.IsMatch(telTxt.Text, "[^0-9]") &&
+                 Validaciones.IsValidEmail(emailTextBox.Text))
+            {
+                int numModo = (int)this.ModoForm;
+                switch (numModo)
+                {
+                    case 0:
+                        this.Entity = new Persona();
+                        this.LoadEntity(Entity);
+                        this.SaveEntity(Entity);
+                        break;
+                    case 1:
+                        this.Entity = new Persona();
+                        this.LoadEntity(Entity);
+                        this.Entity.State = BusinessEntity.States.Deleted;
+                        this.DeleteEntity(IDseleccionado);
+                        break;
+                    case 2:
+                        this.Entity = new Persona();
+                        this.Entity.ID = this.IDseleccionado;
+                        this.LoadEntity(Entity);
+                        this.Entity.State = BusinessEntity.States.Modified;
+                        this.LoadEntity(Entity);
+                        this.SaveEntity(Entity);
+                        break;
+                    default:
+                        break;
+                }
 
-             this.formPanel.Visible = false;
+                this.LoadGrid();
 
-         }
+                this.formPanel.Visible = false;
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Datos ingresados incorrectos, revise mail, legajo o telefono!" + "');", true);
+            }
+        }
 
          private void EnableForm(bool enable)
          {

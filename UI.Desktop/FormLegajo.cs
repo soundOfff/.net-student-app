@@ -22,8 +22,15 @@ namespace UI.Desktop
         private void btnAccept_Click(object sender, EventArgs e)
         {
             PersonaLogic pl = new PersonaLogic();
-            _personaAinscribirse = pl.GetOneLegajo(Convert.ToInt32(txtLegajo.Text));
-            this.Close();
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtLegajo.Text, "[^0-9]"))
+            {
+                _personaAinscribirse = pl.GetOneLegajo(Convert.ToInt32(txtLegajo.Text));
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar numeros!");
+            }
         }
     }
 }

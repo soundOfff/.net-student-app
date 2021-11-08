@@ -21,7 +21,6 @@ namespace UI.Desktop
         public Examenes(Persona per)
         {
             InitializeComponent();
-           // this.dgvExamenes.AutoGenerateColumns = false;
             _personaRegistrada = per;
         }
 

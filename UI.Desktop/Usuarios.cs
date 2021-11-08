@@ -46,7 +46,7 @@ namespace UI.Desktop
         {
             FormLegajo formLegajo = new FormLegajo();
             formLegajo.ShowDialog();
-            UsuariosDesktop formTest = new UsuariosDesktop(ApplicationForm.ModoForm.Alta);
+            UsuariosDesktop formTest = new UsuariosDesktop();
             formTest.ShowDialog();
             Listar();
         }

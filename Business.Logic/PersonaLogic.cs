@@ -32,7 +32,7 @@ namespace Business.Logic
 
         public Persona GetOneLegajo(int legajo)
         {
-            return _personaData.GetOne(legajo);
+            return _personaData.GetOneLegajo(legajo);
         }
 
         public void Insert(Persona per)

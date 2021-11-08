@@ -156,7 +156,10 @@ namespace UI.Desktop
                 !String.IsNullOrEmpty(txtDireccion.Text) &&
                 Validaciones.IsValidEmail(txtEmail.Text) &&
                 !String.IsNullOrEmpty(txtLegajo.Text) &&
-                !String.IsNullOrEmpty(txtTel.Text))
+                !String.IsNullOrEmpty(txtTel.Text) &&
+                !System.Text.RegularExpressions.Regex.IsMatch(txtLegajo.Text, "[^0-9]") &&
+                !System.Text.RegularExpressions.Regex.IsMatch(txtTel.Text, "[^0-9]")
+                )
             {
                 GuardarCambios();
                 MessageBox.Show("Se ha registrado la operacion con exito! ");
@@ -166,6 +169,16 @@ namespace UI.Desktop
             {
                 MessageBox.Show("Datos ingresados incorrectos o nulos! ");
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cboxTipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -53,7 +53,7 @@ namespace UI.Desktop
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             
-            UsuariosDesktop formTest = new UsuariosDesktop(ApplicationForm.ModoForm.Alta);
+            UsuariosDesktop formTest = new UsuariosDesktop();
             formTest.ShowDialog();
             Listar();
         }

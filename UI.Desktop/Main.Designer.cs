@@ -31,16 +31,16 @@ namespace UI.Desktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlVertical = new System.Windows.Forms.Panel();
-            this.buttonEspecialidades = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
+            this.btnEspecialiades = new System.Windows.Forms.Button();
             this.lblTipoPersona = new System.Windows.Forms.Label();
             this.lblNombrePersona = new System.Windows.Forms.Label();
             this.lblPosImg = new System.Windows.Forms.Label();
             this.lblPosTipo = new System.Windows.Forms.Label();
             this.lblPosNombre = new System.Windows.Forms.Label();
-            this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.btnInscripciones = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPersonas = new System.Windows.Forms.Button();
             this.btnReportePlanes = new System.Windows.Forms.Button();
             this.btnExamenes = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -52,22 +52,22 @@ namespace UI.Desktop
             this.pctrSalir = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnCursos = new System.Windows.Forms.Button();
+            this.cirPicImg = new UI.Desktop.Clases.CircularPictureBox();
             this.pnlVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVertical
             // 
             this.pnlVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(10)))), ((int)(((byte)(103)))));
             this.pnlVertical.Controls.Add(this.btnCursos);
-            this.pnlVertical.Controls.Add(this.buttonEspecialidades);
+            this.pnlVertical.Controls.Add(this.btnEspecialiades);
             this.pnlVertical.Controls.Add(this.lblTipoPersona);
             this.pnlVertical.Controls.Add(this.lblNombrePersona);
             this.pnlVertical.Controls.Add(this.lblPosImg);
@@ -76,7 +76,7 @@ namespace UI.Desktop
             this.pnlVertical.Controls.Add(this.cirPicImg);
             this.pnlVertical.Controls.Add(this.btnInscripciones);
             this.pnlVertical.Controls.Add(this.btnLogout);
-            this.pnlVertical.Controls.Add(this.button3);
+            this.pnlVertical.Controls.Add(this.btnPersonas);
             this.pnlVertical.Controls.Add(this.btnReportePlanes);
             this.pnlVertical.Controls.Add(this.btnExamenes);
             this.pnlVertical.Controls.Add(this.btnUsuarios);
@@ -87,24 +87,43 @@ namespace UI.Desktop
             this.pnlVertical.Size = new System.Drawing.Size(200, 600);
             this.pnlVertical.TabIndex = 0;
             // 
-            // buttonEspecialidades
+            // btnCursos
             // 
-            this.buttonEspecialidades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonEspecialidades.FlatAppearance.BorderSize = 0;
-            this.buttonEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEspecialidades.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEspecialidades.ForeColor = System.Drawing.Color.White;
-            this.buttonEspecialidades.Image = ((System.Drawing.Image)(resources.GetObject("buttonEspecialidades.Image")));
-            this.buttonEspecialidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEspecialidades.Location = new System.Drawing.Point(12, 367);
-            this.buttonEspecialidades.Name = "buttonEspecialidades";
-            this.buttonEspecialidades.Size = new System.Drawing.Size(180, 40);
-            this.buttonEspecialidades.TabIndex = 10;
-            this.buttonEspecialidades.Text = "Especialidades";
-            this.buttonEspecialidades.UseVisualStyleBackColor = true;
-            this.buttonEspecialidades.Click += new System.EventHandler(this.buttonEspecialidades_Click);
+            this.btnCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCursos.FlatAppearance.BorderSize = 0;
+            this.btnCursos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursos.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursos.ForeColor = System.Drawing.Color.White;
+            this.btnCursos.Image = ((System.Drawing.Image)(resources.GetObject("btnCursos.Image")));
+            this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCursos.Location = new System.Drawing.Point(12, 413);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(180, 40);
+            this.btnCursos.TabIndex = 11;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
+            // btnEspecialiades
+            // 
+            this.btnEspecialiades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEspecialiades.FlatAppearance.BorderSize = 0;
+            this.btnEspecialiades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnEspecialiades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnEspecialiades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEspecialiades.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEspecialiades.ForeColor = System.Drawing.Color.White;
+            this.btnEspecialiades.Image = ((System.Drawing.Image)(resources.GetObject("btnEspecialiades.Image")));
+            this.btnEspecialiades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEspecialiades.Location = new System.Drawing.Point(12, 367);
+            this.btnEspecialiades.Name = "btnEspecialiades";
+            this.btnEspecialiades.Size = new System.Drawing.Size(180, 40);
+            this.btnEspecialiades.TabIndex = 10;
+            this.btnEspecialiades.Text = "    Especialidades";
+            this.btnEspecialiades.UseVisualStyleBackColor = true;
+            this.btnEspecialiades.Click += new System.EventHandler(this.buttonEspecialidades_Click);
             // 
             // lblTipoPersona
             // 
@@ -153,16 +172,6 @@ namespace UI.Desktop
             this.lblPosNombre.Size = new System.Drawing.Size(0, 13);
             this.lblPosNombre.TabIndex = 7;
             // 
-            // cirPicImg
-            // 
-            this.cirPicImg.Image = ((System.Drawing.Image)(resources.GetObject("cirPicImg.Image")));
-            this.cirPicImg.Location = new System.Drawing.Point(73, 56);
-            this.cirPicImg.Name = "cirPicImg";
-            this.cirPicImg.Size = new System.Drawing.Size(75, 75);
-            this.cirPicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cirPicImg.TabIndex = 0;
-            this.cirPicImg.TabStop = false;
-            // 
             // btnInscripciones
             // 
             this.btnInscripciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -201,24 +210,24 @@ namespace UI.Desktop
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button3
+            // btnPersonas
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(13, 321);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Personas";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPersonas.FlatAppearance.BorderSize = 0;
+            this.btnPersonas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPersonas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonas.ForeColor = System.Drawing.Color.White;
+            this.btnPersonas.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonas.Image")));
+            this.btnPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonas.Location = new System.Drawing.Point(13, 321);
+            this.btnPersonas.Name = "btnPersonas";
+            this.btnPersonas.Size = new System.Drawing.Size(180, 40);
+            this.btnPersonas.TabIndex = 3;
+            this.btnPersonas.Text = "Personas";
+            this.btnPersonas.UseVisualStyleBackColor = true;
+            this.btnPersonas.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnReportePlanes
             // 
@@ -358,24 +367,15 @@ namespace UI.Desktop
             this.pnlContenedor.Size = new System.Drawing.Size(700, 550);
             this.pnlContenedor.TabIndex = 2;
             // 
-            // btnCursos
+            // cirPicImg
             // 
-            this.btnCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCursos.FlatAppearance.BorderSize = 0;
-            this.btnCursos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCursos.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCursos.ForeColor = System.Drawing.Color.White;
-            this.btnCursos.Image = ((System.Drawing.Image)(resources.GetObject("btnCursos.Image")));
-            this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCursos.Location = new System.Drawing.Point(12, 413);
-            this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(180, 40);
-            this.btnCursos.TabIndex = 11;
-            this.btnCursos.Text = "Cursos";
-            this.btnCursos.UseVisualStyleBackColor = true;
-            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            this.cirPicImg.Image = ((System.Drawing.Image)(resources.GetObject("cirPicImg.Image")));
+            this.cirPicImg.Location = new System.Drawing.Point(73, 56);
+            this.cirPicImg.Name = "cirPicImg";
+            this.cirPicImg.Size = new System.Drawing.Size(75, 75);
+            this.cirPicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cirPicImg.TabIndex = 0;
+            this.cirPicImg.TabStop = false;
             // 
             // Main
             // 
@@ -392,13 +392,13 @@ namespace UI.Desktop
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.pnlVertical.ResumeLayout(false);
             this.pnlVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrLogo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctrMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPicImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,7 +416,7 @@ namespace UI.Desktop
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnInscripciones;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPersonas;
         private System.Windows.Forms.Button btnReportePlanes;
         private System.Windows.Forms.Button btnExamenes;
         private System.Windows.Forms.Label lblNombrePersona;
@@ -426,7 +426,7 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblPosImg;
         private System.Windows.Forms.Label lblPosTipo;
         private System.Windows.Forms.Label lblPosNombre;
-        private System.Windows.Forms.Button buttonEspecialidades;
+        private System.Windows.Forms.Button btnEspecialiades;
         private System.Windows.Forms.Button btnCursos;
     }
 }

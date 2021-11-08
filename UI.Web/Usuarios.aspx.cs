@@ -140,34 +140,38 @@ namespace UI.Web
 
         protected void aceptarLinkButton_Click(object sender, EventArgs e)
         {
-            
-            int numModo = (int)this.ModoForm;
-            switch (numModo)
+            if (Validaciones.IsValidEmail(emailTextBox.Text))
             {
-                case 0:
-                    this.Entity = new Usuario();
-                    this.LoadEntity(Entity);
-                    this.SaveEntity(Entity);
-                    break;
-                case 1:
-                    this.Entity.State = BusinessEntity.States.Deleted;
-                    this.DeleteEntity(IDseleccionado);
-                    break;
-                case 2:
-                    this.Entity = new Usuario();
-                    this.Entity.ID = this.IDseleccionado;
-                    this.LoadEntity(Entity);
-                    this.Entity.State = BusinessEntity.States.Modified;
-                    this.LoadEntity(Entity);
-                    this.SaveEntity(Entity);
-                    break;
-                default:
-                    break;
+                int numModo = (int)this.ModoForm;
+                switch (numModo)
+                {
+                    case 0:
+                        this.Entity = new Usuario();
+                        this.LoadEntity(Entity);
+                        this.SaveEntity(Entity);
+                        break;
+                    case 1:
+                        this.Entity.State = BusinessEntity.States.Deleted;
+                        this.DeleteEntity(IDseleccionado);
+                        break;
+                    case 2:
+                        this.Entity = new Usuario();
+                        this.Entity.ID = this.IDseleccionado;
+                        this.LoadEntity(Entity);
+                        this.Entity.State = BusinessEntity.States.Modified;
+                        this.LoadEntity(Entity);
+                        this.SaveEntity(Entity);
+                        break;
+                    default:
+                        break;
+                }
+                this.LoadGrid();
+                this.formPanel.Visible = false;
             }
-
-            this.LoadGrid();
-
-            this.formPanel.Visible = false;
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "El Email es incorrecto!" + "');", true);
+            }
 
         }
 
@@ -202,10 +206,10 @@ namespace UI.Web
 
         protected void nuevoLinkButton_Click(object sender, EventArgs e)
         {
-            this.formPanel.Visible = true;
-            this.ModoForm = ModosForm.Alta;
-            this.ClearForm();
-            this.EnableForm(true);
+                this.formPanel.Visible = true;
+                this.ModoForm = ModosForm.Alta;
+                this.ClearForm();
+                this.EnableForm(true);
 
         }
 

@@ -30,6 +30,9 @@ namespace UI.Desktop
             //la propiedad Text de los TextBox contiene el texto escrito en ellos
             if (this.txtUsuario.Text == "A" && this.txtPass.Text == "a")
             {
+                // Persona registrada en la db como admin 
+                _usuarioRegistrado = ul.GetOne("Admin", "12345678");
+                _personaRegistrada = pl.GetOne(_usuarioRegistrado.IDPersona);
                 this.DialogResult = DialogResult.OK;
             }
             else

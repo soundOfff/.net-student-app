@@ -60,7 +60,7 @@ namespace UI.Web
             {
                 Response.Redirect("Login.aspx");
             }
-            else if ((string)Session["rol"] != "2")
+            else if ((string)Session["rol"] != "2" && (string)Session["rol"] != "1")
             {
                 Response.Redirect("MenuAutogestion.aspx");
             }
@@ -75,9 +75,9 @@ namespace UI.Web
         public void Listar()
         {
             ExamenesLogic exam = new ExamenesLogic();
+            //dgvExamenes.DataSource = exam.GetAll(Login._personaRegistrada);
             dgvExamenes.DataSource = exam.GetAll();
             dgvExamenes.DataBind();
-
         }
 
         protected void btonEditar_Click(object sender, EventArgs e)
@@ -86,7 +86,6 @@ namespace UI.Web
             this.ModoForm = ModosForm.Modificacion;
             EnableForm(true);
             ClearForm();
-            // _examenActual = ((Examen)this.dgvExamenes.SelectedRow.DataItem);
             Examen exa = Logic.GetOne(this.IDseleccionado);
             loadForm(exa);
 
@@ -113,13 +112,23 @@ namespace UI.Web
 
         protected void dgvExamenes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // IdSeleccinado = ((int)this.dgvExamenes.SelectedRow.DataItem);
             this.IDseleccionado = ((int)this.dgvExamenes.SelectedValue);
         }
 
         protected void btonAceptar_Click(object sender, EventArgs e)
         {
-            this.Save();
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtIdCurso.Text, "[^0-9]") &&
+                !System.Text.RegularExpressions.Regex.IsMatch(txtIdInscripcion.Text, "[^0-9]") &&
+                !System.Text.RegularExpressions.Regex.IsMatch(txtLegajoAlumno.Text, "[^0-9]") &&
+                !System.Text.RegularExpressions.Regex.IsMatch(txtNota.Text, "[^0-9]") &&
+                (Convert.ToInt32(txtNota.Text) >= 0) && (Convert.ToInt32(txtNota.Text) <= 10) )
+            {
+                this.Save();
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Tipos Datos ingresados incorrectos, ingrese enteros!" + "');", true);
+            }
         }
 
         private void loadForm(Examen exa)

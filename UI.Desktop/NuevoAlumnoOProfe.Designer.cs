@@ -290,6 +290,7 @@ namespace UI.Desktop
             this.cboxTipo.Name = "cboxTipo";
             this.cboxTipo.Size = new System.Drawing.Size(177, 21);
             this.cboxTipo.TabIndex = 27;
+            this.cboxTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboxTipo_KeyPress);
             // 
             // cBoxPlan
             // 
@@ -299,6 +300,7 @@ namespace UI.Desktop
             this.cBoxPlan.Name = "cBoxPlan";
             this.cBoxPlan.Size = new System.Drawing.Size(179, 21);
             this.cBoxPlan.TabIndex = 28;
+            this.cBoxPlan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboxTipo_KeyPress);
             // 
             // btnCancel
             // 
@@ -309,6 +311,7 @@ namespace UI.Desktop
             this.btnCancel.TabIndex = 30;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnInsc
             // 
@@ -325,10 +328,11 @@ namespace UI.Desktop
             // 
             this.cboxEsp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboxEsp.FormattingEnabled = true;
-            this.cboxEsp.Location = new System.Drawing.Point(340, 430);
+            this.cboxEsp.Location = new System.Drawing.Point(342, 430);
             this.cboxEsp.Name = "cboxEsp";
-            this.cboxEsp.Size = new System.Drawing.Size(184, 21);
+            this.cboxEsp.Size = new System.Drawing.Size(180, 21);
             this.cboxEsp.TabIndex = 31;
+            this.cboxEsp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboxTipo_KeyPress);
             // 
             // NuevoAlumnoOProfe
             // 
